@@ -1,4 +1,4 @@
-package jdbc;
+package nongsan.webmvc.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,9 +15,9 @@ public class connectDB {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			connection=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QLNS;user=sa;password=123");
-			System.out.println("Kết nối DATABASE thành công");
+			System.out.println("Kết nối Database thành công!");
 		} catch (SQLException | ClassNotFoundException e) {
-			System.out.println("Kết nối thất bại!"+e.getMessage());
+			System.out.println("Kết nối Database thất bại!"+e.getMessage());
 		}
 		return connection;
 	}
