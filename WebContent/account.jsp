@@ -37,11 +37,11 @@
               <div class="col-md-6">
                 <div class="aa-myaccount-login">
                 <h4>Đăng nhập</h4>
-                 <form action="" class="aa-login-form">
-                  <label for="">Tên tài khoản hoặc Email<span>*</span></label>
-                   <input type="text" placeholder="Username or email">
+                 <form class="aa-login-form" action="${pageContext.request.contextPath}/login" method="post">
+                  <label for="">Tên tài khoản<span>*</span></label>
+                   <input type="text" placeholder="Username" name="username">
                    <label for="">Mật khẩu<span>*</span></label>
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" name="password">
                     <button type="submit" class="aa-browse-btn">Đăng nhập</button>
                     <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                     <p class="aa-lost-password"><a href="#">Quên mật khẩu?</a></p>
@@ -74,28 +74,4 @@
  <jsp:include page = "./footer/footer.jsp" flush = "true" />
 <!-- end footer-->
   
-
-  <!-- Login Modal -->  
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">                      
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Login or Register</h4>
-          <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
-            <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-            <div class="aa-register-now">
-              Don't have an account?<a href="account.html">Register now!</a>
-            </div>
-          </form>
-        </div>                        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>    
   

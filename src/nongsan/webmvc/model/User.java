@@ -9,16 +9,13 @@ public class User{
 	private String username;
 	private String password;
 	private Date created;
-	public User(int id, String name, String email, String phone, String username, String password, Date created) {
+
+	public User(String username, String password) {
 		super();
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.phone = phone;
 		this.username = username;
 		this.password = password;
-		this.created = created;
 	}
+	
 	public int getId() {
 		return id;
 	}

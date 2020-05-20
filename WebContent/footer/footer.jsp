@@ -12,11 +12,11 @@
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4>Đăng nhập hoặc Đăng ký</h4>
-          <form class="aa-login-form" action="">
+          <form class="aa-login-form" action="${pageContext.request.contextPath}/login" method="post">
             <label for="">Username hoặc email<span>*</span></label>
-            <input type="text" placeholder="Username hoặc email">
+            <input type="text" placeholder="Usernamel" name="username">
             <label for="">Mật khẩu<span>*</span></label>
-            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Mật khẩu" name="password">
             <button class="aa-browse-btn" type="submit">Đăng nhập</button>
             <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Ghi nhớ tài khoản </label>
             <p class="aa-lost-password"><a href="#">Quên mật khẩu?</a></p>
