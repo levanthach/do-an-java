@@ -1,41 +1,50 @@
 package nongsan.webmvc.controller.admin;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import nongsan.webmvc.service.CategoryService;
+import nongsan.webmvc.service.impl.CategoryServicesImpl;
+import nongsan.webmvc.model.Catalog;
+
 /**
  * Servlet implementation class CategoryAddController
  */
-@WebServlet("/CategoryAddController")
+@WebServlet("/CategoryAdd")
 public class CategoryAddController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CategoryAddController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * 
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	private static final long serialVersionUID = 1L;
+	CategoryService cateService = new CategoryServicesImpl();
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/admin/addcate.jsp");
+		dispatcher.forward(req, resp);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String cate_name = req.getParameter("cate-name");
+		String cate_id = req.getParameter("cate-id");
+		String cate_parent_id = req.getParameter("parent-id");
+		Catalog category = new Catalog();
+		category.setId(cate_id);
+		category.setName(cate_name);
+		category.setParent_id(cate_parent_id);
+		cateService.insert(category);
+		System.out.print(cate_id);
+		System.out.print(cate_name);
+		System.out.print(cate_parent_id);
+		resp.sendRedirect(req.getContextPath() + "/admin/dschuyenmuc.jsp");
+
 	}
 
 }
