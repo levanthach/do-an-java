@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+
+import nongsan.webmvc.model.Catalog;
 
 public class connectDB {
 	public connectDB(){
@@ -23,17 +26,6 @@ public class connectDB {
 	}
 	public static void main(String[] args) {
 		System.out.println(getConnect());
-	}
-	public  void excuteSql(String sql) throws Exception{
-		Connection connect =getConnect();
-		PreparedStatement stmt =   (PreparedStatement) connect.createStatement();
-		stmt.executeUpdate(sql);
-	}
-	public ResultSet selectData(String sql) throws Exception{
-		Connection connect =getConnect();
-		PreparedStatement stmt =   (PreparedStatement) connect.createStatement();
-		ResultSet rs=	stmt.executeQuery(sql);
-		return rs;
 	}
 }
 

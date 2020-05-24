@@ -1,6 +1,7 @@
 package nongsan.webmvc.controller.admin;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import nongsan.webmvc.model.Catalog;
 /**
  * Servlet implementation class CategoryAddController
  */
-@WebServlet("/CategoryAdd")
+@WebServlet(urlPatterns = { "/admin/category/add" })
 public class CategoryAddController extends HttpServlet {
 	/**
 	 * 
@@ -40,11 +41,7 @@ public class CategoryAddController extends HttpServlet {
 		category.setName(cate_name);
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);
-		System.out.print(cate_id);
-		System.out.print(cate_name);
-		System.out.print(cate_parent_id);
 		resp.sendRedirect(req.getContextPath() + "/admin/dschuyenmuc.jsp");
-
 	}
 
 }

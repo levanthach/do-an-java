@@ -1,7 +1,7 @@
 package nongsan.webmvc.service;
 
 import nongsan.webmvc.model.Catalog;
-
+import java.util.List;
 public interface CategoryService {
 	void insert(Catalog category);
 
@@ -13,8 +13,7 @@ public interface CategoryService {
 	
 	Catalog get(String name);
 
-//	List<Catalog> getAll();
-//
-//	List<Catalog> search(String username);
+	List<Catalog> getAll();
+
 }
 
