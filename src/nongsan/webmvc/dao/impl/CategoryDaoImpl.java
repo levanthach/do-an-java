@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import java.sql.ResultSet;
 import nongsan.webmvc.model.Catalog;
 
@@ -58,8 +59,7 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 	@Override
 	public List<Catalog> getAll() {
 		List<Catalog> categories = new ArrayList<Catalog>();
-		String sql = "select * from catalog";
-		new connectDB();
+		String sql = "SELECT * FROM catalog";
 		Connection conn = connectDB.getConnect();
 
 		try {
@@ -68,8 +68,9 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 			while (rs.next()) {
 				Catalog category = new Catalog();
-				category.setId(rs.getString("cate_id"));
-				category.setName(rs.getString("cate_name"));
+
+				category.setId(rs.getString("id"));
+				category.setName(rs.getString("name"));
 				category.setParent_id(rs.getString("parent_id"));
 				categories.add(category);
 			}
@@ -80,5 +81,4 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 		return categories;
 	}
-
 }

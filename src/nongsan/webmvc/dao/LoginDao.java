@@ -14,7 +14,8 @@ public class LoginDao {
 	public User checkLogin(String username, String password) {
 		try {
 			String query = "select username, password from users where username = ? AND password = ?";
-			conn = new connectDB().getConnect();
+			new connectDB();
+			conn = connectDB.getConnect();
 			ps = conn.prepareStatement(query);
 			ps.setString(1, username);
 			ps.setString(2, password);

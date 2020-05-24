@@ -17,7 +17,7 @@ import nongsan.webmvc.model.Catalog;
 /**
  * Servlet implementation class CategoryAddController
  */
-@WebServlet("/CategoryAdd")
+@WebServlet(urlPatterns = { "/admin/category/add" })
 public class CategoryAddController extends HttpServlet {
 	/**
 	 * 
@@ -27,8 +27,6 @@ public class CategoryAddController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Catalog> cateList = cateService.getAll();
-		req.setAttribute("cate", cateList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/admin/addcate.jsp");
 		dispatcher.forward(req, resp);
 	}
@@ -44,7 +42,6 @@ public class CategoryAddController extends HttpServlet {
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);
 		resp.sendRedirect(req.getContextPath() + "/admin/dschuyenmuc.jsp");
-
 	}
 
 }

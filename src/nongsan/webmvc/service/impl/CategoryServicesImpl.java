@@ -42,9 +42,7 @@ public class CategoryServicesImpl implements CategoryService {
 
 	@Override
 	public List<Catalog> getAll() {
-		// TODO Auto-generated method stub
 		return categoryDao.getAll();
 	}
-
 
 }

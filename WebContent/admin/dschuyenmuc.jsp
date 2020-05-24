@@ -9,7 +9,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <button class="add-catalog"><a href="/addcate.jsp">Thêm chuyên mục</a></button>
+            <button class="add-catalog"><a href="addcate.jsp">Thêm chuyên mục</a></button>
           </div>
           <div class="col-lg-12">
             <div class="card">
@@ -27,20 +27,11 @@
                       </tr>
                     </thead>
                     <tbody>
-                  
+                  <c:forEach items="${catelist}" var="cate">
                       <tr>
-                         <c:forEach items="${cate}" var="item">
-						    <tr>
-						      <td>${item.name}</td>
-						    </tr>
-						    <td>
-	                          <button>Xóa</button>
-	                          <button>Sửa</button>
-	                        </td>
-                       	</c:forEach>
-                        
-                      </tr>
-                    
+                        <td>${cate.getId()}</td>
+                     </tr>
+                    </c:forEach>
                     </tbody>
                   </table>
                 </div>
