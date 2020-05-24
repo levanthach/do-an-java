@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.ResultSet;
+import nongsan.webmvc.model.Catalog;
 
 import nongsan.webmvc.dao.CategoryDao;
 import nongsan.webmvc.jdbc.connectDB;
-import nongsan.webmvc.model.Catalog;
 
 public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
@@ -52,5 +55,30 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 		return null;
 	}
 
+	@Override
+	public List<Catalog> getAll() {
+		List<Catalog> categories = new ArrayList<Catalog>();
+		String sql = "select * from catalog";
+		new connectDB();
+		Connection conn = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Catalog category = new Catalog();
+				category.setId(rs.getString("cate_id"));
+				category.setName(rs.getString("cate_name"));
+				category.setParent_id(rs.getString("parent_id"));
+				categories.add(category);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return categories;
+	}
 
 }

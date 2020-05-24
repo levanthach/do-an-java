@@ -1,6 +1,8 @@
 package nongsan.webmvc.service.impl;
 
 
+import java.util.List;
+
 import nongsan.webmvc.dao.CategoryDao;
 import nongsan.webmvc.dao.impl.CategoryDaoImpl;
 import nongsan.webmvc.model.Catalog;
@@ -12,7 +14,6 @@ public class CategoryServicesImpl implements CategoryService {
 	@Override
 	public void insert(Catalog category) {
 		categoryDao.insert(category);
-
 	}
 
 	@Override
@@ -38,5 +39,12 @@ public class CategoryServicesImpl implements CategoryService {
 	public Catalog get(String name) {
 		return categoryDao.get(name);
 	}
+
+	@Override
+	public List<Catalog> getAll() {
+		// TODO Auto-generated method stub
+		return categoryDao.getAll();
+	}
+
 
 }

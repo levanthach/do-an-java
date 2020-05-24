@@ -1,6 +1,7 @@
 package nongsan.webmvc.controller.admin;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,6 +27,8 @@ public class CategoryAddController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		List<Catalog> cateList = cateService.getAll();
+		req.setAttribute("cate", cateList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/admin/addcate.jsp");
 		dispatcher.forward(req, resp);
 	}
@@ -40,9 +43,6 @@ public class CategoryAddController extends HttpServlet {
 		category.setName(cate_name);
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);
-		System.out.print(cate_id);
-		System.out.print(cate_name);
-		System.out.print(cate_parent_id);
 		resp.sendRedirect(req.getContextPath() + "/admin/dschuyenmuc.jsp");
 
 	}

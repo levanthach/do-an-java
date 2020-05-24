@@ -1,7 +1,7 @@
 package nongsan.webmvc.dao;
 
-//import com.vienmv.dao.List;
-//import com.vienmv.dao.String;
+import java.util.List;
+
 import nongsan.webmvc.model.Catalog;
 
 public interface CategoryDao {
@@ -15,7 +15,6 @@ public interface CategoryDao {
 	
 	Catalog get(String name);
 
-//	List<Catalog> getAll();
-//
-//	List<Catalog> search(String username);
+	List<Catalog> getAll();
+
 }
