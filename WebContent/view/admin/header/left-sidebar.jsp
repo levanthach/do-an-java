@@ -1,8 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/admin/assets" var="url"/>
     <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
       <div class="brand-logo">
-        <a href="index.html">
-          <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+        <a href="index.jsp">
+          <img src="${url}/images/logo-icon.png" class="logo-icon" alt="logo icon">
           <h5 class="logo-text">Admin Web Nông Sản</h5>
         </a>
       </div>
@@ -19,7 +21,7 @@
           </a>
         </li>
         <li>
-          <a href="${pageContext.request.contextPath}/list-category">
+          <a href="${pageContext.request.contextPath}/admin/cate/list">
             <i class="zmdi zmdi-grid"></i> <span>Chuyên Mục</span>
           </a>
         </li>

@@ -12,7 +12,7 @@
  
    <servlet-mapping>
        <servlet-name>addCategory</servlet-name>
-       <url-pattern>/add-categories</url-pattern>
+       <url-pattern>/admin/cate/add</url-pattern>
    </servlet-mapping>
    
    <servlet>
@@ -22,7 +22,7 @@
  
    <servlet-mapping>
        <servlet-name>listCategory</servlet-name>
-       <url-pattern>/list-category</url-pattern>
+       <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
  
 </web-app>
