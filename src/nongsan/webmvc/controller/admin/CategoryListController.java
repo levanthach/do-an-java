@@ -17,7 +17,7 @@ import nongsan.webmvc.service.impl.CategoryServicesImpl;
 /**
  * Servlet implementation class CategoryListController
  */
-@WebServlet(urlPatterns = { "/admin/category/list" })
+
 public class CategoryListController extends HttpServlet {
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class CategoryListController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Catalog> cateList = cateService.getAll();
 		req.setAttribute("catelist", cateList);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/admin/dschuyenmuc.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/show-cate.jsp");
 		dispatcher.forward(req, resp);
 	}
 

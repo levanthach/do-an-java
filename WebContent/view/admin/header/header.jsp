@@ -11,6 +11,7 @@
 
   <link href="assets/css/pace.min.css" rel="stylesheet" />
   <script src="assets/js/pace.min.js"></script>
+  <link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css"/>
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
   <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />

@@ -10,7 +10,7 @@
   <script src="assets/js/app-script.js"></script>
   <script src="assets/plugins/Chart.js/Chart.min.js"></script>
   <script src="assets/js/index.js"></script>
-
+  <script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
 </body>
 
 </html>

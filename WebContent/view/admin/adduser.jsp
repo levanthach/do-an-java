@@ -6,21 +6,17 @@
       <div class="container-fluid">
 
         <div class="row mt-3">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                <div class="card-title">Thêm sản phẩm</div>
+                <div class="card-title">Vertical Form</div>
                 <hr>
                 <form>
                   <div class="form-group">
-                    <label for="input-1">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục">
+                    <label for="input-1">Name</label>
+                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
                   </div>
                   <div class="form-group">
-                    <label for="input-2">ID chuyên mục cha</label>
-                    <input type="number" class="form-control" id="input-2" placeholder="Id chuyên mục cha">
-                  </div>
-                  <!-- <div class="form-group">
                     <label for="input-2">Email</label>
                     <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
                   </div>
@@ -41,9 +37,9 @@
                       <input type="checkbox" id="user-checkbox1" checked="" />
                       <label for="user-checkbox1">I Agree Terms & Conditions</label>
                     </div>
-                  </div> -->
+                  </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-light px-5"> Thêm</button>
+                    <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Register</button>
                   </div>
                 </form>
               </div>
@@ -53,5 +49,5 @@
         <div class="overlay toggle-menu"></div>
       </div>
     </div>
-  
+
     <jsp:include page = "./footer/footer.jsp" flush = "true" />
