@@ -67,10 +67,10 @@ a:focus {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
+*/
 h2 {
   font-size: 30px;
   font-weight: 700;
@@ -678,7 +678,6 @@ img {
 }
 #menu .menu-area .navbar-default .navbar-nav .aa-search-box input[type="text"] {
   font-size: 14px;
-  font-family: "Raleway", sans-serif;
   border: 1px solid white;
   border-radius: 10px;
   padding: 5px;
@@ -1440,7 +1439,6 @@ img {
 }
 #aa-support .aa-support-area .aa-support-single h4 {
   color: #fff;
-  font-family: "Lato", sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
