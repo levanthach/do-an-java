@@ -10,7 +10,7 @@
               <div class="card-body">
                 <div class="card-title">Thêm chuyên mục</div>
                 <hr>
-                <form action="${pageContext.request.contextPath}/add-categories" method="post">
+                <form action="${pageContext.request.contextPath}/admin/cate/add" method="post">
                  <div class="form-group">
                     <label for="input-1">ID</label>
                     <input type="text" class="form-control" id="input-1" placeholder="ID" name="cate-id">

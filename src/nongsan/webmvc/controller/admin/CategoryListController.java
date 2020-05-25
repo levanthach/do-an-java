@@ -17,7 +17,7 @@ import nongsan.webmvc.service.impl.CategoryServicesImpl;
 /**
  * Servlet implementation class CategoryListController
  */
-
+//@WebServlet(urlPatterns = { "/admin/cate/list" })
 public class CategoryListController extends HttpServlet {
 	/**
 	 * 

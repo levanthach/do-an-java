@@ -17,7 +17,7 @@ import nongsan.webmvc.model.Catalog;
 /**
  * Servlet implementation class CategoryAddController
  */
-//@WebServlet("/add-categories")
+//@WebServlet(urlPatterns = { "" })
 public class CategoryAddController extends HttpServlet {
 	/**
 	 * 
@@ -41,7 +41,8 @@ public class CategoryAddController extends HttpServlet {
 		category.setName(cate_name);
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);
-		resp.sendRedirect(req.getContextPath() + "/view/admin/show-cate.jsp");
+		resp.sendRedirect(req.getContextPath() + "/admin/cate/list");
+//		resp.sendRedirect(req.getContextPath() + "/view/admin/show-cate.jsp");
 	}
 
 }
