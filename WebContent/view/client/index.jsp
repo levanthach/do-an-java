@@ -1380,7 +1380,7 @@
                     </figcaption>                          
                   </figure>
                   <div class="aa-blog-info">
-                    <h3 class="aa-blog-title"><a href="#">18 Tác dụng của tinh dầu sả</a></h3>
+                    <h3 class="aa-blog-title"><a href="#">18 tác dụng của tinh dầu sả</a></h3>
                     <p>1. Khử mùi tự nhiên<br>
                        Sử dụng tinh dầu sả chanh như một chất làm mát, làm sạch không khí  hoặc khử mùi tự nhiên 
                        và an toàn. Pha loãng từ 3ml đến 50ml tinh dầu sả chanh với 100-200ml nước tùy sở thích đậm 
