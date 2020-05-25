@@ -28,7 +28,7 @@
                         <th scope="col">Danh sách ảnh</th>
                         <th scope="col">Cảm nhận</th>
                         <th scope="col">Ngày tạo</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Hành động</th>
                       </tr>
                     </thead>
                     <tbody>

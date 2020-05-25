@@ -21,15 +21,17 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tên chuyên mục</th>
-                        <th scope="col">ID danh mục cha</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Chuyên mục cha</th>
+                        <th scope="col">Hành động</th>
                         
                       </tr>
                     </thead>
                     <tbody>
                   <c:forEach items="${catelist}" var="cate">
                       <tr>
-                        <td>${cate.getId()}</td>
+                        <td style="color:red">${cate.id}</td>
+                        <td>${cate.name }</td>
+        				<td>${cate.parent_id }</td>
                      </tr>
                     </c:forEach>
                     </tbody>

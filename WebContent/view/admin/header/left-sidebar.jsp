@@ -15,17 +15,27 @@
         </li>
         <li>
           <a href="user.jsp">
-            <i class="zmdi zmdi-format-list-bulleted"></i> <span>Quản lí User</span>
+            <i class="zmdi zmdi-accounts"></i> <span>Quản lí User</span>
           </a>
         </li>
         <li>
-          <a href="dschuyenmuc.jsp">
-            <i class="zmdi zmdi-grid"></i> <span>Danh Sách Chuyên Mục</span>
+          <a href="${pageContext.request.contextPath}/list-category">
+            <i class="zmdi zmdi-grid"></i> <span>Chuyên Mục</span>
           </a>
         </li>
         <li>
-          <a href="dssanpham.jsp">
-            <i class="zmdi zmdi-calendar-check"></i> <span>Danh Sách Sản Phẩm</span>
+          <a href="show-product.jsp">
+            <i class="zmdi zmdi-widgets"></i> <span>Danh Sách Sản Phẩm</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="zmdi zmdi-shopping-cart"></i> <span>Đơn Hàng</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
           </a>
         </li>
       </ul>
