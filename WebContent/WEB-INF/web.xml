@@ -24,5 +24,14 @@
        <servlet-name>listCategory</servlet-name>
        <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
+    <servlet>
+       <servlet-name>listBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listBoardnew</servlet-name>
+       <url-pattern>/admin/new/list</url-pattern>
+   </servlet-mapping>
  
 </web-app>

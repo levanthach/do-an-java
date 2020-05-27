@@ -1,14 +1,17 @@
 package nongsan.webmvc.model;
 
-import java.util.Date;
 
 public class Boardnew {
 	private int id;
 	private String title;
 	private String content;
 	private String author;
-	private Date created;
-	public Boardnew(int id, String title, String content, String author, Date created) {
+	private String created;
+	
+	public Boardnew() {
+		super();
+	}
+	public Boardnew(int id, String title, String content, String author, String created) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -40,10 +43,10 @@ public class Boardnew {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public Date getCreated() {
+	public String getCreated() {
 		return created;
 	}
-	public void setCreated(Date created) {
+	public void setCreated(String created) {
 		this.created = created;
 	}
 	@Override
