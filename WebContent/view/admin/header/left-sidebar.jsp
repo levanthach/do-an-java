@@ -16,6 +16,11 @@
           </a>
         </li>
         <li>
+          <a href="${pageContext.request.contextPath}/admin/admin/list">
+            <i class="zmdi zmdi-accounts"></i> <span>Quản lí Admin</span>
+          </a>
+        </li>
+        <li>
           <a href="user.jsp">
             <i class="zmdi zmdi-accounts"></i> <span>Quản lí User</span>
           </a>
@@ -39,6 +44,6 @@
           <a href="#">
             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
           </a>
-        </li>
+        </li>       
       </ul>
     </div>
