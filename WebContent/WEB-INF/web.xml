@@ -14,7 +14,7 @@
        <servlet-name>addCategory</servlet-name>
        <url-pattern>/admin/cate/add</url-pattern>
    </servlet-mapping>
-   
+     
    <servlet>
        <servlet-name>listCategory</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.CategoryListController</servlet-class>
@@ -25,4 +25,24 @@
        <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
  
+  <servlet>
+       <servlet-name>addAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addAdmin</servlet-name>
+       <url-pattern>/admin/admin/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listAdmin</servlet-name>
+       <url-pattern>/admin/admin/list</url-pattern>
+   </servlet-mapping>
+   
 </web-app>
