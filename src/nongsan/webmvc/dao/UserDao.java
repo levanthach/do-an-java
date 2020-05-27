@@ -10,7 +10,7 @@ public interface UserDao {
 
 	void edit(User user);
 	
-	void delete(int id);
+	void delete(String id);
 
 	User get(String name);
 

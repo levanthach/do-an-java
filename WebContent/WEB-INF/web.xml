@@ -45,4 +45,34 @@
        <url-pattern>/admin/admin/list</url-pattern>
    </servlet-mapping>
    
+    <servlet>
+       <servlet-name>addUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addUser</servlet-name>
+       <url-pattern>/admin/user/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listUser</servlet-name>
+       <url-pattern>/admin/user/list</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>deleteUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteUser</servlet-name>
+       <url-pattern>/admin/user/delete</url-pattern>
+   </servlet-mapping>
+   
 </web-app>

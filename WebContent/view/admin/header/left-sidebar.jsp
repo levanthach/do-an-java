@@ -16,12 +16,7 @@
           </a>
         </li>
         <li>
-          <a href="${pageContext.request.contextPath}/admin/admin/list">
-            <i class="zmdi zmdi-accounts"></i> <span>Quản lí Admin</span>
-          </a>
-        </li>
-        <li>
-          <a href="user.jsp">
+          <a href="${pageContext.request.contextPath}/admin/user/list">
             <i class="zmdi zmdi-accounts"></i> <span>Quản lí User</span>
           </a>
         </li>
