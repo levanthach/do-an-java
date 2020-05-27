@@ -1,12 +1,12 @@
 package nongsan.webmvc.model;
 
 public class Admin {
-	private int id;
+	private String id;
 	private String username;
 	private String password;
 	private String name;
-	
-	public Admin(int id, String username, String password, String name) {
+	public Admin() { };
+	public Admin(String id, String username, String password, String name) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -14,11 +14,11 @@ public class Admin {
 		this.name = name;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -52,3 +52,4 @@ public class Admin {
 	}
 	
 }
+
