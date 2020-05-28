@@ -33,7 +33,8 @@
                         <td>${cate.name }</td>
         				<td>${cate.parent_id }</td>
         				 <td>
-                          <button>Xóa</button>
+                          <button><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
+                         
                           <button>Sửa</button>
                         </td>
                      </tr>

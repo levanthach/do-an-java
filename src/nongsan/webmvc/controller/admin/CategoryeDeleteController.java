@@ -13,7 +13,7 @@ import nongsan.webmvc.service.impl.CategoryServicesImpl;
 /**
  * Servlet implementation class CatagoryDeleteController
  */
-@WebServlet(urlPatterns = { "/admin/category/delete" })
+//@WebServlet(urlPatterns = { "/admin/cate/delete" })
 public class CategoryeDeleteController extends HttpServlet {
 	/**
 	 * 
@@ -24,9 +24,10 @@ public class CategoryeDeleteController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id = req.getParameter("id");
-		cateService.delete(Integer.parseInt(id));
+		System.out.print("id catalog :" + id);
+		cateService.delete(id);
 		
-		resp.sendRedirect(req.getContextPath() + "/admin/category/list");
+		resp.sendRedirect(req.getContextPath() + "/admin/cate/list");
 	}
 
 }
