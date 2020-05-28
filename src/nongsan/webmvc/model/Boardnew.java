@@ -2,7 +2,7 @@ package nongsan.webmvc.model;
 
 
 public class Boardnew {
-	private int id;
+	private String id;
 	private String title;
 	private String content;
 	private String author;
@@ -11,7 +11,7 @@ public class Boardnew {
 	public Boardnew() {
 		super();
 	}
-	public Boardnew(int id, String title, String content, String author, String created) {
+	public Boardnew(String id, String title, String content, String author, String created) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -19,10 +19,10 @@ public class Boardnew {
 		this.author = author;
 		this.created = created;
 	}
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getTitle() {

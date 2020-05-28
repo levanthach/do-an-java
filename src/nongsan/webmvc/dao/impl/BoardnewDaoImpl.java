@@ -15,13 +15,13 @@ import nongsan.webmvc.model.Catalog;
 public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	@Override
 	public void insert(Boardnew boardnew) {
-		String sql = "INSERT INTO catalog(id, title, content, author, created) VALUES (?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO boardnew(id, title, content, author, created) VALUES (?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setLong(1, boardnew.getId());
+			ps.setString(1, boardnew.getId());
 			ps.setString(2, boardnew.getTitle());
 			ps.setString(3, boardnew.getContent());
 			ps.setString(4, boardnew.getAuthor());
@@ -69,7 +69,7 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 			while (rs.next()) {
 				Boardnew boardnew = new Boardnew();
 
-				boardnew.setId(rs.getInt("id"));
+				boardnew.setId(rs.getString("id"));
 				boardnew.setTitle(rs.getString("title"));
 				boardnew.setContent(rs.getString("content"));
 				boardnew.setAuthor(rs.getString("author"));

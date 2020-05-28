@@ -9,7 +9,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <button class="add-catalog"><a href="${pageContext.request.contextPath}/admin/cate/add">Thêm tin tức</a></button>
+            <button class="add-catalog"><a href="${pageContext.request.contextPath}/admin/new/add">Thêm tin tức</a></button>
           </div>
           <div class="col-lg-12">
             <div class="card">
