@@ -17,7 +17,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void insert(Product product) {
-		String sql = "INSERT INTO catalog(id, name,parent_id) VALUES (?, ?, ?)";
+		String sql = "INSERT INTO product(id, name, catalog_id, created, price, status, discount, description, image_link, image_list) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
@@ -25,7 +25,14 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, product.getId());
 			ps.setString(2, product.getName());
-		
+			ps.setString(3, product.getCatalog_id());
+			ps.setString(4, product.getCreated());
+			ps.setString(5, product.getPrice());
+			ps.setString(6, product.getStatus());
+			ps.setString(7, product.getDiscount());
+			ps.setString(8, product.getDescription());
+			ps.setString(9, product.getImage_link());
+			ps.setString(10, product.getImage_list());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

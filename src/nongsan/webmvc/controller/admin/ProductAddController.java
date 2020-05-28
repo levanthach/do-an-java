@@ -18,22 +18,21 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.model.Product;
-import nongsan.webmvc.model.User;
 import nongsan.webmvc.service.CategoryService;
 import nongsan.webmvc.service.ProductService;
+import nongsan.webmvc.service.impl.CategoryServicesImpl;
 import nongsan.webmvc.service.impl.ProductServiceImpl;
 
-@WebServlet(urlPatterns = { "/admin/product/add" })
+@WebServlet({"/admin/product/add"})
 public class ProductAddController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
-	CategoryService categoryService = new CategoryServicesImpl();
+	CategoryService cateService = new CategoryServicesImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Catalog> categories = categoryService.getAll();
-
-		req.setAttribute("categories", categories);
-
+		List<Catalog> cateList = cateService.getAll();
+		req.setAttribute("catelist", cateList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/addproduct.jsp");
 		dispatcher.forward(req, resp);
 	}
@@ -41,41 +40,39 @@ public class ProductAddController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		Product product = new Product();
-		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
-		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
+//		Product product = new Product();
+//		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+//		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
 
 		try {
-			List<FileItem> items = servletFileUpload.parseRequest(req);
-			for (FileItem item : items) {
-				if (item.getFieldName().equals("name")) {
-					product.setName(item.getString());
-				} else if (item.getFieldName().equals("category")) {
-					product.setCategory(categoryService.get(Integer.parseInt(item.getString())));
-				} else if (item.getFieldName().equals("price")) {
-					product.setPrice(Long.parseLong(item.getString()));
-				} else if (item.getFieldName().equals("des")) {
-					product.setDes(item.getString());;
-				} else if (item.getFieldName().equals("image")) {
-					final String dir = "F:\\upload";
-					String originalFileName = item.getName();
-					int index = originalFileName.lastIndexOf(".");
-					String ext = originalFileName.substring(index + 1);
-					String fileName = System.currentTimeMillis() + "." + ext;
-					File file = new File(dir + "/" + fileName);
-					item.write(file);
-					product.setImage(fileName);
-				}
-			}
-
+			String product_sku = req.getParameter("product-sku");
+			String product_name = req.getParameter("product-name");
+			String product_cate = req.getParameter("product-cate");
+			String product_day = req.getParameter("product-day");
+			String product_price = req.getParameter("product-price");
+			String product_status = req.getParameter("product-status");
+			String product_discount = req.getParameter("product-discount");
+			String product_desc = req.getParameter("product-desc");
+			String product_image = req.getParameter("product-image");
+			String product_list_image = req.getParameter("product-image-list");
+			
+			
+			Product product = new Product();
+			product.setId(product_sku);
+			
+			product.setName(product_name);
+			product.setCatalog_id(product_cate);
+			product.setCreated(product_day);
+			product.setPrice(product_price);
+			product.setStatus(product_status);
+			product.setDiscount(product_discount);
+			product.setDescription(product_desc);
+			product.setImage_link(product_image);
+			product.setImage_list(product_list_image);
 			productService.insert(product);
-
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");
-		} catch (FileUploadException e) {
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }

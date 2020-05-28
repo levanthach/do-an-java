@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!-- Start header section -->
   <jsp:include page = "./header/header.jsp" flush = "true" />
 
@@ -10,7 +11,12 @@
               <div class="card-body">
                 <div class="card-title">Thêm sản phẩm</div>
                 <hr>
-                <form>
+                <form method="post" action="${pageContext.request.contextPath}/admin/product/add" enctype="multipart/form-data">
+                
+                 <div class="form-group">
+                    <label for="input-1">Mã sản phẩm</label>
+                    <input type="text" class="form-control" id="input-1" placeholder="Mã sản phẩm" name="product-sku">
+                  </div>
                   <div class="form-group">
                     <label for="input-1">Tên sản phẩm</label>
                     <input type="text" class="form-control" id="input-1" placeholder="Tên sản phẩm" name="product-name">
@@ -19,10 +25,9 @@
 	                  <label for="input-2">Chuyên mục</label>
 	                  <div>
 	                    <select class="form-control valid" id="input-6" name="product-cate" required aria-invalid="false">
-	                        <option>Mobile Development</option>
-	                        <option>Digital Marketing</option>
-	                        <option>Graphic Designing</option>
-	                        <option>Ecommerce Industr</option>
+	                    <c:forEach items="${catelist}" var="cate">
+	                        <option>${cate.name }</option>
+	                    </c:forEach>
 	                    </select>
 	                  </div>
 	                </div>
@@ -52,12 +57,29 @@
 		                </div>
 		                </div>
 	              </div>
-                  <div class="form-group">
+                 <div class="form-group">
                   <label for="input-2" class="col-form-label">Mô tả</label>
                   <div>
                     <textarea class="form-control" rows="4" id="input-17" name="product-desc"></textarea>
                   </div>
                 </div>
+                
+                <div class="form-group">
+                  <label for="input-2" class="col-form-label">Nội dung</label>
+                  <div>
+                    <textarea class="form-control" rows="4" id="input-17" name="product-content"></textarea>
+                  </div>
+                </div>
+                
+                 <div class="form-group">
+                    <label for="input-1">Ảnh đại diện</label>
+                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="input-1">Hình mô tả</label>
+                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image-list">
+                  </div>
                 
                 <div class="row">
         <div class="col-lg-12">
