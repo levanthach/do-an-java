@@ -1,6 +1,5 @@
 package nongsan.webmvc.controller.admin;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -11,10 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.model.Product;
@@ -40,10 +35,6 @@ public class ProductAddController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-//		Product product = new Product();
-//		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
-//		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-
 		try {
 			String product_sku = req.getParameter("product-sku");
 			String product_name = req.getParameter("product-name");
@@ -55,7 +46,6 @@ public class ProductAddController extends HttpServlet {
 			String product_desc = req.getParameter("product-desc");
 			String product_image = req.getParameter("product-image");
 			String product_list_image = req.getParameter("product-image-list");
-			
 			
 			Product product = new Product();
 			product.setId(product_sku);
