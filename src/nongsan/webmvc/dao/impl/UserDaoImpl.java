@@ -69,7 +69,7 @@ public class UserDaoImpl extends connectDB implements UserDao {
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 
-			if (rs.next()) {
+			while (rs.next()) {
 				user.setId(rs.getInt("id"));
 				user.setName(rs.getString("name"));
 				user.setEmail(rs.getString("email"));
@@ -85,6 +85,28 @@ public class UserDaoImpl extends connectDB implements UserDao {
 		}
 
         return user;
+	}
+	
+	@Override
+	public void edit(User user) {	
+		String sql = "Update users set name=?, email=?, phone=?, username=?, password=?, created=? where id=?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getPhone());
+			ps.setString(4, user.getUsername());
+			ps.setString(5, user.getPassword());
+			ps.setString(6,user.getCreated());
+			ps.setInt(7,user.getId());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	@Override
@@ -118,28 +140,6 @@ public class UserDaoImpl extends connectDB implements UserDao {
 		return users; 
 	}
 
-	@Override
-	public void edit(User user) {
-		
-		String sql = "Update users set name=? email=? phone=? username=? password=? created=?"+ "where id=?";
-		new connectDB();
-		Connection con = connectDB.getConnect();
-
-		try {
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, user.getName());
-			ps.setString(2, user.getEmail());
-			ps.setString(3, user.getPhone());
-			ps.setString(4, user.getUsername());
-			ps.setString(5, user.getPassword());
-			ps.setString(6,user.getCreated());
-			ps.setString(7,"user.getId()");
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}		
 }
 
 

@@ -22,6 +22,7 @@ public class UserDeleteController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	   
 		int user_id = Integer.parseInt(req.getParameter("user-id"));
+		System.out.print("djdks"+user_id);
 		userService.delete(user_id);	
 		req.setAttribute("userList", userService.getAll());   
 //		resp.sendRedirect(req.getContextPath() + "/admin/user/list");
