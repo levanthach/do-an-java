@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xmlns="http://java.sun.com/xml/ns/javaee"
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
@@ -14,6 +15,17 @@
        <servlet-name>addCategory</servlet-name>
        <url-pattern>/admin/cate/add</url-pattern>
    </servlet-mapping>
+     
+   <servlet>
+       <servlet-name>deleteCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryeDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteCategory</servlet-name>
+       <url-pattern>/admin/cate/delete</url-pattern>
+   </servlet-mapping>
+   
    
    <servlet>
        <servlet-name>listCategory</servlet-name>
@@ -47,4 +59,56 @@
        <url-pattern>/admin/product/list</url-pattern>
    </servlet-mapping>
   
+</web-app>
+ 
+  <servlet>
+       <servlet-name>addAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addAdmin</servlet-name>
+       <url-pattern>/admin/admin/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listAdmin</servlet-name>
+       <url-pattern>/admin/admin/list</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>addUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addUser</servlet-name>
+       <url-pattern>/admin/user/add</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listUser</servlet-name>
+       <url-pattern>/admin/user/list</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>deleteUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteUser</servlet-name>
+       <url-pattern>/admin/user/delete</url-pattern>
+   </servlet-mapping>
+   
 </web-app>
