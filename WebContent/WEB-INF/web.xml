@@ -36,6 +36,30 @@
        <servlet-name>listCategory</servlet-name>
        <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>addProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductAddController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>addProduct</servlet-name>
+       <url-pattern>/admin/product/add</url-pattern>
+   </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>listProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductListController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>listProduct</servlet-name>
+       <url-pattern>/admin/product/list</url-pattern>
+   </servlet-mapping>
+  
+</web-app>
  
   <servlet>
        <servlet-name>addAdmin</servlet-name>

@@ -26,7 +26,7 @@
           </a>
         </li>
         <li>
-          <a href="show-product.jsp">
+          <a href="${pageContext.request.contextPath}/admin/product/list">
             <i class="zmdi zmdi-widgets"></i> <span>Danh Sách Sản Phẩm</span>
           </a>
         </li>
