@@ -22,9 +22,9 @@
                         <th scope="col">Tên danh mục</th>
                         <th scope="col">Giá</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Giảm giá</th>
                         <th scope="col">Mô tả</th>
                         <th scope="col">Nội dung</th>
-                        <th scope="col">Giảm giá</th>
                         <th scope="col">Hình ảnh</th>
                         <th scope="col">Danh sách ảnh</th>
                         <th scope="col">Ngày tạo</th>
@@ -32,23 +32,25 @@
                       </tr>
                     </thead>
                     <tbody>
+                     <c:forEach items="${productlist}" var="product">
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Rau Cam Lâm</td>
-                        <td>Rau xanh sạch</td>
-                        <td>12000</td>
-                        <td>true</td>
-                        <td>Đây là sản phẩm sạch ...</td>
-                        <td>đây là sản phẩm mới đc tung ra thị trường</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>12/12/2012</td>
+                        <th scope="row">${product.id }</th>
+                        <td>${product.name }</td>
+                        <td>${product.catalog_id }</td>
+                        <td>${product.price }</td>
+                        <td>${product.status }</td>
+                        <td>${product.discount }%</td>
+                        <td>${product.description }</td>
+                        <td>${product.content }</td>
+                        <td>${product.image_link }</td>
+                        <td>${product.image_list }</td>
+                        <td>${product.created }</td>
                         <td>
                           <button>Xóa</button>
                           <button>Sửa</button>
                         </td>
                       </tr>
+                      </c:forEach>
                      
                     </tbody>
                   </table>

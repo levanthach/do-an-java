@@ -17,22 +17,23 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void insert(Product product) {
-		String sql = "INSERT INTO product(id, name, catalog_id, created, price, status, discount, description, image_link, image_list) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO product(id, catalog_id, name, price, status, description, content, discount, image_link, image_list, created) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, product.getId());
-			ps.setString(2, product.getName());
-			ps.setString(3, product.getCatalog_id());
-			ps.setString(4, product.getCreated());
-			ps.setString(5, product.getPrice());
-			ps.setString(6, product.getStatus());
-			ps.setString(7, product.getDiscount());
-			ps.setString(8, product.getDescription());
+			ps.setString(2, product.getCatalog_id());
+			ps.setString(3, product.getName());
+			ps.setString(4, product.getPrice());
+			ps.setString(5, product.getStatus());
+			ps.setString(6, product.getDescription());
+			ps.setString(7, product.getContent());
+			ps.setString(8, product.getDiscount());
 			ps.setString(9, product.getImage_link());
 			ps.setString(10, product.getImage_list());
+			ps.setString(11, product.getCreated());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -66,7 +67,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 	@Override
 	public List<Product> getAll() {
 		List<Product> products = new ArrayList<Product>();
-		String sql = "SELECT * FROM catalog";
+		String sql = "SELECT * FROM product";
 		Connection conn = connectDB.getConnect();
 
 		try {
@@ -77,8 +78,16 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				Product product = new Product();
 
 				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
 				product.setName(rs.getString("name"));
-			
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setImage_list(rs.getString("image_list"));
+				product.setCreated(rs.getString("created"));
 				products.add(product);
 			}
 
