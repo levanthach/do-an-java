@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!-- Start header section -->
   <jsp:include page = "./header/header.jsp" flush = "true" />
 
@@ -14,31 +15,31 @@
                 <form action="${pageContext.request.contextPath}/admin/user/add" method="post">
                   <div class="form-group">
                     <label for="input-1">ID</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your ID">
+                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your ID" value="${user.id}" name="user-id">
                   </div>
                   <div class="form-group">
                     <label for="input-1">Name</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+                    <input type="text" class="form-control" id="input-2" placeholder="Enter Your Name" value="${user.name}" name="user-name">
                   </div>
                   <div class="form-group">
                     <label for="input-2">Email</label>
-                    <input type="text" class="form-control" id="input-2" placeholder="Enter Your Email Address">
+                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your Email Address" value="${user.email}" name="user-email">
                   </div>
                   <div class="form-group">
                     <label for="input-3">Mobile</label>
-                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your Mobile Number">
+                    <input type="text" class="form-control" id="input-4" placeholder="Enter Your Mobile Number" value="${user.phone}" name="user-phone">
                   </div>
                   <div class="form-group">
                     <label for="input-3">UserName</label>
-                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your User Name">
+                    <input type="text" class="form-control" id="input-5" placeholder="Enter Your User Name" value="${user.username}" name="user-userName">
                   </div>
                   <div class="form-group">
                     <label for="input-4">Password</label>
-                    <input type="text" class="form-control" id="input-4" placeholder="Enter Password">
+                    <input type="text" class="form-control" id="myinput" placeholder="Enter Password" value="${user.password}" name="user-password">
                   </div>
                   <div class="form-group">
                     <label for="input-5">Date</label>
-                    <input type="text" class="form-control" id="input-5" placeholder="Date">
+                    <input type="text" class="form-control" id="input-6" placeholder="Date" value="${user.created}" name="user-created">
                   </div>
                   <div class="form-group py-2">
                     <div class="icheck-material-white">

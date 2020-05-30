@@ -75,4 +75,14 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+       <servlet-name>editUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editUser</servlet-name>
+       <url-pattern>/admin/user/edit</url-pattern>
+   </servlet-mapping>
+   
 </web-app>

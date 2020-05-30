@@ -35,8 +35,12 @@
         				<td>${user.password }</td>
         				<td>${user.created }</td>
         				 <td>
-                          <button><a href="delete?id=${user.id}">Xóa</a></button>
-                          <button>Sửa</button>
+                          <button type="button">
+                          	<a href="${pageContext.request.contextPath}/admin/user/delete?user-id=${user.id}">Xóa</a>
+                          </button>
+                         
+                          <button type="button">
+                          <a href="${pageContext.request.contextPath}/admin/user/edit?user-id=${user.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

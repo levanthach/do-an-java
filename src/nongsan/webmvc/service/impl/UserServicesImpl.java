@@ -30,7 +30,7 @@ public class UserServicesImpl implements UserService {
 	}
 
 	@Override
-	public void delete(String id) {
+	public void delete(int id) {
 		userDao.delete(id);
 		
 	}
