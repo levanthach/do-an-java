@@ -26,6 +26,15 @@
        <url-pattern>/admin/cate/delete</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+       <servlet-name>editCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editCategory</servlet-name>
+       <url-pattern>/admin/cate/edit</url-pattern>
+   </servlet-mapping>
    
    <servlet>
        <servlet-name>listCategory</servlet-name>
