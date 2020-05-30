@@ -68,8 +68,6 @@
        <url-pattern>/admin/product/list</url-pattern>
    </servlet-mapping>
   
-</web-app>
- 
   <servlet>
        <servlet-name>addAdmin</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
