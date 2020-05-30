@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xmlns="http://java.sun.com/xml/ns/javaee"
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
@@ -15,6 +16,17 @@
        <url-pattern>/admin/cate/add</url-pattern>
    </servlet-mapping>
      
+   <servlet>
+       <servlet-name>deleteCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryeDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteCategory</servlet-name>
+       <url-pattern>/admin/cate/delete</url-pattern>
+   </servlet-mapping>
+   
+   
    <servlet>
        <servlet-name>listCategory</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.CategoryListController</servlet-class>
