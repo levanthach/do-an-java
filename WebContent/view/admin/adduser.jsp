@@ -11,7 +11,11 @@
               <div class="card-body">
                 <div class="card-title">Vertical Form</div>
                 <hr>
-                <form>
+                <form action="${pageContext.request.contextPath}/admin/user/add" method="post">
+                  <div class="form-group">
+                    <label for="input-1">ID</label>
+                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your ID">
+                  </div>
                   <div class="form-group">
                     <label for="input-1">Name</label>
                     <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
@@ -25,12 +29,16 @@
                     <input type="text" class="form-control" id="input-3" placeholder="Enter Your Mobile Number">
                   </div>
                   <div class="form-group">
+                    <label for="input-3">UserName</label>
+                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your User Name">
+                  </div>
+                  <div class="form-group">
                     <label for="input-4">Password</label>
                     <input type="text" class="form-control" id="input-4" placeholder="Enter Password">
                   </div>
                   <div class="form-group">
-                    <label for="input-5">Confirm Password</label>
-                    <input type="text" class="form-control" id="input-5" placeholder="Confirm Password">
+                    <label for="input-5">Date</label>
+                    <input type="text" class="form-control" id="input-5" placeholder="Date">
                   </div>
                   <div class="form-group py-2">
                     <div class="icheck-material-white">

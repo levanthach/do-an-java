@@ -2,13 +2,13 @@ package nongsan.webmvc.model;
 import java.util.Date;
 
 public class User{
-	private int id;
+	private String id;
 	private String name;
 	private String email;
 	private String phone;
 	private String username;
 	private String password;
-	private Date created;
+	private String created;
 
 	public User(String username, String password) {
 		super();
@@ -16,10 +16,14 @@ public class User{
 		this.password = password;
 	}
 	
-	public int getId() {
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -52,10 +56,10 @@ public class User{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Date getCreated() {
+	public String getCreated() {
 		return created;
 	}
-	public void setCreated(Date created) {
+	public void setCreated(String created) {
 		this.created = created;
 	}
 	@Override
@@ -63,6 +67,7 @@ public class User{
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", username=" + username
 				+ ", password=" + password + ", created=" + created + "]";
 	}
+
 	
 	
 }
