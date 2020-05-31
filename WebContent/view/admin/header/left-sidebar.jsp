@@ -18,7 +18,7 @@
         
          <li>
           <a href="${pageContext.request.contextPath}/admin/admin/list">
-            <i class="zmdi zmdi-accounts"></i> <span>Quản lí Admin</span>
+            <i class="zmdi zmdi-account-box"></i> <span>Quản lí Admin</span>
           </a>
         </li>
         <li>

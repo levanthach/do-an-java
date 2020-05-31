@@ -3,6 +3,7 @@ package nongsan.webmvc.service.impl;
 
 import java.util.List;
 
+
 import nongsan.webmvc.dao.ProductDao;
 import nongsan.webmvc.dao.impl.ProductDaoImpl;
 import nongsan.webmvc.model.Product;
@@ -18,7 +19,20 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void edit(Product newProduct) {
-		
+		Product oldProduct = productDao.get(newProduct.getId());
+		System.out.print("Old id" + oldProduct);
+		oldProduct.setName(newProduct.getName());
+		oldProduct.setCatalog_id(newProduct.getCatalog_id());
+		oldProduct.setStatus(newProduct.getStatus());
+		oldProduct.setPrice(newProduct.getPrice());
+		oldProduct.setDescription(newProduct.getDescription());
+		oldProduct.setContent(newProduct.getContent());
+		oldProduct.setDiscount(newProduct.getDiscount());
+		oldProduct.setImage_link(newProduct.getImage_link());
+		oldProduct.setImage_list(newProduct.getImage_list());
+		oldProduct.setCreated(newProduct.getCreated());
+
+		productDao.edit(oldProduct);
 
 	}
 

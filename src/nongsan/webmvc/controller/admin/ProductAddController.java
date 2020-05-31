@@ -47,7 +47,6 @@ public class ProductAddController extends HttpServlet {
 			String product_list_image = req.getParameter("product-image-list");
 			String product_day = req.getParameter("product-day");
 			
-			System.out.print(product_sku);
 			Product product = new Product();
 			
 			product.setId(product_sku);

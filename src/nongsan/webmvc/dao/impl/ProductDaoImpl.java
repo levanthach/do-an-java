@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import java.sql.ResultSet;
+
+import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.model.Product;
 
 import nongsan.webmvc.dao.ProductDao;
@@ -41,8 +43,28 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 	}
 
 	@Override
-	public void edit(Product category) {
-		// TODO Auto-generated method stub
+	public void edit(Product product) {
+		String sql = "UPDATE product SET name = ?, catalog_id = ?, price = ?, status = ?, description = ?, content = ?, discount = ?, image_link = ?, image_list = ?, created = ? WHERE id = ?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, product.getCatalog_id());
+			ps.setString(2, product.getName());
+			ps.setString(3, product.getPrice());
+			ps.setString(4, product.getStatus());
+			ps.setString(5, product.getDescription());
+			ps.setString(6, product.getContent());
+			ps.setString(7, product.getDiscount());
+			ps.setString(8, product.getImage_link());
+			ps.setString(9, product.getImage_list());
+			ps.setString(10, product.getCreated());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -64,7 +86,32 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public Product get(int id) {
-		// TODO Auto-generated method stub
+		String sql = "SELECT * FROM product WHERE id = ? ";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setCreated(rs.getString("created"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setImage_list(rs.getString("image_list"));
+				return product;
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
