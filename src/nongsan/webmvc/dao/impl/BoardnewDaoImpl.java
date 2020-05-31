@@ -7,10 +7,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//import com.vienmv.dao.impl.String;
+//import com.vienmv.model.Category;
+
 import nongsan.webmvc.dao.BoardnewDao;
 import nongsan.webmvc.jdbc.connectDB;
 import nongsan.webmvc.model.Boardnew;
-import nongsan.webmvc.model.Catalog;
 
 public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	@Override
@@ -33,20 +35,61 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	}
 
 	@Override
-	public void edit(Boardnew boardnew) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+		String sql = "DELETE FROM boardnew WHERE id=?";
+		Connection con = connectDB.getConnect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
-
+	@Override
+	public void edit(Boardnew boardnew) {
+		String sql = "UPDATE boardnew SET title=?,content=?,author=?,created=? WHERE id=?";
+		Connection con = connectDB.getConnect();
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, boardnew.getTitle());
+			ps.setString(2, boardnew.getContent());
+			ps.setString(3, boardnew.getAuthor());
+			ps.setString(4, boardnew.getCreated());
+			ps.setString(5, boardnew.getId());
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	@Override
 	public Boardnew get(int id) {
-		// TODO Auto-generated method stub
+		
+		String sql = "SELECT * FROM boardnew WHERE id = ? ";
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Boardnew boardnew = new Boardnew();
+
+				boardnew.setId(rs.getString("id"));
+				boardnew.setTitle(rs.getString("title"));
+				boardnew.setContent(rs.getString("content"));
+				boardnew.setAuthor(rs.getString("author"));
+				boardnew.setCreated(rs.getString("created"));
+				//System.out.println("cc"+rs.getString("title"));
+				return boardnew;
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
@@ -83,4 +126,5 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 
 		return boardnews;
 	}
+
 }

@@ -35,8 +35,8 @@
         				<td>${boardnew.author}</td>
         				<td>${boardnew.created}</td>
         				 <td>
-                          <button>Xóa</button>
-                          <button>Sửa</button>
+                          <button><a href="${pageContext.request.contextPath}/admin/new/delete?id=${boardnew.id}">Xóa</a></button>
+                          <button><a href="${pageContext.request.contextPath}/admin/new/edit?id=${boardnew.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

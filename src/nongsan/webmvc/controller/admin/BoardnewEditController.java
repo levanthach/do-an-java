@@ -11,36 +11,36 @@ import javax.servlet.http.HttpServletResponse;
 import nongsan.webmvc.model.Boardnew;
 import nongsan.webmvc.service.BoardnewService;
 import nongsan.webmvc.service.impl.BoardnewServicesImpl;
-public class BoardnewAddController extends HttpServlet {
+
+public class BoardnewEditController extends HttpServlet{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	BoardnewService boardnewService = new BoardnewServicesImpl();
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/addboardnew.jsp");
+		String id = req.getParameter("id");
+		Boardnew boardnew = boardnewService.get(Integer.parseInt(id));
+		req.setAttribute("boardnew", boardnew);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/editboardnew.jsp");
 		dispatcher.forward(req, resp);
 	}
-
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String new_id = req.getParameter("new-id");
-		String new_title = req.getParameter("new-title");
-		String new_content = req.getParameter("new-content");
-		String new_author = req.getParameter("new-author");
-		String new_created = req.getParameter("new-created");
+		
 		Boardnew boardnew = new Boardnew();
-		boardnew.setId(new_id);
-		boardnew.setTitle(new_title);
-		boardnew.setContent(new_content);
-		boardnew.setAuthor(new_author);
-		boardnew.setCreated(new_created);
-		boardnewService.insert(boardnew);
-		resp.sendRedirect(req.getContextPath() + "/admin/new/list");
-//		resp.sendRedirect(req.getContextPath() + "/view/admin/show-new.jsp");
+		boardnew.setId(req.getParameter("new-id"));
+		boardnew.setTitle(req.getParameter("new-title"));
+		boardnew.setContent(req.getParameter("new-content"));
+		boardnew.setAuthor(req.getParameter("new-author"));
+		boardnew.setCreated(req.getParameter("new-created"));
+		boardnewService.edit(boardnew);
+		
+		resp.sendRedirect(req.getContextPath()+"/admin/new/list");
+
 	}
 
 }
