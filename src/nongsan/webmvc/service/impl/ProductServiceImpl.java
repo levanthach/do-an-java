@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		productDao.delete(id);
 
 	}

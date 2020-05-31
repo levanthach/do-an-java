@@ -46,8 +46,9 @@
                         <td>${product.image_list }</td>
                         <td>${product.created }</td>
                         <td>
-                          <button>Xóa</button>
-                          <button>Sửa</button>
+                           <button><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
+                         
+                          <button><a href="${pageContext.request.contextPath}/admin/cate/product?id=${product.id}">Sửa</a></button>
                         </td>
                       </tr>
                       </c:forEach>

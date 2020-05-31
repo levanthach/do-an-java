@@ -47,8 +47,18 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 	}
 
 	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
+	public void delete(String id) {
+		String sql = "DELETE FROM product WHERE id = ?";
+		new connectDB();
+		Connection conn = connectDB.getConnect();
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -97,4 +107,5 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 		return products;
 	}
+
 }
