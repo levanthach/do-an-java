@@ -68,6 +68,26 @@
        <url-pattern>/admin/product/list</url-pattern>
    </servlet-mapping>
   
+   <servlet>
+       <servlet-name>deleteProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteProduct</servlet-name>
+       <url-pattern>/admin/product/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editProduct</servlet-name>
+       <url-pattern>/admin/product/edit</url-pattern>
+   </servlet-mapping>
+   
   <servlet>
        <servlet-name>addAdmin</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
