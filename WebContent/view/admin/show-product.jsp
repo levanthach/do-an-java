@@ -38,7 +38,17 @@
                         <td>${product.name }</td>
                         <td>${product.catalog_id }</td>
                         <td>${product.price }</td>
-                        <td>${product.status }</td>
+                        <td>
+                        
+                        <c:choose>
+	                        <c:when test="${product.status == 1}"> 
+	                        	<c:out value="Còn hàng"/>
+	                       	</c:when>
+	                       	<c:otherwise>
+						        <c:out value="Hết hàng"/>
+						    </c:otherwise>
+                       	</c:choose>
+                        </td>
                         <td>${product.discount }%</td>
                         <td>${product.description }</td>
                         <td>${product.content }</td>
@@ -46,9 +56,9 @@
                         <td>${product.image_list }</td>
                         <td>${product.created }</td>
                         <td>
-                           <button><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
+                            <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
                          
-                          <button><a href="${pageContext.request.contextPath}/admin/cate/product?id=${product.id}">Sửa</a></button>
+                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/product/edit?id=${product.id}">Sửa</a></button>
                         </td>
                       </tr>
                       </c:forEach>
