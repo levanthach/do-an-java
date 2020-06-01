@@ -30,11 +30,12 @@
                   <c:forEach items="${catelist}" var="cate">
                       <tr>
                         <td scope="row">${cate.id}</td>
-                        <td>${cate.name }</td>
-        				<td>${cate.parent_id }</td>
+                        <td>${cate.name}</td>
+        				<td>${cate.parent_id}</td>
         				 <td>
-                          <button>Xóa</button>
-                          <button>Sửa</button>
+                          <button><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
+                         
+                          <button><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

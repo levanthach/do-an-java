@@ -17,6 +17,26 @@
    </servlet-mapping>
      
    <servlet>
+       <servlet-name>deleteCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryeDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteCategory</servlet-name>
+       <url-pattern>/admin/cate/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editCategory</servlet-name>
+       <url-pattern>/admin/cate/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
        <servlet-name>listCategory</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.CategoryListController</servlet-class>
    </servlet>
@@ -25,6 +45,7 @@
        <servlet-name>listCategory</servlet-name>
        <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
+
    <servlet>
        <servlet-name>addBoardnew</servlet-name>
        	<servlet-class>nongsan.webmvc.controller.admin.BoardnewAddController</servlet-class>
@@ -48,7 +69,62 @@
        <servlet-class>nongsan.webmvc.controller.admin.BoardnewDeleteController</servlet-class>
    </servlet>
  
-<<<<<<< HEAD
+   
+   <servlet-mapping>
+       <servlet-name>deleteBoardnew</servlet-name>
+       <url-pattern>/admin/new/delete</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   <servlet-name>editBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editBoardnew</servlet-name>
+       <url-pattern>/admin/new/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>addProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductAddController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>addProduct</servlet-name>
+       <url-pattern>/admin/product/add</url-pattern>
+   </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>listProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductListController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>listProduct</servlet-name>
+       <url-pattern>/admin/product/list</url-pattern>
+   </servlet-mapping>
+  
+   <servlet>
+       <servlet-name>deleteProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteProduct</servlet-name>
+       <url-pattern>/admin/product/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editProduct</servlet-name>
+       <url-pattern>/admin/product/edit</url-pattern>
+   </servlet-mapping>
+   
   <servlet>
        <servlet-name>addAdmin</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
@@ -99,19 +175,7 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
-=======
-   <servlet-mapping>
-       <servlet-name>deleteBoardnew</servlet-name>
-       <url-pattern>/admin/new/delete</url-pattern>
-   </servlet-mapping>
-   <servlet>
-   <servlet-name>editBoardnew</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.admin.BoardnewEditController</servlet-class>
-   </servlet>
- 
-   <servlet-mapping>
-       <servlet-name>editBoardnew</servlet-name>
-       <url-pattern>/admin/new/edit</url-pattern>
-   </servlet-mapping>
->>>>>>> vy_dev
+
+
+
 </web-app>

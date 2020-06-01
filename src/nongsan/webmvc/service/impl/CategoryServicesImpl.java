@@ -25,7 +25,7 @@ public class CategoryServicesImpl implements CategoryService {
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		categoryDao.delete(id);
 
 	}

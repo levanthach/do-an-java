@@ -1,21 +1,20 @@
 package nongsan.webmvc.model;
-import java.util.Date;
 
 public class Product {
-	private int id;
-	private int catalog_id;
+	private String id;
+	private String catalog_id;
 	private String name;
-	private double price;
-	private int status;
+	private String price;
+	private String status;
 	private String description;
 	private String content;
-	private int discount;
 	private String image_link;
 	private String image_list;
-	private String review;
-	private Date created;
-	public Product(int id, int catalog_id, String name, double price, int status, String description, String content,
-			int discount, String image_link, String image_list, String review, Date created) {
+	private String created;
+	private String discount;
+	public Product() {}
+	public Product(String id, String catalog_id, String name, String price, String status, String description, String content,
+			String discount, String image_link, String image_list, String created) {
 		super();
 		this.id = id;
 		this.catalog_id = catalog_id;
@@ -27,20 +26,19 @@ public class Product {
 		this.discount = discount;
 		this.image_link = image_link;
 		this.image_list = image_list;
-		this.review = review;
 		this.created = created;
 	}
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public int getCatalog_id() {
+	public String getCatalog_id() {
 		return catalog_id;
 	}
-	public void setCatalog_id(int catalog_id) {
-		this.catalog_id = catalog_id;
+	public void setCatalog_id(String product_cate) {
+		this.catalog_id = product_cate;
 	}
 	public String getName() {
 		return name;
@@ -48,16 +46,16 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setPrice(String product_price) {
+		this.price = product_price;
 	}
-	public int getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(int status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public String getDescription() {
@@ -72,10 +70,10 @@ public class Product {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public int getDiscount() {
+	public String getDiscount() {
 		return discount;
 	}
-	public void setDiscount(int discount) {
+	public void setDiscount(String discount) {
 		this.discount = discount;
 	}
 	public String getImage_link() {
@@ -90,24 +88,19 @@ public class Product {
 	public void setImage_list(String image_list) {
 		this.image_list = image_list;
 	}
-	public String getReview() {
-		return review;
-	}
-	public void setReview(String review) {
-		this.review = review;
-	}
-	public Date getCreated() {
+	public String getCreated() {
 		return created;
 	}
-	public void setCreated(Date created) {
-		this.created = created;
+	public void setCreated(String product_day) {
+		this.created = product_day;
 	}
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", catalog_id=" + catalog_id + ", name=" + name + ", price=" + price + ", status="
 				+ status + ", description=" + description + ", content=" + content + ", discount=" + discount
-				+ ", image_link=" + image_link + ", image_list=" + image_list + ", review=" + review + ", created="
+				+ ", image_link=" + image_link + ", image_list=" + image_list + ", created="
 				+ created + "]";
 	}
+
 	
 }

@@ -15,6 +15,12 @@
             <i class="zmdi zmdi-view-dashboard"></i> <span>Tổng quan</span>
           </a>
         </li>
+        
+         <li>
+          <a href="${pageContext.request.contextPath}/admin/admin/list">
+            <i class="zmdi zmdi-account-box"></i> <span>Quản lí Admin</span>
+          </a>
+        </li>
         <li>
           <a href="${pageContext.request.contextPath}/admin/user/list">
             <i class="zmdi zmdi-accounts"></i> <span>Quản lí User</span>
@@ -26,7 +32,7 @@
           </a>
         </li>
         <li>
-          <a href="show-product.jsp">
+          <a href="${pageContext.request.contextPath}/admin/product/list">
             <i class="zmdi zmdi-widgets"></i> <span>Danh Sách Sản Phẩm</span>
           </a>
         </li>

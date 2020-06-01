@@ -1,7 +1,6 @@
 package nongsan.webmvc.controller.admin;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,15 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.service.CategoryService;
 import nongsan.webmvc.service.impl.CategoryServicesImpl;
-import nongsan.webmvc.model.Catalog;
 
 /**
- * Servlet implementation class CategoryAddController
+ * Servlet implementation class CatagoryEditController
  */
-//@WebServlet(urlPatterns = { "" })
-public class CategoryAddController extends HttpServlet {
+//@WebServlet(urlPatterns = { "/admin/cate/edit" })
+public class CategoryEditController extends HttpServlet {
 	/**
 	 * 
 	 */
@@ -27,21 +26,25 @@ public class CategoryAddController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/addcate.jsp");
+		String id = req.getParameter("id");
+		System.out.print("Id update :"+id);
+		Catalog category = cateService.get(Integer.parseInt(id));
+		
+		req.setAttribute("category", category);
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/editcate.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cate_name = req.getParameter("cate-name");
-		String cate_id = req.getParameter("cate-id");
-		String cate_parent_id = req.getParameter("parent-id");
+		
 		Catalog category = new Catalog();
-		category.setId(cate_id);
-		category.setName(cate_name);
-		category.setParent_id(cate_parent_id);
-		cateService.insert(category);
-		resp.sendRedirect(req.getContextPath() + "/admin/cate/list");
-	}
+		category.setId(req.getParameter("id"));
+		category.setName(req.getParameter("name"));
+		cateService.edit(category);
+		
+		resp.sendRedirect(req.getContextPath()+"/admin/category/list");
 
+	}
 }
