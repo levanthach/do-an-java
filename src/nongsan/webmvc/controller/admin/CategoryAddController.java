@@ -34,10 +34,8 @@ public class CategoryAddController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String cate_name = req.getParameter("cate-name");
-		String cate_id = req.getParameter("cate-id");
 		String cate_parent_id = req.getParameter("parent-id");
 		Catalog category = new Catalog();
-		category.setId(cate_id);
 		category.setName(cate_name);
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);

@@ -58,7 +58,6 @@ public class ProductEditController extends HttpServlet {
 		product.setImage_list(req.getParameter("product-image-list"));
 		product.setCreated(req.getParameter("product-day"));
 		productService.edit(product);
-		System.out.print(productService);
 		
 		resp.sendRedirect(req.getContextPath()+"/admin/product/list");
 

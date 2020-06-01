@@ -31,11 +31,20 @@
                       <tr>
                         <td scope="row">${cate.id}</td>
                         <td>${cate.name}</td>
-        				<td>${cate.parent_id}</td>
+        				<td>
+        					<c:choose>
+	                        <c:when test="${cate.parent_id == 0}"> 
+	                        	<c:out value="NULL"/>
+	                       	</c:when>
+	                       	<c:otherwise>
+						        <c:out value="Sản phẩm mới"/>
+						    </c:otherwise>
+                       	</c:choose>
+        				</td>
         				 <td>
-                          <button><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
+                         <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
                          
-                          <button><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}">Sửa</a></button>
+                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

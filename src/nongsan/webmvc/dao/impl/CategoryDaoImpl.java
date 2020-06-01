@@ -25,15 +25,14 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 	@Override
 	public void insert(Catalog category) {
-		String sql = "INSERT INTO catalog(id, name,parent_id) VALUES (?, ?, ?)";
+		String sql = "INSERT INTO catalog(name,parent_id) VALUES (?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, category.getId());
-			ps.setString(2, category.getName());
-			ps.setString(3, category.getParent_id());
+			ps.setString(1, category.getName());
+			ps.setString(2, category.getParent_id());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -42,17 +41,18 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 	@Override
 	public void edit(Catalog category) {
-		String sql = "UPDATE catalog SET name = ? WHERE id = ?";
+		String sql = "UPDATE catalog SET name = ?, parent_id = ? WHERE id = ?";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, category.getName());
-			ps.setString(2, category.getId());
+			ps.setString(2, category.getParent_id());
+			ps.setString(3, category.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -74,7 +74,7 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 				category.setId(rs.getString("id"));
 				category.setName(rs.getString("name"));
-				category.setParent_id(rs.getString("parent-id"));
+				category.setParent_id(rs.getString("parent_id"));
 
 				return category;
 

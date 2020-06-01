@@ -11,10 +11,7 @@
                 <div class="card-title">Thêm chuyên mục</div>
                 <hr>
                 <form action="${pageContext.request.contextPath}/admin/cate/add" method="post">
-                 <div class="form-group">
-                    <label for="input-1">ID</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="ID" name="cate-id">
-                  </div>
+                
                   <div class="form-group">
                     <label for="input-1">Tên chuyên mục</label>
                     <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục" name="cate-name">
@@ -22,12 +19,9 @@
 	               <div class="form-group">
 	                  <label for="input-2">Chuyên mục cha</label>
 	                  <div>
-	                    <select class="form-control valid" id="input-6" name="intersted" required="" aria-invalid="false">
-	                        <option>NULL</option>
-	                        <option>Mobile Development</option>
-	                        <option>Digital Marketing</option>
-	                        <option>Graphic Designing</option>
-	                        <option>Ecommerce Industr</option>
+	                    <select class="form-control valid" id="input-6" name="parent-id" required aria-invalid="false">
+	                        <option value="0">NULL</option>
+	                       <option value="1">Sản phẩm mới</option>
 	                    </select>
 	                  </div>
 	                </div>

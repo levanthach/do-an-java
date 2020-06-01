@@ -15,27 +15,25 @@
 	                <form action="${pageContext.request.contextPath}/admin/cate/edit" method="post">
 	                  <div class="form-group">
 	                    <label for="input-1">ID</label>
-	                    <input type="text" class="form-control" id="input-1" placeholder="ID" name="id" value="${category.id}">
+	                    <input type="text" class="form-control" readonly id="input-1" placeholder="ID" name="id" value="${catelist.id}">
 	                  </div>
 	                  <div class="form-group">
 	                    <label for="input-1">Tên chuyên mục</label>
-	                    <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục" name="name" value="${category.name }">
+	                    <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục" name="name" value="${catelist.name }">
 	                  </div>
 		              <div class="form-group">
 		                  <label for="input-2">Chuyên mục cha</label>
 		                  <div>
-		                    <select class="form-control valid" id="input-6" name="parent-id" aria-invalid="false" value="${category.parent_id}">
-		                        <option>NULL</option>
-		                        <option>Mobile Development</option>
-		                        <option>Digital Marketing</option>
-		                        <option>Graphic Designing</option>
-		                        <option>Ecommerce Industr</option>
+		                     <select class="form-control valid" id="input-6" name="parent-id" required aria-invalid="false">
+		                        <option value="0">NULL</option>
+		                       <option value="1">Sản phẩm mới</option>
 		                    </select>
 		                  </div>
 		               </div>
 	                   <div class="form-footer">
-	                       <button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
-	                       <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Sửa</button>
+	                      <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/cate/list">Hủy</a></button>
+                         
+                     		<button type="submit" class="btn btn-success">Cập nhật</button>
 	                   </div> 
 	               
 	                </form>

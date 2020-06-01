@@ -16,19 +16,11 @@ public class CategoryServicesImpl implements CategoryService {
 		categoryDao.insert(category);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	@Override
 	public void edit(Catalog newCategory) {
 		Catalog oldCate = categoryDao.get(Integer.parseInt(newCategory.getId()));
-		System.out.println("tân: "+oldCate);
 		oldCate.setName(newCategory.getName());
+		oldCate.setParent_id(newCategory.getParent_id());
 		categoryDao.edit(oldCate);
 
 	}
