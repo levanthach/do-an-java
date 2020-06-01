@@ -13,19 +13,18 @@
                 <hr>
           	
 	                <form action="${pageContext.request.contextPath}/admin/cate/edit" method="post">
-	    
-	                 <div class="form-group">
+	                  <div class="form-group">
 	                    <label for="input-1">ID</label>
-	                    <input type="text" class="form-control" id="input-1" placeholder="ID" name="cate-id" value="${category.id}">
+	                    <input type="text" class="form-control" id="input-1" placeholder="ID" name="id" value="${category.id}">
 	                  </div>
 	                  <div class="form-group">
 	                    <label for="input-1">Tên chuyên mục</label>
-	                    <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục" name="cate-name" value="${category.name }">
+	                    <input type="text" class="form-control" id="input-1" placeholder="Tên chuyên mục" name="name" value="${category.name }">
 	                  </div>
-		               <div class="form-group">
+		              <div class="form-group">
 		                  <label for="input-2">Chuyên mục cha</label>
 		                  <div>
-		                    <select class="form-control valid" id="input-6" name="intersted" required="" aria-invalid="false" value="${category.parent_id}">
+		                    <select class="form-control valid" id="input-6" name="parent-id" aria-invalid="false" value="${category.parent_id}">
 		                        <option>NULL</option>
 		                        <option>Mobile Development</option>
 		                        <option>Digital Marketing</option>
@@ -33,11 +32,11 @@
 		                        <option>Ecommerce Industr</option>
 		                    </select>
 		                  </div>
-		                </div>
-	                 <div class="form-footer">
-	                    <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
-	                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Sửa</button>
-	                </div> 
+		               </div>
+	                   <div class="form-footer">
+	                       <button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
+	                       <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Sửa</button>
+	                   </div> 
 	               
 	                </form>
 	                 
