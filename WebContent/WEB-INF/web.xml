@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xmlns="http://java.sun.com/xml/ns/javaee"
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
@@ -24,7 +25,30 @@
        <servlet-name>listCategory</servlet-name>
        <url-pattern>/admin/cate/list</url-pattern>
    </servlet-mapping>
+   <servlet>
+       <servlet-name>addBoardnew</servlet-name>
+       	<servlet-class>nongsan.webmvc.controller.admin.BoardnewAddController</servlet-class>
+   </servlet>
  
+   <servlet-mapping>
+       <servlet-name>addBoardnew</servlet-name>
+       <url-pattern>/admin/new/add</url-pattern>
+   </servlet-mapping>
+    <servlet>
+       <servlet-name>listBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listBoardnew</servlet-name>
+       <url-pattern>/admin/new/list</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   <servlet-name>deleteBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewDeleteController</servlet-class>
+   </servlet>
+ 
+<<<<<<< HEAD
   <servlet>
        <servlet-name>addAdmin</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
@@ -75,4 +99,19 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
+=======
+   <servlet-mapping>
+       <servlet-name>deleteBoardnew</servlet-name>
+       <url-pattern>/admin/new/delete</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   <servlet-name>editBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editBoardnew</servlet-name>
+       <url-pattern>/admin/new/edit</url-pattern>
+   </servlet-mapping>
+>>>>>>> vy_dev
 </web-app>
