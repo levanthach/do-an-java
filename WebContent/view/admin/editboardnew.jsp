@@ -21,7 +21,7 @@
                   </div>
                   <div class="form-group">
                     <label for="input-3">Nội dung</label>
-                    <input type="text" class="form-control" id="input-3" placeholder="Nội dung" value="${boardnew.content}" name="new-content">
+                    <textarea class="form-control" rows="4" id="input-17" name="new-content">${boardnew.content}</textarea>
                   </div>
 	               <div class="form-group">
 	                  <label for="input-4">Người đăng</label>
@@ -40,8 +40,8 @@
 	                  <input type="date" class="form-control" id="input-5" value="${boardnew.created}" name="new-created">
 	              </div>
                  <div class="form-footer">
-                    <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
-                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Sửa</button>
+                 	<button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>
+                     <button class="btn btn-success">Cập nhật</button>
                 </div>
                 </form>
               </div>

@@ -175,7 +175,4 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
-
-
-
 </web-app>

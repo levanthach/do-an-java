@@ -5,7 +5,7 @@
       <div class="container-fluid">
 
         <div class="row mt-3">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
                 <div class="card-title">Thêm tin tức</div>
@@ -19,14 +19,15 @@
                     <label for="input-2">Tên tin tức</label>
                     <input type="text" class="form-control" id="input-2" placeholder="Tên tin tức" name="new-title">
                   </div>
+      
                   <div class="form-group">
                     <label for="input-3">Nội dung</label>
-                    <input type="text" class="form-control" id="input-3" placeholder="Nội dung" name="new-content">
+                    <textarea class="form-control" rows="4" id="input-17" name="new-content"></textarea>
                   </div>
 	               <div class="form-group">
 	                  <label for="input-4">Người đăng</label>
                   <div>
-                    <select class="form-control valid" id="input-4" name="new-author" required="" aria-invalid="false">
+                    <select class="form-control valid" id="input-4" name="new-author" required aria-invalid="false">
                         <option>NULL</option>
                         <option>Thịnh Dương</option>
                         <option>Lê Thạch</option>
@@ -40,7 +41,8 @@
 	                  <input type="date" class="form-control" id="input-5" name="new-created">
 	              </div>
                  <div class="form-footer">
-                    <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
+                 	
+                    <button class="btn btn-danger"><i class="fa fa-times"></i><a href="${pageContext.request.contextPath}/admin/new/list">Hủy</a></button>
                     <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Thêm</button>
                 </div>
                 </form>

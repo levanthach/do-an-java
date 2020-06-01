@@ -24,6 +24,7 @@
                         <th scope="col">Nội dung</th>
                         <th scope="col">Người đăng</th>
                         <th scope="col">Ngày đăng</th>
+                         <th scope="col">Hành động</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -35,8 +36,9 @@
         				<td>${boardnew.author}</td>
         				<td>${boardnew.created}</td>
         				 <td>
-                          <button><a href="${pageContext.request.contextPath}/admin/new/delete?id=${boardnew.id}">Xóa</a></button>
-                          <button><a href="${pageContext.request.contextPath}/admin/new/edit?id=${boardnew.id}">Sửa</a></button>
+                         <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/new/delete?id=${boardnew.id}">Xóa</a></button>
+                         
+                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/new/edit?id=${boardnew.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

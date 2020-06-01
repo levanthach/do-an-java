@@ -44,16 +44,12 @@
         <li>
           <a href="#">
             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
-          </a>
-<<<<<<< HEAD
-        </li>       
-=======
+          </a>   
         </li>
         <li>
           <a href="${pageContext.request.contextPath}/admin/new/list">
             <i class="icon-envelope-open"></i> <span>Tin tức</span>
           </a>
         </li>
->>>>>>> vy_dev
       </ul>
     </div>
