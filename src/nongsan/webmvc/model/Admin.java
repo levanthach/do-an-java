@@ -1,11 +1,11 @@
 package nongsan.webmvc.model;
 
 public class Admin {
-	private String id;
-	private String username;
-	private String password;
-	private String name;
-	public Admin() { };
+	 String id;
+	 String username;
+	 String password;
+	 String name;
+	public Admin() {};
 	public Admin(String id, String username, String password, String name) {
 		super();
 		this.id = id;

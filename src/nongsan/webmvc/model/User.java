@@ -2,7 +2,7 @@ package nongsan.webmvc.model;
 import java.util.Date;
 
 public class User{
-	private String id;
+	private int id;
 	private String name;
 	private String email;
 	private String phone;
@@ -20,10 +20,10 @@ public class User{
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -67,7 +67,6 @@ public class User{
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", username=" + username
 				+ ", password=" + password + ", created=" + created + "]";
 	}
-
 	
 	
 }

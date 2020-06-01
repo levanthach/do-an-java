@@ -7,6 +7,9 @@
 
         <div class="row mt-3">
           <div class="col-lg-12">
+            <button class="add-catalog"><a href="${pageContext.request.contextPath}/admin/user/add">Thêm User</a></button>
+          </div>
+          <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Danh sách User</h5>
@@ -35,8 +38,11 @@
         				<td>${user.password }</td>
         				<td>${user.created }</td>
         				 <td>
-                          <button><a href="delete?id=${user.id}">Xóa</a></button>
-                          <button>Sửa</button>
+                          <button type="button">
+                          	<a href="${pageContext.request.contextPath}/admin/user/delete?user-id=${user.id}">Xóa</a>
+                          </button>
+                          <button type="button">
+                          <a href="${pageContext.request.contextPath}/admin/user/edit?user-id=${user.id}">Sửa</a></button>
                         </td>
                      </tr>
                     </c:forEach>

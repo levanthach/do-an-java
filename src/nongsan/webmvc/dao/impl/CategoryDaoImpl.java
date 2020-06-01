@@ -60,7 +60,6 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 	@Override
 	public Catalog get(int id) {
-		System.out.print("Id trong Dao :" + id);
 		String sql = "SELECT * FROM catalog WHERE id = ? ";
 		new connectDB();
 		Connection con = connectDB.getConnect();
@@ -75,6 +74,7 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 				category.setId(rs.getString("id"));
 				category.setName(rs.getString("name"));
+				category.setParent_id(rs.getString("parent-id"));
 
 				return category;
 

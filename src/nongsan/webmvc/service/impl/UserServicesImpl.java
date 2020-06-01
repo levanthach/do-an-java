@@ -18,8 +18,13 @@ public class UserServicesImpl implements UserService {
 
 	@Override
 	public void edit(User newUser) {
-		User oldUSer = userDao.get(newUser.getName());
+		User oldUSer = userDao.get(newUser.getId());
 		oldUSer.setName(newUser.getName());
+		oldUSer.setEmail(newUser.getEmail());
+		oldUSer.setPhone(newUser.getPhone());
+		oldUSer.setUsername(newUser.getUsername());
+		oldUSer.setPassword(newUser.getPassword());
+		oldUSer.setCreated(newUser.getCreated());
 		userDao.edit(oldUSer);
 
 	}
@@ -30,15 +35,14 @@ public class UserServicesImpl implements UserService {
 	}
 
 	@Override
-	public void delete(String id) {
+	public void delete(int id) {
 		userDao.delete(id);
 		
 	}
 
 	@Override
 	public User get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.get(id);
 	}
 
 	@Override

@@ -83,7 +83,7 @@
               
           
                <div class="form-footer">
-                    <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button>
+                    <button class="btn btn-danger"><i class="fa fa-times"></i><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>
                     <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Thêm</button>
                 </div>
                 </form>

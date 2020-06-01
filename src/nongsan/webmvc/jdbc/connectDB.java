@@ -2,12 +2,8 @@ package nongsan.webmvc.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
-import nongsan.webmvc.model.Catalog;
 
 public class connectDB {
 	public connectDB(){
@@ -28,4 +24,3 @@ public class connectDB {
 		System.out.println(getConnect());
 	}
 }
-

@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%> 
+<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!-- Start header section --> 
   <jsp:include page = "./header/header.jsp" flush = "true" /> 
     <div class="content-wrapper"> 
@@ -17,7 +18,7 @@
                   </div>                 
                   <div class="form-group"> 
                     <label for="input-1">Username</label> 
-                    <input type="text" class="form-control" id="input-1" placeholder="Username" name="admin-username"> 
+                    <input type="text" class="form-control" id="input-1" placeholder="Username"  name="admin-username"> 
                   </div> 
                   <div class="form-group"> 
                     <label for="input-1">Password</label> 
@@ -37,8 +38,8 @@
                     <input type="text" class="form-control" id="input-1" placeholder="Tên Admin" name="admin-name"> 
                   </div>	
                   <div class="form-footer"> 
-                    <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Hủy</button> 
-                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Thêm</button> 
+
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Lưu </button> 
                 </div>  
                 </form> 
               </div> 

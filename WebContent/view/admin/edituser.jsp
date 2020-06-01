@@ -12,30 +12,30 @@
               <div class="card-body">
                 <div class="card-title">Vertical Form</div>
                 <hr>
-                <form action="${pageContext.request.contextPath}/admin/user/add" method="post">
+                <form action="${pageContext.request.contextPath}/admin/user/edit" method="post">
                   <div class="form-group">
                     <label for="input-1">ID</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your ID" name="user-id">
+                    <input type="text" class="form-control" id="input-1" placeholder="Enter Your ID" value="${user.id}" name="user-id">
                   </div>
                   <div class="form-group">
                     <label for="input-1">Name</label>
-                    <input type="text" class="form-control" id="input-2" placeholder="Enter Your Name" name="user-name">
+                    <input type="text" class="form-control" id="input-2" placeholder="Enter Your Name" value="${user.name}" name="user-name">
                   </div>
                   <div class="form-group">
                     <label for="input-2">Email</label>
-                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your Email Address" name="user-email">
+                    <input type="text" class="form-control" id="input-3" placeholder="Enter Your Email Address" value="${user.email}" name="user-email">
                   </div>
                   <div class="form-group">
                     <label for="input-3">Mobile</label>
-                    <input type="text" class="form-control" id="input-4" placeholder="Enter Your Mobile Number" name="user-phone">
+                    <input type="text" class="form-control" id="input-4" placeholder="Enter Your Mobile Number" value="${user.phone}" name="user-phone">
                   </div>
                   <div class="form-group">
                     <label for="input-3">UserName</label>
-                    <input type="text" class="form-control" id="input-5" placeholder="Enter Your User Name" name="user-userName">
+                    <input type="text" class="form-control" id="input-5" placeholder="Enter Your User Name" value="${user.username}" name="user-userName">
                   </div>
                   <div class="form-group">
                     <label for="input-4">Password</label>
-                    <input type="password" class="form-control" id="myinput" placeholder="Enter Password" name="user-password">
+                    <input type="password" class="form-control" id="myinput" placeholder="Enter Password" value="${user.password}" name="user-password">
 					<input type="checkbox" onclick="myFunction1()">Hiển thị mật khẩu
 					<script>function myFunction1() {
                     	  var x = document.getElementById("myinput");
@@ -49,7 +49,7 @@
                   </div>
                   <div class="form-group">
                     <label for="input-5">Date</label>
-                    <input type="date" class="form-control" id="input-6" placeholder="Date" name="user-created">
+                    <input type="date" class="form-control" id="input-6" placeholder="Date" value="${user.created}" name="user-created">
                   </div>
                   <div class="form-group py-2">
                     <div class="icheck-material-white">
@@ -58,7 +58,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Register</button>
+                    <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Edit</button>
                   </div>
                 </form>
               </div>

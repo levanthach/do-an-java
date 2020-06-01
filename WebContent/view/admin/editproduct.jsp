@@ -89,7 +89,7 @@
                <div class="form-footer">
                      <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>
                          
-                     <button class="btn btn-success">Cập nhật</button>
+                     <button type="submit" class="btn btn-success">Cập nhật</button>
                 </div>
                 </form>
               </div>

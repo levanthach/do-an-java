@@ -12,17 +12,15 @@ import nongsan.webmvc.model.User;
 import nongsan.webmvc.service.UserService;
 import nongsan.webmvc.service.impl.UserServicesImpl;
 
-public class UserAddController extends HttpServlet {
-	/**
-	 * 
-	 */
+public class UserEditController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UserService userService = new UserServicesImpl();
-
-
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/adduser.jsp");
+		int user_id = Integer.parseInt(req.getParameter("user-id"));
+        User user = userService.get(user_id);
+        req.setAttribute("user", user);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/edituser.jsp");
 		dispatcher.forward(req, resp);
 	}
 
@@ -38,14 +36,14 @@ public class UserAddController extends HttpServlet {
 		
 		
 		User user = new User();
-		user.setId(user_id);
 		user.setName(user_name);
 		user.setEmail(user_email);
 		user.setPhone(user_phone);
 		user.setUsername(user_userName);
 		user.setPassword(user_password);
 		user.setCreated(user_created);
-		userService.insert(user);
+		user.setId(user_id);
+		userService.edit(user);
 		resp.sendRedirect(req.getContextPath() + "/admin/user/list");
 		//resp.sendRedirect(req.getContextPath() + "/view/admin/user.jsp");
 	}

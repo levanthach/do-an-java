@@ -13,7 +13,7 @@ import nongsan.webmvc.model.User;
 import nongsan.webmvc.service.UserService;
 import nongsan.webmvc.service.impl.UserServicesImpl;
 
-public class UserController extends HttpServlet {
+public class UserListController extends HttpServlet {
 	/**
 	 * 
 	 */
