@@ -42,7 +42,6 @@ public class CategoryAddController extends HttpServlet {
 		category.setParent_id(cate_parent_id);
 		cateService.insert(category);
 		resp.sendRedirect(req.getContextPath() + "/admin/cate/list");
-//		resp.sendRedirect(req.getContextPath() + "/view/admin/show-cate.jsp");
 	}
 
 }

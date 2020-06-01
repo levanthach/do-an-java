@@ -11,6 +11,7 @@ public class LoginDao {
 	Connection conn = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
+	
 	public User checkLogin(String username, String password) {
 		try {
 			String query = "select username, password from users where username = ? AND password = ?";
@@ -30,4 +31,5 @@ public class LoginDao {
 		}
 		return null;
 	}
+	
 }

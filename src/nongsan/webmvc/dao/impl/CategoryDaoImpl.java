@@ -7,6 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//import com.vienmv.dao.impl.String;
+//import com.vienmv.model.Category;
+
+//import com.vienmv.dao.impl.String;
+
+//import com.vienmv.dao.impl.Override;
+//import com.vienmv.dao.impl.String;
+
 import java.sql.ResultSet;
 import nongsan.webmvc.model.Catalog;
 
@@ -34,19 +42,46 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 
 	@Override
 	public void edit(Catalog category) {
-		// TODO Auto-generated method stub
-		
-	}
+		String sql = "UPDATE catalog SET name = ? WHERE id = ?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
 
-	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, category.getName());
+			ps.setString(2, category.getId());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
 	@Override
 	public Catalog get(int id) {
-		// TODO Auto-generated method stub
+		String sql = "SELECT * FROM catalog WHERE id = ? ";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Catalog category = new Catalog();
+
+				category.setId(rs.getString("id"));
+				category.setName(rs.getString("name"));
+				category.setParent_id(rs.getString("parent-id"));
+
+				return category;
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 
@@ -80,5 +115,21 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 		}
 
 		return categories;
+	}
+
+	@Override
+	public void delete(String id) {
+		System.out.println("Id :"+ id);
+		String sql = "DELETE FROM catalog WHERE id = ?";
+		new connectDB();
+		Connection conn = connectDB.getConnect();
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
