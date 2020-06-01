@@ -125,6 +125,16 @@
        <url-pattern>/admin/product/edit</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+       <servlet-name>editUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editUser</servlet-name>
+       <url-pattern>/admin/user/edit</url-pattern>
+   </servlet-mapping>
+
   <servlet>
        <servlet-name>addAdmin</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
