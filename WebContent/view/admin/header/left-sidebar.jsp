@@ -15,13 +15,14 @@
             <i class="zmdi zmdi-view-dashboard"></i> <span>Tổng quan</span>
           </a>
         </li>
-        <li>
+        
+         <li>
           <a href="${pageContext.request.contextPath}/admin/admin/list">
-            <i class="zmdi zmdi-accounts"></i> <span>Quản lí Admin</span>
+            <i class="zmdi zmdi-account-box"></i> <span>Quản lí Admin</span>
           </a>
         </li>
         <li>
-          <a href="user.jsp">
+          <a href="${pageContext.request.contextPath}/admin/user/list">
             <i class="zmdi zmdi-accounts"></i> <span>Quản lí User</span>
           </a>
         </li>
@@ -31,7 +32,7 @@
           </a>
         </li>
         <li>
-          <a href="show-product.jsp">
+          <a href="${pageContext.request.contextPath}/admin/product/list">
             <i class="zmdi zmdi-widgets"></i> <span>Danh Sách Sản Phẩm</span>
           </a>
         </li>
@@ -43,7 +44,12 @@
         <li>
           <a href="#">
             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
+          </a>   
+        </li>
+        <li>
+          <a href="${pageContext.request.contextPath}/admin/new/list">
+            <i class="icon-envelope-open"></i> <span>Tin tức</span>
           </a>
-        </li>       
+        </li>
       </ul>
     </div>
