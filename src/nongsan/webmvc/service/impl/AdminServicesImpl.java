@@ -15,16 +15,18 @@ public class AdminServicesImpl implements AdminService {
 		adminDao.insert(admin); 
 	} 
  
-	@Override 
-	public void edit(Admin newAdmin) { 
-		Admin oldAdmin = adminDao.get(newAdmin.getId()); 
-		oldAdmin.setName(newAdmin.getName()); 
+	@Override
+	public void edit(Admin admin) {
+		Admin oldAdmin = adminDao.get(admin.getId());		
+		oldAdmin.setUsername(admin.getUsername());
+		oldAdmin.setPassword(admin.getPassword());
+		oldAdmin.setName(admin.getName());
 		adminDao.edit(oldAdmin); 
- 
+
 	} 
  
 	@Override 
-	public void delete(int id) { 
+	public void delete(String id) { 
 		adminDao.delete(id); 
  
 	} 
@@ -42,7 +44,6 @@ public class AdminServicesImpl implements AdminService {
 	@Override 
 	public List<Admin> getAll() { 
 		return adminDao.getAll(); 
-	} 
- 
+	}	
 } 
  

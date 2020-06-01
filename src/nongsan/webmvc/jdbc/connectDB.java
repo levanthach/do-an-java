@@ -1,5 +1,6 @@
 package nongsan.webmvc.jdbc;
 
+import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,13 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import nongsan.webmvc.model.Catalog;
+
 
 public class connectDB {
+	String sql;
 	public connectDB(){
-		
+		super();
 	}
-	public static Connection getConnect(){
+	public  static Connection getConnect(){
 		Connection connection = null;
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -24,7 +26,20 @@ public class connectDB {
 		}
 		return connection;
 	}
+	public void thucThiCauLenhSQL(String sql) throws Exception{
+		Connection connect = getConnect();
+		java.sql.Statement stmt = connect.createStatement();
+		stmt.executeUpdate(sql);
+	}
+	public ResultSet chonDuLieuTuDTB(String sql) throws Exception{
+		Connection connect = getConnect();
+		java.sql.Statement stmt = connect.createStatement();
+		ResultSet rs =stmt.executeQuery(sql);
+		return rs;
+	}
 	public static void main(String[] args) {
+		connectDB connect = new connectDB();
+		System.out.println(connect.getConnect());
 		System.out.println(getConnect());
 	}
 }

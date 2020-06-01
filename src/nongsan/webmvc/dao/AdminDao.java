@@ -8,8 +8,8 @@ public interface AdminDao {
 	void insert(Admin admin); 
  
 	void edit(Admin admin); 
- 
-	void delete(int id); 
+	
+	void delete(String id); 
  
 	Admin get(int id); 
 	 
