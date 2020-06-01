@@ -15,7 +15,7 @@
                 
                  <div class="form-group">
                     <label for="input-1">Mã sản phẩm</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Mã sản phẩm" name="product-sku" value="${product.id}">
+                    <input type="text" class="form-control" id="input-1" placeholder="Mã sản phẩm" name="product-sku" value="${product.id}" disabled="disabled">
                   </div>
                   <div class="form-group">
                     <label for="input-1">Tên sản phẩm</label>
@@ -88,7 +88,7 @@
                <div class="form-footer">
                      <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>
                          
-                     <button class="btn btn-success">Cập nhật</button>
+                     <button type="submit" class="btn btn-success">Cập nhật</button>
                 </div>
                 </form>
               </div>

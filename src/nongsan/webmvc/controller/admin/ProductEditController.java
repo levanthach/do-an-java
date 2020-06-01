@@ -20,7 +20,7 @@ import nongsan.webmvc.service.impl.ProductServiceImpl;
 /**
  * Servlet implementation class ProductEditController
  */
-//@WebServlet(urlPatterns = { "/admin/cate/edit" })
+
 public class ProductEditController extends HttpServlet {
 	/**
 	 * 
