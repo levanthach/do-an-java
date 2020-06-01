@@ -15,8 +15,9 @@
                 
                  <div class="form-group">
                     <label for="input-1">Mã sản phẩm</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Mã sản phẩm" name="product-sku" value="${product.id}" disabled="disabled">
+                    <input type="text" class="form-control" readonly="readonly" id="input-1" placeholder="Mã sản phẩm" name="product-sku" value="${product.id}">
                   </div>
+                  
                   <div class="form-group">
                     <label for="input-1">Tên sản phẩm</label>
                     <input type="text" class="form-control" id="input-1" placeholder="Tên sản phẩm" name="product-name" value="${product.name}">

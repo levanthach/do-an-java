@@ -35,7 +35,7 @@ public class ProductAddController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 						
-			String product_sku = req.getParameter("product-sku");
+//			String product_sku = req.getParameter("product-sku");
 			String product_cate = req.getParameter("product-cate");
 			String product_name = req.getParameter("product-name");
 			String product_price = req.getParameter("product-price");
@@ -49,7 +49,7 @@ public class ProductAddController extends HttpServlet {
 			
 			Product product = new Product();
 			
-			product.setId(product_sku);
+//			product.setId(product_sku);
 			product.setCatalog_id(product_cate);
 			product.setName(product_name);
 			product.setPrice(product_price);

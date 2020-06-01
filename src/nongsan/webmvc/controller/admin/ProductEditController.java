@@ -46,7 +46,7 @@ public class ProductEditController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		Product product = new Product();
-		product.setId(req.getParameter("id"));
+		product.setId(req.getParameter("product-sku"));
 		product.setCatalog_id(req.getParameter("product-cate"));
 		product.setName(req.getParameter("product-name"));
 		product.setPrice(req.getParameter("product-price"));
@@ -58,7 +58,7 @@ public class ProductEditController extends HttpServlet {
 		product.setImage_list(req.getParameter("product-image-list"));
 		product.setCreated(req.getParameter("product-day"));
 		productService.edit(product);
-	
+		System.out.print(productService);
 		
 		resp.sendRedirect(req.getContextPath()+"/admin/product/list");
 

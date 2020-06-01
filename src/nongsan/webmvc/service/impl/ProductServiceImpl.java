@@ -20,7 +20,6 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void edit(Product newProduct) {
 		Product oldProduct = productDao.get(Integer.parseInt(newProduct.getId()));
-		System.out.print("Old id" + oldProduct);	
 		oldProduct.setName(newProduct.getName());
 		oldProduct.setCatalog_id(newProduct.getCatalog_id());
 		oldProduct.setStatus(newProduct.getStatus());
