@@ -9,16 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.List;
 import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.service.CategoryService;
 import nongsan.webmvc.service.impl.CategoryServicesImpl;
-
-/**
- * Servlet implementation class CategoryListController
- */
-
-public class CategoryListController extends HttpServlet {
+public class CategoryEditController extends HttpServlet {
 	/**
 	 * 
 	 */
@@ -27,10 +21,21 @@ public class CategoryListController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Catalog> cateList = cateService.getAll();
-		req.setAttribute("catelist", cateList);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/show-cate.jsp");
+		String id = req.getParameter("id");
+		Catalog category = cateService.get(Integer.parseInt(id));		
+		req.setAttribute("category", category);		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/editcate.jsp");
 		dispatcher.forward(req, resp);
 	}
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Catalog category = new Catalog();
+		category.setId(req.getParameter("id"));
+		category.setName(req.getParameter("name"));
+		category.setParent_id(req.getParameter("parent-id"));
+		System.out.println("TÂn: "+category);
+		cateService.edit(category);
+		resp.sendRedirect(req.getContextPath()+"/admin/cate/list");
+	}
 }

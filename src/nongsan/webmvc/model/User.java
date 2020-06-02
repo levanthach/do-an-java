@@ -8,7 +8,7 @@ public class User{
 	private String phone;
 	private String username;
 	private String password;
-	private Date created;
+	private String created;
 
 	public User(String username, String password) {
 		super();
@@ -16,6 +16,10 @@ public class User{
 		this.password = password;
 	}
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -52,10 +56,10 @@ public class User{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Date getCreated() {
+	public String getCreated() {
 		return created;
 	}
-	public void setCreated(Date created) {
+	public void setCreated(String created) {
 		this.created = created;
 	}
 	@Override

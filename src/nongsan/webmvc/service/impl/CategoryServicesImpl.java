@@ -16,16 +16,25 @@ public class CategoryServicesImpl implements CategoryService {
 		categoryDao.insert(category);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public void edit(Catalog newCategory) {
-		Catalog oldCate = categoryDao.get(newCategory.getId());
+		Catalog oldCate = categoryDao.get(Integer.parseInt(newCategory.getId()));
+		System.out.println("tân: "+oldCate);
 		oldCate.setName(newCategory.getName());
 		categoryDao.edit(oldCate);
 
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		categoryDao.delete(id);
 
 	}

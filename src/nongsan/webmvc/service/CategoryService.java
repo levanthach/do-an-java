@@ -7,13 +7,13 @@ public interface CategoryService {
 
 	void edit(Catalog category);
 
-	void delete(int id);
-
 	Catalog get(int id);
 	
 	Catalog get(String name);
 
 	List<Catalog> getAll();
+
+	void delete(String id);
 
 }
 
