@@ -1,16 +1,15 @@
 package nongsan.webmvc.dao.impl; 
  
-import java.sql.Connection; 
-import java.sql.PreparedStatement; 
-import java.sql.SQLException; 
- 
-import java.util.ArrayList; 
-import java.util.List; 
- 
-import java.sql.ResultSet; 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import nongsan.webmvc.dao.AdminDao;
+import nongsan.webmvc.jdbc.connectDB;
 import nongsan.webmvc.model.Admin; 
-import nongsan.webmvc.dao.AdminDao; 
-import nongsan.webmvc.jdbc.connectDB; 
  
 public class AdminDaoImpl extends connectDB implements AdminDao { 
  
@@ -22,7 +21,7 @@ public class AdminDaoImpl extends connectDB implements AdminDao {
  
 		try { 
 			PreparedStatement ps = con.prepareStatement(sql); 
-			ps.setString(1, admin.getId()); 
+			ps.setInt(1, admin.getId()); 
 			ps.setString(2, admin.getUsername()); 
 			ps.setString(3, admin.getPassword()); 
 			ps.setString(4, admin.getName()); 
@@ -34,23 +33,32 @@ public class AdminDaoImpl extends connectDB implements AdminDao {
  	
 	@Override 
 	public void delete(String id) { 		
-		// TODO Auto-generated method stub 	 
+		String sql = "Delete from admin where id=?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1,id);
+			ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 	} 
 	
 	@Override
 	public Admin get(int id) {		
 		Admin admin = new Admin();
-		String sql = "SELECT * FROM admin WHERE id = ? ";
+		String sql = "SELECT * FROM admin WHERE id=?";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, id);
+			ps.setInt(1,id);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {				
-				admin.setId(rs.getString("id"));
+				admin.setId(rs.getInt("id"));
 				admin.setUsername(rs.getString("username"));
 				admin.setPassword(rs.getString("password"));
 				admin.setName(rs.getString("name"));
@@ -73,21 +81,18 @@ public class AdminDaoImpl extends connectDB implements AdminDao {
 		try 
 		{
 			PreparedStatement ps = con.prepareStatement(sql); 
-			ps.setString(4, admin.getId());
+			ps.setInt(4, admin.getId());
 			ps.setString(1, admin.getUsername());
 			ps.setString(2, admin.getPassword());
 			ps.setString(3, admin.getName());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		// TODO Auto-generated method stub 
-		 
+		}		 
 	} 
 	
 	@Override 
 	public Admin get(String name) { 
-		// TODO Auto-generated method stub 
 		return null; 
 	} 
  
@@ -104,7 +109,7 @@ public class AdminDaoImpl extends connectDB implements AdminDao {
 			while (rs.next()) { 
 				Admin admin = new Admin(); 
  
-				admin.setId(rs.getString("id")); 
+				admin.setId(rs.getInt("id")); 
 				admin.setUsername(rs.getString("username")); 
 				admin.setPassword(rs.getString("password")); 
 				admin.setName(rs.getString("name")); 

@@ -36,7 +36,7 @@
                         <td>${admin.password}</td> 
         				<td>${admin.name}</td> 
         				 <td> 
-                          <button><a href="${pageContext.request.contextPath}/admin/admin/delete?id=${admin.id}">Xóa</a></button>
+                          <button><a href="${pageContext.request.contextPath}/admin/admin/delete?admin-id=${admin.id}">Xóa</a></button>
                           <button><a href="${pageContext.request.contextPath}/admin/admin/edit?id=${admin.id}">Sửa</a></button>
                         </td> 
                      </tr> 

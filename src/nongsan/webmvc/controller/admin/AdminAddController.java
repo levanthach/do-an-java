@@ -1,19 +1,16 @@
 package nongsan.webmvc.controller.admin; 
  
-import java.io.IOException; 
-import java.util.List; 
- 
-import javax.servlet.RequestDispatcher; 
-import javax.servlet.ServletException; 
-import javax.servlet.annotation.WebServlet; 
-import javax.servlet.http.HttpServlet; 
-import javax.servlet.http.HttpServletRequest; 
-import javax.servlet.http.HttpServletResponse; 
+import java.io.IOException;
 
- 
-import nongsan.webmvc.service.AdminService; 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import nongsan.webmvc.model.Admin;
+import nongsan.webmvc.service.AdminService;
 import nongsan.webmvc.service.impl.AdminServicesImpl; 
-import nongsan.webmvc.model.Admin; 
  
 /** 
  * Servlet implementation class AdminAddController 
@@ -34,7 +31,7 @@ public class AdminAddController extends HttpServlet {
  
 	@Override 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	 
-		String admin_id = req.getParameter("admin-id");
+		int admin_id = Integer.parseInt(req.getParameter("admin-id"));
 		String admin_username = req.getParameter("admin-username"); 
 		String admin_password = req.getParameter("admin-password"); 
 		String admin_name = req.getParameter("admin-name"); 

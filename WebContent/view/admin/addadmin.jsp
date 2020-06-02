@@ -38,7 +38,7 @@
                     <input type="text" class="form-control" id="input-1" placeholder="Tên Admin" name="admin-name"> 
                   </div>	
                   <div class="form-footer"> 
-
+					<button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> Hủy </button> 
                     <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Lưu </button> 
                 </div>  
                 </form> 

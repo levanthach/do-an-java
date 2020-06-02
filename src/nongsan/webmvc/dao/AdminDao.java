@@ -1,7 +1,7 @@
 package nongsan.webmvc.dao; 
  
-import java.util.List; 
- 
+import java.util.List;
+
 import nongsan.webmvc.model.Admin; 
  
 public interface AdminDao { 
