@@ -30,7 +30,8 @@ public class BoardnewEditController extends HttpServlet{
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		Boardnew boardnew = new Boardnew();
 		boardnew.setId(req.getParameter("new-id"));
 		boardnew.setTitle(req.getParameter("new-title"));

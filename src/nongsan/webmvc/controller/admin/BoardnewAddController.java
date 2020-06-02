@@ -27,20 +27,19 @@ public class BoardnewAddController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String new_id = req.getParameter("new-id");
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		String new_title = req.getParameter("new-title");
 		String new_content = req.getParameter("new-content");
 		String new_author = req.getParameter("new-author");
 		String new_created = req.getParameter("new-created");
 		Boardnew boardnew = new Boardnew();
-		boardnew.setId(new_id);
 		boardnew.setTitle(new_title);
 		boardnew.setContent(new_content);
 		boardnew.setAuthor(new_author);
 		boardnew.setCreated(new_created);
 		boardnewService.insert(boardnew);
 		resp.sendRedirect(req.getContextPath() + "/admin/new/list");
-//		resp.sendRedirect(req.getContextPath() + "/view/admin/show-new.jsp");
 	}
 
 }

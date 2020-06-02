@@ -11,10 +11,7 @@
                 <div class="card-title">Thêm tin tức</div>
                 <hr>
                 <form action="${pageContext.request.contextPath}/admin/new/add" method="post">
-                 <div class="form-group">
-                    <label for="input-1">ID</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="ID" name="new-id">
-                  </div>
+                 
                   <div class="form-group">
                     <label for="input-2">Tên tin tức</label>
                     <input type="text" class="form-control" id="input-2" placeholder="Tên tin tức" name="new-title">

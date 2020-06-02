@@ -28,7 +28,8 @@ public class UserAddController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int user_id = Integer.parseInt(req.getParameter("user-id"));
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		String user_name = req.getParameter("user-name");
 		String user_email = req.getParameter("user-email");
 		String user_phone = req.getParameter("user-phone");
@@ -38,7 +39,6 @@ public class UserAddController extends HttpServlet {
 		
 		
 		User user = new User();
-		user.setId(user_id);
 		user.setName(user_name);
 		user.setEmail(user_email);
 		user.setPhone(user_phone);

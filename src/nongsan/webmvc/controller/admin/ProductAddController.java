@@ -31,11 +31,11 @@ public class ProductAddController extends HttpServlet {
 		dispatcher.forward(req, resp);
 	}
 
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		try {
-						
-//			String product_sku = req.getParameter("product-sku");
+			req.setCharacterEncoding("utf-8");
+			resp.setContentType("text/html;charset=UTF-8");
 			String product_cate = req.getParameter("product-cate");
 			String product_name = req.getParameter("product-name");
 			String product_price = req.getParameter("product-price");
@@ -46,10 +46,8 @@ public class ProductAddController extends HttpServlet {
 			String product_image = req.getParameter("product-image");
 			String product_list_image = req.getParameter("product-image-list");
 			String product_day = req.getParameter("product-day");
-			
+
 			Product product = new Product();
-			
-//			product.setId(product_sku);
 			product.setCatalog_id(product_cate);
 			product.setName(product_name);
 			product.setPrice(product_price);
@@ -61,10 +59,7 @@ public class ProductAddController extends HttpServlet {
 			product.setImage_list(product_list_image);
 			product.setCreated(product_day);
 			productService.insert(product);
-			System.out.print(productService);
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 	}
 }

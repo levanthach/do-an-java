@@ -16,19 +16,18 @@ public class UserDaoImpl extends connectDB implements UserDao {
 	
 	@Override
 	public void insert(User user) {
-		String sql = "INSERT INTO users(id,name,email,phone,username,password,created) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO users(name,email,phone,username,password,created) VALUES (?, ?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, user.getId());
-			ps.setString(2, user.getName());
-			ps.setString(3, user.getEmail());
-			ps.setString(4, user.getPhone());
-			ps.setString(5, user.getUsername());
-			ps.setString(6, user.getPassword());
-			ps.setString(7,user.getCreated());
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getPhone());
+			ps.setString(4, user.getUsername());
+			ps.setString(5, user.getPassword());
+			ps.setString(6,user.getCreated());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -33,7 +33,9 @@ public class CategoryAddController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cate_name = req.getParameter("cate-name");
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
+	    String cate_name = req.getParameter("cate-name");
 		String cate_parent_id = req.getParameter("parent-id");
 		Catalog category = new Catalog();
 		category.setName(cate_name);

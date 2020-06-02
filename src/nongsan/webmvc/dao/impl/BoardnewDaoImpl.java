@@ -17,17 +17,16 @@ import nongsan.webmvc.model.Boardnew;
 public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	@Override
 	public void insert(Boardnew boardnew) {
-		String sql = "INSERT INTO boardnew(id, title, content, author, created) VALUES (?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO boardnew(title, content, author, created) VALUES (?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, boardnew.getId());
-			ps.setString(2, boardnew.getTitle());
-			ps.setString(3, boardnew.getContent());
-			ps.setString(4, boardnew.getAuthor());
-			ps.setString(5, boardnew.getCreated());
+			ps.setString(1, boardnew.getTitle());
+			ps.setString(2, boardnew.getContent());
+			ps.setString(3, boardnew.getAuthor());
+			ps.setString(4, boardnew.getCreated());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

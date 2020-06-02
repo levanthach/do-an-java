@@ -44,7 +44,8 @@ public class ProductEditController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		Product product = new Product();
 		product.setId(req.getParameter("product-sku"));
 		product.setCatalog_id(req.getParameter("product-cate"));

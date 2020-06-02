@@ -26,6 +26,8 @@ public class UserEditController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		int user_id = Integer.parseInt(req.getParameter("user-id"));
 		String user_name = req.getParameter("user-name");
 		String user_email = req.getParameter("user-email");
