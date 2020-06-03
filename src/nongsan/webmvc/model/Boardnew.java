@@ -5,17 +5,19 @@ public class Boardnew {
 	private String id;
 	private String title;
 	private String content;
+	private String image_link;
 	private String author;
 	private String created;
 	
 	public Boardnew() {
 		super();
 	}
-	public Boardnew(String id, String title, String content, String author, String created) {
+	public Boardnew(String id, String title, String content,String image_link, String author, String created) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.content = content;
+		this.image_link = image_link;
 		this.author = author;
 		this.created = created;
 	}
@@ -37,6 +39,12 @@ public class Boardnew {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public String getImage_link() {
+		return image_link;
+	}
+	public void setImage_link(String image_link) {
+		this.image_link = image_link;
+	}
 	public String getAuthor() {
 		return author;
 	}
@@ -51,8 +59,8 @@ public class Boardnew {
 	}
 	@Override
 	public String toString() {
-		return "Boardnew [id=" + id + ", title=" + title + ", content=" + content + ", author=" + author + ", created="
-				+ created + "]";
+		return "Boardnew [id=" + id + ", title=" + title + ", content=" + content + ", image_link=" + image_link
+				+ ", author=" + author + ", created=" + created + "]";
 	}
 	
 }

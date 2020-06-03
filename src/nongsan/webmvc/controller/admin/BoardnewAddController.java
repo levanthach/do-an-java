@@ -31,11 +31,13 @@ public class BoardnewAddController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		String new_title = req.getParameter("new-title");
 		String new_content = req.getParameter("new-content");
+		String new_image_link = req.getParameter("new-image_link");
 		String new_author = req.getParameter("new-author");
 		String new_created = req.getParameter("new-created");
 		Boardnew boardnew = new Boardnew();
 		boardnew.setTitle(new_title);
 		boardnew.setContent(new_content);
+		boardnew.setImage_link(new_image_link);
 		boardnew.setAuthor(new_author);
 		boardnew.setCreated(new_created);
 		boardnewService.insert(boardnew);

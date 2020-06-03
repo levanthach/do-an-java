@@ -16,10 +16,13 @@
                     <label for="input-2">Tên tin tức</label>
                     <input type="text" class="form-control" id="input-2" placeholder="Tên tin tức" name="new-title">
                   </div>
-      
                   <div class="form-group">
                     <label for="input-3">Nội dung</label>
                     <textarea class="form-control" rows="4" id="input-17" name="new-content"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-3">Hình ảnh</label>
+                    <input type="text" class="form-control" id="input-18" placeholder="Địa chỉ hình ảnh" name="new-image_link">
                   </div>
 	               <div class="form-group">
 	                  <label for="input-4">Người đăng</label>

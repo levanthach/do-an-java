@@ -36,6 +36,7 @@ public class BoardnewEditController extends HttpServlet{
 		boardnew.setId(req.getParameter("new-id"));
 		boardnew.setTitle(req.getParameter("new-title"));
 		boardnew.setContent(req.getParameter("new-content"));
+		boardnew.setImage_link(req.getParameter("new-image_link"));
 		boardnew.setAuthor(req.getParameter("new-author"));
 		boardnew.setCreated(req.getParameter("new-created"));
 		boardnewService.edit(boardnew);
