@@ -23,6 +23,10 @@
                     <label for="input-3">Nội dung</label>
                     <textarea class="form-control" rows="4" id="input-17" name="new-content">${boardnew.content}</textarea>
                   </div>
+                  <div class="form-group">
+                    <label for="input-2">Hình ảnh</label>
+                    <input type="text" class="form-control" id="input-10" placeholder="Địa chỉ hình ảnh" value="${boardnew.image_link}"name="new-image_link">
+                  </div>
 	               <div class="form-group">
 	                  <label for="input-4">Người đăng</label>
                   <div>

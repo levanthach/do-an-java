@@ -23,6 +23,7 @@ public class BoardnewServicesImpl implements BoardnewService{
 		System.out.println("xem thử có chưa "+oldBoardnew);
 		oldBoardnew.setTitle(newBoardnew.getTitle());
 		oldBoardnew.setContent(newBoardnew.getContent());
+		oldBoardnew.setImage_link(newBoardnew.getImage_link());
 		oldBoardnew.setAuthor(newBoardnew.getAuthor());
 		oldBoardnew.setCreated(newBoardnew.getCreated());
 		boardnewDao.edit(oldBoardnew);
