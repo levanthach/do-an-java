@@ -15,16 +15,15 @@ public class AdminDaoImpl extends connectDB implements AdminDao {
  
 	@Override 
 	public void insert(Admin admin) { 
-		String sql = "INSERT INTO admin(id, username,password,name) VALUES (?,?,?,?)"; 
+		String sql = "INSERT INTO admin(username,password,name) VALUES (?,?,?)"; 
 		new connectDB(); 
 		Connection con = connectDB.getConnect(); 
  
 		try { 
 			PreparedStatement ps = con.prepareStatement(sql); 
-			ps.setInt(1, admin.getId()); 
-			ps.setString(2, admin.getUsername()); 
-			ps.setString(3, admin.getPassword()); 
-			ps.setString(4, admin.getName()); 
+			ps.setString(1, admin.getUsername()); 
+			ps.setString(2, admin.getPassword()); 
+			ps.setString(3, admin.getName()); 
 			ps.executeUpdate(); 
 		} catch (SQLException e) { 
 			e.printStackTrace(); 

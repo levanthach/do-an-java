@@ -23,7 +23,6 @@
                       <tr> 
                         <th scope="col">#</th> 
                         <th scope="col">Tên đăng nhập</th> 
-                        <th scope="col">Mật khẩu</th>
                         <th scope="col">Tên Admin</th>
                         <th scope="col">Hành động</th>                        
                      </tr> 
@@ -33,11 +32,11 @@
                       <tr> 
                         <td scope="row">${admin.id}</td> 
                         <td>${admin.username}</td> 
-                        <td>${admin.password}</td> 
         				<td>${admin.name}</td> 
         				 <td> 
-                          <button><a href="${pageContext.request.contextPath}/admin/admin/delete?admin-id=${admin.id}">Xóa</a></button>
-                          <button><a href="${pageContext.request.contextPath}/admin/admin/edit?id=${admin.id}">Sửa</a></button>
+                           <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/admin/delete?admin-id=${admin.id}">Xóa</a></button>
+              
+                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/admin/edit?id=${admin.id}">Sửa</a></button>
                         </td> 
                      </tr> 
                     </c:forEach> 

@@ -30,13 +30,13 @@ public class AdminAddController extends HttpServlet {
 	} 
  
 	@Override 
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	 
-		int admin_id = Integer.parseInt(req.getParameter("admin-id"));
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		String admin_username = req.getParameter("admin-username"); 
 		String admin_password = req.getParameter("admin-password"); 
 		String admin_name = req.getParameter("admin-name"); 
 		Admin admin = new Admin(); 
-		admin.setId(admin_id); 
 		admin.setUsername(admin_username); 
 		admin.setPassword(admin_password); 
 		admin.setName(admin_name); 

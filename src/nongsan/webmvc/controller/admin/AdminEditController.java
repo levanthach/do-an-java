@@ -29,6 +29,8 @@ public class AdminEditController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html;charset=UTF-8");
 		int admin_id = Integer.parseInt(req.getParameter("id"));
 		String admin_username = req.getParameter("username");
 		String admin_password = req.getParameter("password");
