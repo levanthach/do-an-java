@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://java.sun.com/xml/ns/javaee"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   id="WebApp_ID" version="3.0">
+   <display-name>Website Nông Sản</display-name>
+
+   <servlet>
+       <servlet-name>addCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addCategory</servlet-name>
+       <url-pattern>/admin/cate/add</url-pattern>
+   </servlet-mapping>
+        
+   <servlet>
+       <servlet-name>listCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listCategory</servlet-name>
+       <url-pattern>/admin/cate/list</url-pattern>
+   </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>deleteCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryeDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteCategory</servlet-name>
+       <url-pattern>/admin/cate/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editCategory</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.CategoryEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editCategory</servlet-name>
+       <url-pattern>/admin/cate/edit</url-pattern>
+   </servlet-mapping>
+   
+
+   <servlet>
+       <servlet-name>addBoardnew</servlet-name>
+       	<servlet-class>nongsan.webmvc.controller.admin.BoardnewAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addBoardnew</servlet-name>
+       <url-pattern>/admin/new/add</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>listBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listBoardnew</servlet-name>
+       <url-pattern>/admin/new/list</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   
+   <servlet-name>deleteBoardnew</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.BoardnewDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteBoardnew</servlet-name>
+       <url-pattern>/admin/new/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   		<servlet-name>editBoardnew</servlet-name>
+       	<servlet-class>nongsan.webmvc.controller.admin.BoardnewEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editBoardnew</servlet-name>
+       <url-pattern>/admin/new/edit</url-pattern>
+   </servlet-mapping>
+
+   <servlet>
+       <servlet-name>addProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductAddController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>addProduct</servlet-name>
+       <url-pattern>/admin/product/add</url-pattern>
+   </servlet-mapping>
+   
+   
+   <servlet>
+       <servlet-name>listProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductListController</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>listProduct</servlet-name>
+       <url-pattern>/admin/product/list</url-pattern>
+   </servlet-mapping>
+  
+   <servlet>
+       <servlet-name>deleteProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductDeleteController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>deleteProduct</servlet-name>
+       <url-pattern>/admin/product/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editProduct</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ProductEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editProduct</servlet-name>
+       <url-pattern>/admin/product/edit</url-pattern>
+   </servlet-mapping>
+   
+
+
+  <servlet>
+       <servlet-name>addAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminAddController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>addAdmin</servlet-name>
+       <url-pattern>/admin/admin/add</url-pattern>
+   </servlet-mapping>
+   
+       <servlet>
+       <servlet-name>deleteAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteAdmin</servlet-name>
+       <url-pattern>/admin/admin/delete</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>editAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editAdmin</servlet-name>
+       <url-pattern>/admin/admin/edit</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listAdmin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listAdmin</servlet-name>
+       <url-pattern>/admin/admin/list</url-pattern>
+   </servlet-mapping>
+ 
+ 
+    <servlet>
+       <servlet-name>editUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserEditController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>editUser</servlet-name>
+       <url-pattern>/admin/user/edit</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>addUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserAddController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>addUser</servlet-name>
+       <url-pattern>/admin/user/add</url-pattern>
+   </servlet-mapping>
+   
+     <servlet>
+       <servlet-name>listUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listUser</servlet-name>
+       <url-pattern>/admin/user/list</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>deleteUser</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.UserDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteUser</servlet-name>
+       <url-pattern>/admin/user/delete</url-pattern>
+   </servlet-mapping>
+</web-app>
