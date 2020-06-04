@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
         <section id="menu">
     <div class="container">
       <div class="menu-area">
@@ -38,14 +40,7 @@
               <a class="aa-search-box">
                 <form action="">
                   <input type="text" name="" id="" placeholder="Bạn cần tìm gì? ">
-                  <a href="index.jsp" style="border: medium none;
-                    color: #fff;
-                    height: 100%;
-                    position: absolute;
-                    right: 5px;
-                    top: 0px;
-                    width: 50px;
-                    transition: all 0.5s;"><span class="fa fa-search"></span></a>
+                  <a href="index.jsp" class="serach-box"><span class="fa fa-search"></span></a>
                 </form>
               </a>
               <!-- / search box -->

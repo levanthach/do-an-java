@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
   <!-- Start header section -->
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
   <!-- / header section -->
@@ -12,7 +14,7 @@
 <!--  content -->
 <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="assets/img/fashion/cart.jpg" alt="fashion img" width="1500" height="500">
+   <img src="${url}/img/fashion/cart.jpg" alt="fashion img" width="1500" height="500">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -50,7 +52,7 @@
                     <tbody>
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="assets/img/fashion/vitao.jpg" alt="img"></a></td>
+                        <td><a href="#"><img src="${url}/img/fashion/vitao.jpg" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">Vi tảo cao cấp</a></td>
                         <td>$250</td>
                         <td><input class="aa-cart-quantity" type="number" value="1"></td>
@@ -58,7 +60,7 @@
                       </tr>
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="assets/img/fashion/mangtay.jpg" alt="img"></a></td>
+                        <td><a href="#"><img src="${url}/img/fashion/mangtay.jpg" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">Măng tây</a></td>
                         <td>$250</td>
                         <td><input class="aa-cart-quantity" type="number" value="1"></td>
@@ -66,7 +68,7 @@
                       </tr>
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="assets/img/fashion/hatdieu.jpg" alt="img"></a></td>
+                        <td><a href="#"><img src="${url}/img/fashion/hatdieu.jpg" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">Hạt điều</a></td>
                         <td>$50</td>
                         <td><input class="aa-cart-quantity" type="number" value="1"></td>

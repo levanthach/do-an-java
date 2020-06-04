@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
   <!-- Start header section -->
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
   <!-- / header section -->
@@ -24,7 +26,7 @@
               <div class="col-md-5 no-padding">                
                 <div class="aa-promo-left">
                   <div class="aa-promo-banner">                    
-                    <img src="assets/images/section1_tc.jpg" alt="dâu tây Đà Lạt">                    
+                    <img src="${url}/images/section1_tc.jpg" alt="dâu tây Đà Lạt">                    
                     <div class="aa-prom-content">
                       <span>Giảm giá 35%</span>
                       <h4><a href="#">Dâu tây Đà Lạt</a></h4>                      
@@ -37,7 +39,7 @@
                 <div class="aa-promo-right">
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="assets/images/section2_tc.jpg" alt="hạt tiêu daklak">                      
+                      <img src="${url}/images/section2_tc.jpg" alt="hạt tiêu daklak">                      
                       <div class="aa-prom-content">
                         <span>Sản Phẩm độc quyền</span>
                         <h4><a href="#">Hạt tiêu DakLak</a></h4>                        
@@ -46,7 +48,7 @@
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="assets/images/section3_tc.jpg" alt="img">                      
+                      <img src="${url}/images/section3_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Sản phẩm nhập khẩu</span>
                         <h4><a href="#">Cherry Mỹ</a></h4>                        
@@ -55,7 +57,7 @@
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="assets/images/section4_tc.jpg" alt="img">                      
+                      <img src="${url}/images/section4_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Giảm giá 25%</span>
                         <h4><a href="#">Tinh Dầu Sả</a></h4>                        
@@ -64,7 +66,7 @@
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="assets/images/section5_tc.jpg" alt="img">                      
+                      <img src="${url}/images/section5_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Sản phẩm độc quyền</span>
                         <h4><a href="#">Mật ong rừng Tây Bắc</a></h4>                        
@@ -103,7 +105,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/mangtay.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -121,7 +123,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/hatdieu.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                              <figcaption>
                               <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
@@ -139,7 +141,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/cuqua1.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                              <figcaption>
                               <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -155,7 +157,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/cuqua2.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -173,7 +175,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-5.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/rausach1.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
@@ -189,7 +191,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-6.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/matong.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -205,7 +207,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/salach.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -223,7 +225,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/images/products/tieuxanh.jpg" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
@@ -248,7 +250,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -266,7 +268,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-2.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-2.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -284,7 +286,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-3.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-3.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -300,7 +302,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-4.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-4.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -318,7 +320,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-5.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-5.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -335,7 +337,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-6.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-6.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -351,7 +353,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-7.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-7.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -369,7 +371,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -394,7 +396,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-1.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -412,7 +414,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-2.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-2.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -430,7 +432,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-3.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-3.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -446,7 +448,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-4.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-4.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -464,7 +466,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-5.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-5.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -480,7 +482,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-6.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-6.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -496,7 +498,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-7.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-7.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -514,7 +516,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/sports/sport-8.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/sports/sport-8.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -538,7 +540,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-1.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-1.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -556,7 +558,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-2.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-2.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -574,7 +576,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-3.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-3.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -590,7 +592,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-4.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-4.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -608,7 +610,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-5.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-5.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -624,7 +626,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-6.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-6.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -640,7 +642,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-7.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-7.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -658,7 +660,7 @@
                         <!-- start single product item -->
                         <li>
                           <figure>
-                            <a class="aa-product-img" href="#"><img src="assets/img/electronics/electronic-8.png" alt="polo shirt img"></a>
+                            <a class="aa-product-img" href="#"><img src="${url}/img/electronics/electronic-8.png" alt="polo shirt img"></a>
                             <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                               <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -692,7 +694,7 @@
                                   <div class="simpleLens-container">
                                       <div class="simpleLens-big-image-container">
                                           <a class="simpleLens-lens-image" data-lens-image="assets/img/view-slider/large/polo-shirt-1.png">
-                                              <img src="assets/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                              <img src="${url}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
                                           </a>
                                       </div>
                                   </div>
@@ -700,18 +702,18 @@
                                       <a href="#" class="simpleLens-thumbnail-wrapper"
                                          data-lens-image="assets/img/view-slider/large/polo-shirt-1.png"
                                          data-big-image="assets/img/view-slider/medium/polo-shirt-1.png">
-                                          <img src="assets/img/view-slider/thumbnail/polo-shirt-1.png">
+                                          <img src="${url}/img/view-slider/thumbnail/polo-shirt-1.png">
                                       </a>                                    
                                       <a href="#" class="simpleLens-thumbnail-wrapper"
                                          data-lens-image="assets/img/view-slider/large/polo-shirt-3.png"
                                          data-big-image="assets/img/view-slider/medium/polo-shirt-3.png">
-                                          <img src="assets/img/view-slider/thumbnail/polo-shirt-3.png">
+                                          <img src="${url}/img/view-slider/thumbnail/polo-shirt-3.png">
                                       </a>
 
                                       <a href="#" class="simpleLens-thumbnail-wrapper"
                                          data-lens-image="assets/img/view-slider/large/polo-shirt-4.png"
                                          data-big-image="assets/img/view-slider/medium/polo-shirt-4.png">
-                                          <img src="assets/img/view-slider/thumbnail/polo-shirt-4.png">
+                                          <img src="${url}/img/view-slider/thumbnail/polo-shirt-4.png">
                                       </a>
                                   </div>
                                 </div>
@@ -774,7 +776,7 @@
         <div class="col-md-12">        
           <div class="row">
             <div class="aa-banner-area">
-            <a href="#"><img src="assets/images/banner_tc.jpg" alt="banner trang chủ"></a>
+            <a href="#"><img src="${url}/images/banner_tc.jpg" alt="banner trang chủ"></a>
           </div>
           </div>
         </div>
@@ -802,7 +804,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -820,7 +822,7 @@
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -838,7 +840,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/t-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       </figure>
                       <figcaption>
@@ -856,7 +858,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-3.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-3.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -872,7 +874,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -888,7 +890,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -906,7 +908,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -924,7 +926,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -950,7 +952,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -968,7 +970,7 @@
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -986,7 +988,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/t-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       </figure>
                       <figcaption>
@@ -1004,7 +1006,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-3.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-3.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -1020,7 +1022,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -1036,7 +1038,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -1054,7 +1056,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -1072,7 +1074,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -1098,7 +1100,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -1116,7 +1118,7 @@
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-2.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-2.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -1134,7 +1136,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/t-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       </figure>
                       <figcaption>
@@ -1152,7 +1154,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-3.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-3.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -1168,7 +1170,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -1184,7 +1186,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -1202,7 +1204,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -1220,7 +1222,7 @@
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -1293,7 +1295,7 @@
               <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="assets/images/avatar.jpg" alt="avatar 1">
+                <img class="aa-testimonial-img" src="${url}/images/avatar.jpg" alt="avatar 1">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
                     được giao khá nhanh và sản phẩm thì tốt.</p>
@@ -1306,7 +1308,7 @@
               <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="assets/images/avater-2.jpg" alt="avatar 2">
+                <img class="aa-testimonial-img" src="${url}/images/avater-2.jpg" alt="avatar 2">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
                     được giao khá nhanh và sản phẩm thì tốt.</p>
@@ -1319,7 +1321,7 @@
                <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="assets/images/avatar-1.jpg" alt="avatar 3">
+                <img class="aa-testimonial-img" src="${url}/images/avatar-1.jpg" alt="avatar 3">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
                     được giao khá nhanh và sản phẩm thì tốt.</p>
@@ -1349,7 +1351,7 @@
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="assets/images/blog_1.jpg" alt="img"></a>  
+                    <a href="#"><img src="${url}/images/blog_1.jpg" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>52K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>116</a>
@@ -1371,7 +1373,7 @@
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="assets/images/blog_2.jpg" alt="img"></a>  
+                    <a href="#"><img src="${url}/images/blog_2.jpg" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>5.2K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>416</a>
@@ -1394,7 +1396,7 @@
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="assets/images/blog_3.jpg" alt="img"></a>  
+                    <a href="#"><img src="${url}/images/blog_3.jpg" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>10.3K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>432</a>
@@ -1428,17 +1430,17 @@
         <div class="col-md-12">
           <div class="aa-client-brand-area">
             <ul class="aa-client-brand-slider">
-              <li><a href="#"><img src="assets/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-joomla.png" alt="joomla img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="assets/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-joomla.png" alt="joomla img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
+              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
             </ul>
           </div>
         </div>

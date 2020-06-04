@@ -1,27 +1,23 @@
-<%-- 
-    Document   : script
-    Created on : May 6, 2020, 12:00:48 AM
-    Author     : LENOVO
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
         <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./assets/js/bootstrap.js"></script>  
+  <script src="${url}/js/bootstrap.js"></script>  
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="./assets/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="${url}/assets/js/jquery.smartmenus.js"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="./assets/js/jquery.smartmenus.bootstrap.js"></script>  
+  <script type="text/javascript" src="${url}/js/jquery.smartmenus.bootstrap.js"></script>  
   <!-- To Slider JS -->
-  <script src="./assets/js/sequence.js"></script>
-  <script src="./assets/js/sequence-theme.modern-slide-in.js"></script>  
+  <script src="${url}/js/sequence.js"></script>
+  <script src="${url}/js/sequence-theme.modern-slide-in.js"></script>  
   <!-- Product view slider -->
-  <script type="text/javascript" src="./assets/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="./assets/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="${url}/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="${url}/js/jquery.simpleLens.js"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="./assets/js/slick.js"></script>
+  <script type="text/javascript" src="${url}/js/slick.js"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="./assets/js/nouislider.js"></script>
+  <script type="text/javascript" src="${url}/js/nouislider.js"></script>
   <!-- Custom js -->
-  <script src="./assets/js/custom.js"></script> 
+  <script src="${url}/js/custom.js"></script> 
