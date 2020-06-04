@@ -53,6 +53,7 @@
                             Đăng bởi <a href="#">Thịnh Dương</a>
                           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <div class="aa-post-date">${boardnew.created}</div>
                         </div>
                       </article>
@@ -152,6 +153,13 @@
                     </div>
 
 >>>>>>> dbe796779b4c5ef877b06a5f08f26f3d2e04da87
+=======
+                          <div class="aa-post-date">${boardnew.created}</div>
+                        </div>
+                      </article>
+                    </div>
+                    </c:forEach>
+>>>>>>> vy_new
                   </div>
                 </div>
                 <!-- Blog Pagination -->
