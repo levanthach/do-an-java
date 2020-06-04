@@ -230,6 +230,17 @@ img {
   float: left;
   width: 100%;
 }
+
+.serach-box {
+	 color: #fff;
+	 border: medium none;
+     height: 100%;
+     position: absolute;
+     right: 5px;
+     top: 0px;
+     width: 50px;
+     transition: all 0.5s;
+}
 #aa-header .aa-header-top .aa-header-top-area {
   display: inline;
   float: left;

@@ -219,4 +219,14 @@
        <servlet-name>deleteUser</servlet-name>
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
+   
+      <servlet>
+       <servlet-name>homePage</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.HomeSevlet</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>homePage</servlet-name>
+       <url-pattern>/</url-pattern>
+   </servlet-mapping>
 </web-app>
