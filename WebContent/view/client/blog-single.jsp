@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
   <!-- Start header section -->
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
   <!-- / header section -->
@@ -12,7 +14,7 @@
 <!--  content -->
     <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="assets/img/fashion/background.jpg" alt="fashion img" width="1920" height="500">
+   <img src="${url}/img/fashion/background.jpg" alt="fashion img" width="1920" height="500">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
@@ -48,7 +50,7 @@
                       </div>
                     </div>
                     <figure class="aa-blog-img">
-                      <a href="#"><img src="assets/img/fashion/11.jpg" alt="fashion img"></a>
+                      <a href="#"><img src="${url}/img/fashion/11.jpg" alt="fashion img"></a>
                     </figure>
                     <h3> <b> 1. Nông sản hàng hóa là gì ?</b> </h3>
                     <p>Nông sản là những sản phẩm hoặc bán thành phẩm của ngành sản xuất hàng hóa thông qua gây trồng và phát triển của cây trồng. Sản phẩm nông nghiệp bao gồm nhiều nhóm hàng thực phẩm, tơ sợi, nhiên liệu, nguyên vật liệu, dược phẩm , các sản phẩm độc đáo đặc thù. Ngày nay, nông sản còn hàm nghĩa những sản phẩm từ hoạt động làm vườn và thực tế nông sản thường được hiểu là những sản phẩm hàng hóa được làm ra từ tư liệu sản xuất là đất.</p>
@@ -97,7 +99,7 @@
                         <li>
                           <div class="media">
                             <div class="media-left">    
-                                <img  src="assets/img/fashion/pp.jpg" alt="img" width="100" height="100">
+                                <img  src="${url}/img/fashion/pp.jpg" alt="img" width="100" height="100">
                             </div>
                             <div class="media-body">
                              <h4 class="author-name">Maria</h4>
@@ -110,7 +112,7 @@
                         <li>
                           <div class="media">
                             <div class="media-left">    
-                                <img  src="assets/img/fashion/pp.jpg" alt="img" width="100" height="100">
+                                <img  src="${url}/img/fashion/pp.jpg" alt="img" width="100" height="100">
                             </div>
                             <div class="media-body">
                              <h4 class="author-name">Otoke</h4>
@@ -124,7 +126,7 @@
                           <li class="author-comments">
                             <div class="media">
                               <div class="media-left">    
-                                  <img  src="assets/img/fashion/pp1.jpg" alt="img" width="100" height="100">
+                                  <img  src="${url}/img/fashion/pp1.jpg" alt="img" width="100" height="100">
                               </div>
                               <div class="media-body">
                                <h4 class="author-name">Admin</h4>
@@ -220,7 +222,7 @@
                     <div class="aa-recently-views">
                       <ul>
                         <li>
-                          <a class="aa-cartbox-img" href="#"><img src="assets/img/fashion/12.jpg" alt="img"></a>
+                          <a class="aa-cartbox-img" href="#"><img src="${url}/img/fashion/12.jpg" alt="img"></a>
                           <div class="aa-cartbox-info">
                             <h4><a href="#"><b>Một số loại nông sản</a></h4>
                             <p>May 9th 2020</p>
