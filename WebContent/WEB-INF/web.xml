@@ -67,6 +67,15 @@
        <url-pattern>/admin/new/list</url-pattern>
    </servlet-mapping>
    <servlet>
+       <servlet-name>listBoardnewClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.BoardnewListClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listBoardnewClient</servlet-name>
+       <url-pattern>/client/new/list</url-pattern>
+   </servlet-mapping>
+   <servlet>
    
    <servlet-name>deleteBoardnew</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.BoardnewDeleteController</servlet-class>

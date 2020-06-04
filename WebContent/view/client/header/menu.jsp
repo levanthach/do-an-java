@@ -31,7 +31,7 @@
                   <li><a href="product.jsp">MẬT ONG</a></li>
                 </ul>
               </li>
-              <li><a href="blog-archive.jsp">TIN TỨC</a></li>
+              <li><a href="${pageContext.request.contextPath}/client/new/list">TIN TỨC</a></li>
               <li><a href="checkout.jsp">ĐẶT HÀNG</a></li>
               <li><a href="contact.jsp">LIÊN HỆ</a></li>
               <li class="aa-search"><!-- search box -->
