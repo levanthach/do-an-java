@@ -15,7 +15,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Sản phẩm yêu thích</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp.html">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
           <li class="active">Sản phẩm yêu thích</li>
         </ol>
       </div>
