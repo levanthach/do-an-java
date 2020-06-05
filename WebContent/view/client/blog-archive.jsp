@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Bài đăng</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
           <li class="active">Bài đăng</li>
         </ol>
       </div>
@@ -45,9 +45,9 @@
                       <article class="aa-blog-content-single">                        
                         <h4><a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}">${boardnew.title}</a></h4>
                         <figure class="aa-blog-img">
-                          <a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}"><img src="${boardnew.image_link}" alt="farm products" height="180px" width="300px"></a>
+                          <a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}" alt="farm products" height="180px" width="300px"></a>
                         </figure>
-                        <p>${boardnew.content}</p>
+                        <p class="desc-boardnews">${boardnew.content}</p>
                         <div class="aa-article-bottom">
                           <div class="aa-post-author">
                             Đăng bởi <a href="#">${boardnew.author}</a>

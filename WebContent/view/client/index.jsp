@@ -1120,18 +1120,15 @@
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="${boardnew.image_link}" alt="img"></a>  
+                    <a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
-                      <span href="#"><i class="fa fa-eye"></i>52K</span>
-                      <a href="#"><i class="fa fa-thumbs-o-up"></i>116</a>
-                      <a href="#"><i class="fa fa-comment-o"></i>29</a>
-                      <span href="#"><i class="fa fa-clock-o"></i>19/5/2020</span>
+                      <span href="#"><i class="fa fa-clock-o"></i>${boardnew.created}</span>
                     </figcaption>                          
                   </figure>
                   <div class="aa-blog-info">
-                    <h3 class="aa-blog-title"><a href="#">${boardnew.title}</a></h3>
-                    <p>${boardnew.content}</p> 
-                    <a href="${pageContext.request.contextPath}/view/client/news-list" class="aa-read-mor-btn">Xem thêm<span class="fa fa-long-arrow-right"></span></a>
+                    <h3 class="aa-blog-title"><a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}">${boardnew.title}</a></h3>
+                    <p class="desc-boardnews">${boardnew.content}</p> 
+                    <a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}" class="aa-read-mor-btn">Xem thêm<span class="fa fa-long-arrow-right"></span></a>
                   </div>
                 </div>
               </div>

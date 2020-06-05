@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Thông tin về Blog</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
           <li class="active">Thông tin Blog</li>
         </ol>
       </div>
@@ -48,7 +48,7 @@
                       <div class="aa-post-date">${boardnew.created}</div>
                     </div>
                     <figure class="aa-blog-img">
-                      <a href="#"><img src="${boardnew.image_link}" alt="fashion img"></a>
+                      <a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}" alt="fashion img"></a>
                     </figure>
                     <p>${boardnew.content}</p>
                     <div class="blog-single-bottom">

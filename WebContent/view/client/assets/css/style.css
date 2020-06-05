@@ -82,7 +82,16 @@ h2 {
 img {
   border: none;
 }
-
+/* Custom CSS by Thach */
+.desc-boardnews {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 .aa-primary-btn {
   font-size: 16px;
   padding: 10px 30px;
