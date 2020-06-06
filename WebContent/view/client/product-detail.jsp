@@ -19,7 +19,7 @@
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Hạt óc chó</h2>
+        <h2>Chi tiết sản phẩm</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
           <li><a href="product.jsp">Mặt hàng</a></li>

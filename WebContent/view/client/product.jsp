@@ -57,31 +57,33 @@
               </div>
               <div class="aa-product-catg-head-right">
                 <a id="grid-catg" href="#"><span class="fa fa-th"></span></a>
-                <a id="list-catg" href="#"><span class="fa fa-list"></span></a>
               </div>
             </div>
             <div class="aa-product-catg-body">
               <ul class="aa-product-catg">
                 <!-- start single product item -->
+                <c:if test="${empty productlist}">
+                 	<p style="margin-left: 30px">Chưa có sản phẩm!</p>
+                 </c:if>
                 <c:forEach items="${productlist}" var="product">
-                <li>
-                  <figure>
-                    <a class="aa-product-img" href="#"><img src="${url}/images/${product.image_link}" alt="polo shirt img"></a>
-                    <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
-                    <figcaption>
-                      <h4 class="aa-product-title"><a href="#">${product.name}</a></h4>
-                      <span class="aa-product-price">500.000<sup><u>đ</u></sup></span><span class="aa-product-price"><del>800.000<sup><u>đ</u></sup></del></span>
-                      <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                    </figcaption>
-                  </figure>                         
-                  <div class="aa-product-hvr-content">
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
-                    <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>                            
-                  </div>
-                  <!-- product badge -->
-                  <span class="aa-badge aa-sale" href="#">SALE!</span>
-                </li>
+	                <li>
+	                  <figure>
+	                    <a class="aa-product-img" href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></a>
+	                    <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    <figcaption>
+	                      <h4 class="aa-product-title"><a href="#">${product.name}</a></h4>
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span>
+	                    
+	                    </figcaption>
+	                  </figure>                         
+	                  <div class="aa-product-hvr-content">
+	                    <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+	          
+	                    <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>                            
+	                  </div>
+	                  <!-- product badge -->
+	                  <span class="aa-badge aa-sale" href="#">- ${product.discount}%</span>
+	                </li>
                 </c:forEach>                                       
               </ul>
               <!-- quick view modal -->                  
@@ -97,48 +99,35 @@
                             <div class="simpleLens-gallery-container" id="demo-1">
                               <div class="simpleLens-container">
                                   <div class="simpleLens-big-image-container">
-                                      <a class="simpleLens-lens-image" data-lens-image="assets/img/view-slider/large/polo-shirt-1.png">
-                                          <img src="${url}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                      <a class="simpleLens-lens-image" data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}">
+                                          <img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" class="simpleLens-big-image">
                                       </a>
                                   </div>
                               </div>
-                              <div class="simpleLens-thumbnails-container">
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="assets/img/view-slider/large/polo-shirt-1.png"
-                                     data-big-image="assets/img/view-slider/medium/polo-shirt-1.png">
-                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-1.png">
-                                  </a>                                    
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="assets/img/view-slider/large/polo-shirt-3.png"
-                                     data-big-image="assets/img/view-slider/medium/polo-shirt-3.png">
-                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-3.png">
-                                  </a>
 
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="assets/img/view-slider/large/polo-shirt-4.png"
-                                     data-big-image="assets/img/view-slider/medium/polo-shirt-4.png">
-                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-4.png">
-                                  </a>
-                              </div>
                             </div>
                           </div>
                         </div>
                         <!-- Modal view content -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="aa-product-view-content">
-                            <h3>T-Shirt</h3>
+                            <h3>${product.name}</h3>
                             <div class="aa-price-block">
-                              <span class="aa-product-view-price">$34.99</span>
-                              <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
+                              <span class="aa-product-view-price">${product.price}</span>
+                              <p class="aa-product-avilability">Tình trạng: <span>
+                                 <c:choose>
+			                        <c:when test="${product.status == 1}"> 
+			                        	<c:out value="Còn hàng"/>
+			                       	</c:when>
+			                       	<c:otherwise>
+								        <c:out value="Hết hàng"/>
+								    </c:otherwise>
+		                       	</c:choose>
+                              
+                              </span></p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
-                            <h4>Size</h4>
-                            <div class="aa-prod-view-size">
-                              <a href="#">S</a>
-                              <a href="#">M</a>
-                              <a href="#">L</a>
-                              <a href="#">XL</a>
-                            </div>
+                            <p>${product.content}</p>
+                           
                             <div class="aa-prod-quantity">
                               <form action="">
                                 <select name="" id="">
@@ -151,12 +140,12 @@
                                 </select>
                               </form>
                               <p class="aa-prod-category">
-                                Category: <a href="#">Polo T-Shirt</a>
+                                Chuyên mục: <a href="#">Polo T-Shirt</a>
                               </p>
                             </div>
                             <div class="aa-prod-view-bottom">
-                              <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                              <a href="#" class="aa-add-to-cart-btn">View Details</a>
+                              <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>THÊM GIỎ HÀNG</a>
+                              <a href="#" class="aa-add-to-cart-btn">Chi tiết</a>
                             </div>
                           </div>
                         </div>
@@ -213,21 +202,7 @@
                 <a href="#">Tinh dầu bưởi</a>
               </div>
             </div>
-            <!-- single sidebar -->
-            <div class="aa-sidebar-widget">
-              <h3>Sắp xếp theo giá</h3>              
-              <!-- price range -->
-              <div class="aa-sidebar-price-range">
-               <form action="">
-                  <div id="skipstep" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>
-                  <span id="skip-value-lower" class="example-val">30.00</span>
-                 <span id="skip-value-upper" class="example-val">100.00</span>
-                 <button class="aa-filter-btn" type="submit">Lọc</button>
-               </form>
-              </div>              
 
-            </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Lượt xem gần đây</h3>
