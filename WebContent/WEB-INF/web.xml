@@ -222,6 +222,27 @@
        <servlet-name>homePage</servlet-name>
        <url-pattern>/home</url-pattern>
    </servlet-mapping>
+
+   <servlet>
+       <servlet-name>CategoryListClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.CategoryListClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>CategoryListClient</servlet-name>
+       <url-pattern>/view/client/product</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>CategoryListIdClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.CategoryListIdClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>CategoryListIdClient</servlet-name>
+       <url-pattern>/view/client/product-id</url-pattern>
+   </servlet-mapping>
+
 	
  	<servlet>
 		<servlet-name>listBoardnewClient</servlet-name>
