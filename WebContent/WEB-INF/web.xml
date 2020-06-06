@@ -211,13 +211,32 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
-      <servlet>
+    <servlet>
        <servlet-name>homePage</servlet-name>
        <servlet-class>nongsan.webmvc.controller.HomeSevlet</servlet-class>
    </servlet>
  
    <servlet-mapping>
        <servlet-name>homePage</servlet-name>
-       <url-pattern>/</url-pattern>
+       <url-pattern>/home</url-pattern>
+   </servlet-mapping>
+   <servlet>
+       <servlet-name>CategoryListClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.CategoryListClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>CategoryListClient</servlet-name>
+       <url-pattern>/view/client/product</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>CategoryListIdClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.CategoryListIdClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>CategoryListIdClient</servlet-name>
+       <url-pattern>/view/client/product-id</url-pattern>
    </servlet-mapping>
 </web-app>

@@ -132,4 +132,6 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 			e.printStackTrace();
 		}
 	}
+	
+	
 }
