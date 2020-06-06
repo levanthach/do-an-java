@@ -178,7 +178,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setImage_link(rs.getString("image_link"));
 				product.setImage_list(rs.getString("image_list"));
 				product.setCreated(rs.getString("created"));
-				System.out.println("tên: "+product);
 				products.add(product);
 			}
 

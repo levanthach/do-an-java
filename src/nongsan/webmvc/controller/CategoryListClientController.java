@@ -28,7 +28,9 @@ public class CategoryListClientController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		List<Catalog> cateList = cateService.getAll();
-		req.setAttribute("catelist", cateList);		
+		req.setAttribute("catelist", cateList);
+		List<Product> productList = productService.getAll();
+		req.setAttribute("productlist", productList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product.jsp");
 		dispatcher.forward(req, resp);
 	}

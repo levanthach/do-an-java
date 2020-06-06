@@ -66,7 +66,7 @@
                 <c:forEach items="${productlist}" var="product">
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="${url}/images/products/${product.image_link}" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/images/${product.image_link}" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="#">${product.name}</a></h4>
