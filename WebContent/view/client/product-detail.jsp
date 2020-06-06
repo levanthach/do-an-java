@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Hạt óc chó</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
           <li><a href="product.jsp">Mặt hàng</a></li>
           <li class="active">Hạt óc chó</li>
         </ol>
