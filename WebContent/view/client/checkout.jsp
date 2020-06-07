@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
 
   <!-- Start header section -->
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
@@ -13,13 +15,13 @@
 <!--  content -->
     <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-    <img src="assets/img/fashion/checkout.jpg" alt="fashion img" width="1480" height="500">
+    <img src="${url}/img/fashion/checkout.jpg" alt="fashion img" width="1480" height="500">
     <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
         <h2>Thanh toán</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp.html">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
           <li class="active">Thanh toán</li>
         </ol>
       </div>

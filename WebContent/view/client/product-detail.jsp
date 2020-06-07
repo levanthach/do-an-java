@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
 
   <!-- Start header section -->
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
@@ -13,15 +15,15 @@
 <!--  content -->
    <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="assets/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+      <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.png" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Hạt óc chó</h2>
+        <h2>Chi tiết sản phẩm</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp">Trang chủ</a></li>         
-          <li><a href="product.jsp">Mặt hàng</a></li>
-          <li class="active">Hạt óc chó</li>
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/view/client/product">Sản phẩm</a></li>
+          <li style="color:#fff">${detail_product.name }</li>
         </ol>
       </div>
      </div>
@@ -38,35 +40,36 @@
             <div class="aa-product-details-content">
               <div class="row">
                 <!-- Modal view slider -->
+             
                 <div class="col-md-5 col-sm-5 col-xs-12">                              
                   <div class="aa-product-view-slider">                                
                     <div id="demo-1" class="simpleLens-gallery-container">
                       <div class="simpleLens-container">
-                        <div class="simpleLens-big-image-container"><a data-lens-image="assets/img/view-slider/large/polo-shirt-1.png" class="simpleLens-lens-image"><img src="assets/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image"></a></div>
+                        <div class="simpleLens-big-image-container"><a data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}" class="simpleLens-lens-image"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}" class="simpleLens-big-image"></a></div>
                       </div>
-                      <div class="simpleLens-thumbnails-container">
-                          <a data-big-image="assets/img/view-slider/medium/polo-shirt-1.png" data-lens-image="assets/img/view-slider/large/polo-shirt-1.png" class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="assets/img/view-slider/thumbnail/polo-shirt-1.png">
-                          </a>                                    
-                          <a data-big-image="assets/img/view-slider/medium/polo-shirt-3.png" data-lens-image="assets/img/view-slider/large/polo-shirt-3.png" class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="assets/img/view-slider/thumbnail/polo-shirt-3.png">
-                          </a>
-                          <a data-big-image="assets/img/view-slider/medium/polo-shirt-4.png" data-lens-image="assets/img/view-slider/large/polo-shirt-4.png" class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="assets/img/view-slider/thumbnail/polo-shirt-4.png">
-                          </a>
-                      </div>
+                    
                     </div>
                   </div>
                 </div>
                 <!-- Modal view content -->
+
                 <div class="col-md-7 col-sm-7 col-xs-12">
                   <div class="aa-product-view-content">
-                    <h3>Hạt óc chó Mỹ 500gr nhập khẩu Mỹ</h3>
+                    <h3>${detail_product.name }</h3>
                     <div class="aa-price-block">
-                        <span class="aa-product-view-price">550.000<sup><u>đ</u></sup></span>
-                      <p class="aa-product-avilability">Tình trạng: <span>Còn hàng</span></p>
+                        <span class="aa-product-view-price"><b>${detail_product.price }</b> VNĐ</span>
+                      <p class="aa-product-avilability">Tình trạng: <span>
+                      	<c:choose>
+			                        <c:when test="${detail_product.status == 1}"> 
+			                        	<c:out value="Còn hàng"/>
+			                       	</c:when>
+			                       	<c:otherwise>
+								        <c:out value="Hết hàng"/>
+								    </c:otherwise>
+		                       	</c:choose>
+                      </span></p>
                     </div>
-                    <p>Giúp mát gan, thông mật, lợi tiểu. Giúp làm đẹp da chống lão hóa!</p>
+                    <p>${detail_product.description }</p>
                     <div class="aa-prod-quantity">
                       <form action="">
                         <select id="" name="">
@@ -79,35 +82,29 @@
                         </select>
                       </form>
                       <p class="aa-prod-category">
-                        Danh mục: <a href="product.jsp">Các loại hạt</a>
+                       <c:forEach items="${name_cate_of_product}" var="name_cate">
+                        Danh mục: <a href="product.jsp">${name_cate.name }</a>
+                        </c:forEach>
                       </p>
                     </div>
                     <div class="aa-prod-view-bottom">
                       <a class="aa-add-to-cart-btn" href="#">Thêm vào giỏ hàng</a>
-                      <a class="aa-add-to-cart-btn" href="#">Đánh dấu</a>
-                      <a class="aa-add-to-cart-btn" href="#">So sánh</a>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
             <div class="aa-product-details-bottom">
-              <ul class="nav nav-tabs" id="myTab2">
-                <li><a href="#description" data-toggle="tab">Mô tả</a></li>
+              <ul class="nav nav-tabs aa-products-tab" id="myTab2">
+                <li class="active"><a href="#description" data-toggle="tab" class="">Mô tả</a></li>
                 <li><a href="#review" data-toggle="tab">Đánh giá</a></li>                
               </ul>
 
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="description">
-                  <p>Quả óc chó là một cách tuyệt vời để tăng thêm chất dinh dưỡng, hương vị và độ giòn cho món ăn. Không chỉ có hương vị mà còn là giàu chất béo không bão hòa đơn thể tốt cho tim và là nguồn axit béo omega-3 quí hiếm. Axit béo omega-3 rất cần thiết cho não. Hạt óc chó cũng là nguồn dinh dưỡng giàu chất axit béo không no nhiều nối đôi(PUFA) có chứa Axit Alpha Lipoic(ALA), một dạng thực vật của axit béo omega-3. Ngoài các chất chống oxy hóa, một ounce(28,35g) cũng cung cấp 4g protein và 2g chất xơ.</p>
-                  <ul>
-                    <li>Quả óc chó rất tốt với phụ nữ có thai và em bé.</li>
-                    <li>Ăn quả óc chó thường xuyên để có trái tim khỏe mạnh.</li>
-                    <li>Quả óc chó giúp cải thiện giấc ngủ.</li>
-                    <li>Ăn quả óc chó hằng ngày giúp nhuận tràng, có lợi cho bệnh tiểu đường.</li>
-                    <li>Quả óc chó giúp ngăn ngừa sỏi túi mật, bảo vệ xương.</li>
-                  </ul>
+                  <p>${detail_product.content }</p>
                 </div>
                 <div class="tab-pane fade " id="review">
                  <div class="aa-product-review-area">
@@ -117,7 +114,7 @@
                         <div class="media">
                           <div class="media-left">
                             <a href="#">
-                              <img class="media-object" src="assets/img/testimonial-img-3.jpg" alt="girl image">
+                              <img class="media-object" src="${url}/img/testimonial-img-3.jpg" alt="girl image">
                             </a>
                           </div>
                           <div class="media-body">
@@ -137,7 +134,7 @@
                         <div class="media">
                           <div class="media-left">
                             <a href="#">
-                              <img class="media-object" src="assets/img/testimonial-img-3.jpg" alt="girl image">
+                              <img class="media-object" src="${url}/img/testimonial-img-3.jpg" alt="girl image">
                             </a>
                           </div>
                           <div class="media-body">
@@ -186,12 +183,12 @@
             </div>
             <!-- Related product -->
             <div class="aa-product-related-item">
-              <h3>Mặt hàng liên quan</h3>
+              <h3>Sản phẩm liên quan</h3>
               <ul class="aa-product-catg aa-related-item-slider">
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-2.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                      <figcaption>
                       <h4 class="aa-product-title"><a href="#">Hạt điều</a></h4>
@@ -209,7 +206,7 @@
                  <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/women/girl-2.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-2.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="#">Tinh dầu</a></h4>
@@ -227,7 +224,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/man/t-shirt-1.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/man/t-shirt-1.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                   </figure>
                   <figcaption>
@@ -245,7 +242,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/women/girl-3.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-3.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                      <figcaption>
                       <h4 class="aa-product-title"><a href="#">Rau cải</a></h4>
@@ -261,7 +258,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-1.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -277,7 +274,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/women/girl-4.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-4.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -295,7 +292,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/man/polo-shirt-4.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                      <figcaption>
                       <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -313,7 +310,7 @@
                 <!-- start single product item -->
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="assets/img/women/girl-1.png" alt="polo shirt img"></a>
+                    <a class="aa-product-img" href="#"><img src="${url}/img/women/girl-1.png" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                      <figcaption>
                       <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -343,7 +340,7 @@
                               <div class="simpleLens-container">
                                   <div class="simpleLens-big-image-container">
                                       <a class="simpleLens-lens-image" data-lens-image="assets/img/view-slider/large/polo-shirt-1.png">
-                                          <img src="assets/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                          <img src="${url}/img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
                                       </a>
                                   </div>
                               </div>
@@ -351,18 +348,18 @@
                                   <a href="#" class="simpleLens-thumbnail-wrapper"
                                      data-lens-image="assets/img/view-slider/large/polo-shirt-1.png"
                                      data-big-image="assets/img/view-slider/medium/polo-shirt-1.png">
-                                      <img src="assets/img/view-slider/thumbnail/polo-shirt-1.png">
+                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-1.png">
                                   </a>                                    
                                   <a href="#" class="simpleLens-thumbnail-wrapper"
                                      data-lens-image="assets/img/view-slider/large/polo-shirt-3.png"
                                      data-big-image="assets/img/view-slider/medium/polo-shirt-3.png">
-                                      <img src="assets/img/view-slider/thumbnail/polo-shirt-3.png">
+                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-3.png">
                                   </a>
 
                                   <a href="#" class="simpleLens-thumbnail-wrapper"
                                      data-lens-image="assets/img/view-slider/large/polo-shirt-4.png"
                                      data-big-image="assets/img/view-slider/medium/polo-shirt-4.png">
-                                      <img src="assets/img/view-slider/thumbnail/polo-shirt-4.png">
+                                      <img src="${url}/img/view-slider/thumbnail/polo-shirt-4.png">
                                   </a>
                               </div>
                             </div>

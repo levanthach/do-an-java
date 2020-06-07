@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
          <!-- start header top  -->
     <div class="aa-header-top">
       <div class="container">
@@ -21,12 +22,12 @@
                 <div class="aa-language">
                   <div class="dropdown">
                     <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <img src="./assets/img/flag/english.jpg" alt="english flag">ENGLISH
+                      <img src="${url}/img/flag/english.jpg" alt="english flag">ENGLISH
                       <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#"><img src="./assets/img/flag/french.jpg" alt="">FRENCH</a></li>
-                      <li><a href="#"><img src="./assets/img/flag/english.jpg" alt="">ENGLISH</a></li>
+                      <li><a href="#"><img src="${url}/img/flag/french.jpg" alt="">FRENCH</a></li>
+                      <li><a href="#"><img src="${url}/img/flag/english.jpg" alt="">ENGLISH</a></li>
                     </ul>
                   </div>
                 </div>

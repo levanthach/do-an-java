@@ -17,7 +17,7 @@ import nongsan.webmvc.model.Boardnew;
 public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	@Override
 	public void insert(Boardnew boardnew) {
-		String sql = "INSERT INTO boardnew(title, content, author, created) VALUES (?, ?, ?, ?)";
+		String sql = "INSERT INTO boardnew(title, content,image_link, author, created) VALUES (?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
@@ -25,8 +25,9 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, boardnew.getTitle());
 			ps.setString(2, boardnew.getContent());
-			ps.setString(3, boardnew.getAuthor());
-			ps.setString(4, boardnew.getCreated());
+			ps.setString(3, boardnew.getImage_link());
+			ps.setString(4, boardnew.getAuthor());
+			ps.setString(5, boardnew.getCreated());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -47,16 +48,17 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 	}
 	@Override
 	public void edit(Boardnew boardnew) {
-		String sql = "UPDATE boardnew SET title=?,content=?,author=?,created=? WHERE id=?";
+		String sql = "UPDATE boardnew SET title=?,content=?,image_link=?,author=?,created=? WHERE id=?";
 		Connection con = connectDB.getConnect();
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, boardnew.getTitle());
 			ps.setString(2, boardnew.getContent());
-			ps.setString(3, boardnew.getAuthor());
-			ps.setString(4, boardnew.getCreated());
-			ps.setString(5, boardnew.getId());
+			ps.setString(3, boardnew.getImage_link());
+			ps.setString(4, boardnew.getAuthor());
+			ps.setString(5, boardnew.getCreated());
+			ps.setString(6, boardnew.getId());
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -80,6 +82,7 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 				boardnew.setId(rs.getString("id"));
 				boardnew.setTitle(rs.getString("title"));
 				boardnew.setContent(rs.getString("content"));
+				boardnew.setImage_link(rs.getString("image_link"));
 				boardnew.setAuthor(rs.getString("author"));
 				boardnew.setCreated(rs.getString("created"));
 				//System.out.println("cc"+rs.getString("title"));
@@ -114,6 +117,7 @@ public class BoardnewDaoImpl extends connectDB implements BoardnewDao{
 				boardnew.setId(rs.getString("id"));
 				boardnew.setTitle(rs.getString("title"));
 				boardnew.setContent(rs.getString("content"));
+				boardnew.setImage_link(rs.getString("image_link"));
 				boardnew.setAuthor(rs.getString("author"));
 				boardnew.setCreated(rs.getString("created"));
 				boardnews.add(boardnew);

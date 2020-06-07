@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
          <div class="aa-header-bottom">
       <div class="container">
         <div class="row">
@@ -19,7 +20,7 @@
                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                 </a>-->
                 <!-- img based logo -->
-                <a href="index.jsp"><img src="./assets/images/logo.jpg" alt="logo img" width="100%"></a> 
+                <a href="${pageContext.request.contextPath}/home"><img src="${url}/images/logo.jpg" alt="logo img" width="100%"></a> 
               </div>
               <!-- / logo  -->
               <!-- Shipping service -->
@@ -64,7 +65,7 @@
                 <div class="aa-cartbox-summary">
                   <ul>
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="assets/img/woman-small-2.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-2.jpg" alt="img"></a>
                       <div class="aa-cartbox-info">
                         <h4><a href="#">Product Name</a></h4>
                         <p>1 x $250</p>
@@ -72,7 +73,7 @@
                       <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
                     </li>
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="assets/img/woman-small-1.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-1.jpg" alt="img"></a>
                       <div class="aa-cartbox-info">
                         <h4><a href="#">Product Name</a></h4>
                         <p>1 x $250</p>

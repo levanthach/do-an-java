@@ -22,6 +22,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Tiêu đề</th>
                         <th scope="col">Nội dung</th>
+                        <th scope="col">Hình ảnh</th>
                         <th scope="col">Người đăng</th>
                         <th scope="col">Ngày đăng</th>
                          <th scope="col">Hành động</th>
@@ -33,6 +34,7 @@
                         <td scope="row">${boardnew.id}</td>
                         <td>${boardnew.title}</td>
         				<td>${boardnew.content}</td>
+        				<td>${boardnew.image_link}</td>
         				<td>${boardnew.author}</td>
         				<td>${boardnew.created}</td>
         				 <td>

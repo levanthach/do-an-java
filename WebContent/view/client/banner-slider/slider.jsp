@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
        <section id="aa-slider">
     <div class="aa-slider-area">
       <div id="sequence" class="seq">
@@ -13,7 +15,7 @@
             <!-- single slide item -->
             <li>
               <div class="seq-model">
-                <img data-seq src="assets/images/slide_1.jpg" alt="Men slide img" />
+                <img data-seq src="${url}/images/slide_1.jpg" alt="Men slide img" />
               </div>
               <div class="seq-title">
                <span data-seq>Giảm giá lên đến 50%</span>                
@@ -25,7 +27,7 @@
             <!-- single slide item -->
             <li>
               <div class="seq-model">
-                <img data-seq src="assets/images/slide_2.jpg" alt="Wristwatch slide img" />
+                <img data-seq src="${url}/images/slide_2.jpg" alt="Wristwatch slide img" />
               </div>
               <div class="seq-title">
                 <span data-seq>Giảm giá lên đến 20%</span>                
@@ -37,7 +39,7 @@
             <!-- single slide item -->
             <li>
               <div class="seq-model">
-                <img data-seq src="assets/images/slide_3.jpg" alt="Women Jeans slide img" />
+                <img data-seq src="${url}/images/slide_3.jpg" alt="Women Jeans slide img" />
               </div>
               <div class="seq-title">
                 <span data-seq>Giảm giá lên đến 33%</span>                
@@ -49,7 +51,7 @@
             <!-- single slide item -->           
             <li>
               <div class="seq-model">
-                <img data-seq src="assets/images/slide_4.jpg" alt="Shoes slide img" />
+                <img data-seq src="${url}/images/slide_4.jpg" alt="Shoes slide img" />
               </div>
               <div class="seq-title">
                 <span data-seq>Giảm giá lên đến 25%</span>                
