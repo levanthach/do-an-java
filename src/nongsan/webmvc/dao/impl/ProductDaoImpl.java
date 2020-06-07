@@ -97,14 +97,16 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			while (rs.next()) {
 				Product product = new Product();
 				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
 				product.setName(rs.getString("name"));
 				product.setPrice(rs.getString("price"));
-				product.setCreated(rs.getString("created"));
+				product.setStatus(rs.getString("status"));
 				product.setDescription(rs.getString("description"));
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setImage_list(rs.getString("image_list"));
+				product.setCreated(rs.getString("created"));
 				return product;
 
 			}
@@ -186,5 +188,9 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 		}
 		return products;
 	}
+	
+
+	
+	
 
 }

@@ -223,23 +223,34 @@
        <url-pattern>/home</url-pattern>
    </servlet-mapping>
 
-   <servlet>
-       <servlet-name>CategoryListClient</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.CategoryListClientController</servlet-class>
+	<servlet>
+       <servlet-name>productDetail</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductDetailController</servlet-class>
    </servlet>
  
    <servlet-mapping>
-       <servlet-name>CategoryListClient</servlet-name>
+       <servlet-name>productDetail</servlet-name>
+       <url-pattern>/view/client/product-detail</url-pattern>
+   </servlet-mapping>	
+
+
+   <servlet>
+       <servlet-name>ProductListClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductListClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductListClient</servlet-name>
        <url-pattern>/view/client/product</url-pattern>
    </servlet-mapping>
    
     <servlet>
-       <servlet-name>CategoryListIdClient</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.CategoryListIdClientController</servlet-class>
+       <servlet-name>PrductListOfCategoryClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.PrductListOfCategoryClientController</servlet-class>
    </servlet>
  
    <servlet-mapping>
-       <servlet-name>CategoryListIdClient</servlet-name>
+       <servlet-name>PrductListOfCategoryClient</servlet-name>
        <url-pattern>/view/client/product-id</url-pattern>
    </servlet-mapping>
 
