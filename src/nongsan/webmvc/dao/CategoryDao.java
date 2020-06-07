@@ -3,6 +3,7 @@ package nongsan.webmvc.dao;
 import java.util.List;
 
 import nongsan.webmvc.model.Catalog;
+import nongsan.webmvc.model.Product;
 
 public interface CategoryDao {
 	void insert(Catalog category);
@@ -16,5 +17,7 @@ public interface CategoryDao {
 	Catalog get(String name);
 
 	List<Catalog> getAll();
+	
+	List<Catalog> getCateByProduct(int id);
 
 }

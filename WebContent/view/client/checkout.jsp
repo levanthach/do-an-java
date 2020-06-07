@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Thanh toán</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp.html">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
           <li class="active">Thanh toán</li>
         </ol>
       </div>

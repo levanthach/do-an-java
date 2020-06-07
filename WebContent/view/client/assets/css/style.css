@@ -82,7 +82,21 @@ h2 {
 img {
   border: none;
 }
-
+/* Custom CSS by Thach */
+.desc-boardnews {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.more-product {
+	text-align: center;
+	margin-bottom:40px;
+}
+/* End custom by Thach */
 .aa-primary-btn {
   font-size: 16px;
   padding: 10px 30px;
@@ -1178,6 +1192,12 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+a.aa-product-img img {
+    width: 300px;
+    height: 310px;
+    object-fit: cover;
+}
 .aa-product-catg li figure .aa-add-card-btn {
   background: #000 none repeat scroll 0 0;
   bottom: 0;
@@ -2066,7 +2086,7 @@ img {
 }
 #aa-product-category .aa-product-catg-content .aa-product-catg-body .aa-product-catg li {
   margin: 0 0 20px 30px;
-  width: 29.916%;
+  width: 28.916%;
 }
 #aa-product-category .aa-product-catg-content .aa-product-catg-body .aa-product-catg li .aa-product-descrip {
   display: none;

@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Trang tài khoản</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp">Trang chủ</a></li>                   
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>                   
           <li class="active">Tài khoản</li>
         </ol>
       </div>
