@@ -92,6 +92,11 @@ img {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+.more-product {
+	text-align: center;
+	margin-bottom:40px;
+}
+/* End custom by Thach */
 .aa-primary-btn {
   font-size: 16px;
   padding: 10px 30px;
