@@ -211,13 +211,66 @@
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
    
-      <servlet>
+ 	<!--  Client Router -->
+ 	
+   <servlet>
        <servlet-name>homePage</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.HomeSevlet</servlet-class>
+       <servlet-class>nongsan.webmvc.controller.HomeController</servlet-class>
    </servlet>
  
    <servlet-mapping>
        <servlet-name>homePage</servlet-name>
-       <url-pattern>/</url-pattern>
+       <url-pattern>/home</url-pattern>
    </servlet-mapping>
+
+	<servlet>
+       <servlet-name>productDetail</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductDetailController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>productDetail</servlet-name>
+       <url-pattern>/view/client/product-detail</url-pattern>
+   </servlet-mapping>	
+
+
+   <servlet>
+       <servlet-name>ProductListClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductListClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductListClient</servlet-name>
+       <url-pattern>/view/client/product</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+       <servlet-name>PrductListOfCategoryClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.PrductListOfCategoryClientController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>PrductListOfCategoryClient</servlet-name>
+       <url-pattern>/view/client/product-id</url-pattern>
+   </servlet-mapping>
+
+	
+ 	<servlet>
+		<servlet-name>listBoardnewClient</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.BoardnewListClientController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listBoardnewClient</servlet-name>
+		<url-pattern>/view/client/news-list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>listBoardnewClientDetail</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.BoardnewListClientDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listBoardnewClientDetail</servlet-name>
+		<url-pattern>/view/client/news-list-detail</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

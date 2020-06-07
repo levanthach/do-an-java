@@ -23,9 +23,9 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="index.jsp">TRANG CHỦ</a></li>
-              <li><a href="index.jsp">GIỚI THIỆU</a></li>
-              <li><a href="product.jsp">SẢN PHẨM<span class="caret"></span></a>
+              <li><a href="${pageContext.request.contextPath}/home">TRANG CHỦ</a></li>
+              <li><a href="${pageContext.request.contextPath}/about">GIỚI THIỆU</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/product">SẢN PHẨM<span class="caret"></span></a>
                 <ul class="dropdown-menu">                
                   <li><a href="product.jsp">RAU CỦ QUẢ</a></li>
                   <li><a href="product.jsp">CÁC LOẠI HẠT</a></li>
@@ -33,14 +33,14 @@
                   <li><a href="product.jsp">MẬT ONG</a></li>
                 </ul>
               </li>
-              <li><a href="blog-archive.jsp">TIN TỨC</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/news-list">TIN TỨC</a></li>
               <li><a href="checkout.jsp">ĐẶT HÀNG</a></li>
               <li><a href="contact.jsp">LIÊN HỆ</a></li>
               <li class="aa-search"><!-- search box -->
               <a class="aa-search-box">
                 <form action="">
                   <input type="text" name="" id="" placeholder="Bạn cần tìm gì? ">
-                  <a href="index.jsp" class="serach-box"><span class="fa fa-search"></span></a>
+                  <a href="${pageContext.request.contextPath}/view/client/home" class="serach-box"><span class="fa fa-search"></span></a>
                 </form>
               </a>
               <!-- / search box -->
