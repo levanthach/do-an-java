@@ -245,12 +245,12 @@
    </servlet-mapping>
    
     <servlet>
-       <servlet-name>PrductListOfCategoryClient</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.PrductListOfCategoryClientController</servlet-class>
+       <servlet-name>ProductListOfCategoryClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductListOfCategoryClientController</servlet-class>
    </servlet>
  
    <servlet-mapping>
-       <servlet-name>PrductListOfCategoryClient</servlet-name>
+       <servlet-name>ProductListOfCategoryClient</servlet-name>
        <url-pattern>/view/client/product-id</url-pattern>
    </servlet-mapping>
 

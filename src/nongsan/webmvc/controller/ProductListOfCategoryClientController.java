@@ -16,7 +16,7 @@ import nongsan.webmvc.service.ProductService;
 import nongsan.webmvc.service.impl.CategoryServicesImpl;
 import nongsan.webmvc.service.impl.ProductServiceImpl;
 
-public class PoductListOfCategoryClientController extends HttpServlet {
+public class ProductListOfCategoryClientController extends HttpServlet {
 
 	/**
 	 * 
