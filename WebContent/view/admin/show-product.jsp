@@ -19,14 +19,11 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tên sản phẩm</th>
-                        <th scope="col">Tên danh mục</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">ID danh mục</th>
                         <th scope="col">Giá</th>
                         <th scope="col">Status</th>
                         <th scope="col">Giảm giá</th>
-                        <th scope="col">Mô tả</th>
-                        <th scope="col">Nội dung</th>
-                        <th scope="col">Hình ảnh</th>
-                        <th scope="col">Danh sách ảnh</th>
                         <th scope="col">Ngày tạo</th>
                         <th scope="col">Hành động</th>
                       </tr>
@@ -36,6 +33,7 @@
                       <tr>
                         <th scope="row">${product.id }</th>
                         <td>${product.name }</td>
+                        <td><img style="    width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></td>
                         <td>${product.catalog_id }</td>
                         <td>${product.price }</td>
                         <td>
@@ -50,10 +48,6 @@
                        	</c:choose>
                         </td>
                         <td>${product.discount }%</td>
-                        <td>${product.description }</td>
-                        <td>${product.content }</td>
-                        <td>${product.image_link }</td>
-                        <td>${product.image_list }</td>
                         <td>${product.created }</td>
                         <td>
                             <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
