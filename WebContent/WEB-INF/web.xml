@@ -218,6 +218,38 @@
  
    <servlet-mapping>
        <servlet-name>homePage</servlet-name>
-       <url-pattern>/</url-pattern>
+       <url-pattern>/home</url-pattern>
    </servlet-mapping>
+   
+   
+      <servlet>
+       <servlet-name>AdminHomePage</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminHomePage</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminHomePage</servlet-name>
+       <url-pattern>/admin/homepage</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>AdminLogout</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminLogout</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminLogout</servlet-name>
+       <url-pattern>/admin/logout</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>AdminLogin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminLoginController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminLogin</servlet-name>
+       <url-pattern>/admin/login</url-pattern>
+   </servlet-mapping>
+   
 </web-app>
