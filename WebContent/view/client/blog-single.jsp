@@ -14,14 +14,14 @@
 <!--  content -->
     <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${url}/img/fashion/background.jpg" alt="fashion img" width="1920" height="500">
+   <img src="${pageContext.request.contextPath}/view/client/assets/images/blog-banner.png" alt="banner blog">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Thông tin về Blog</h2>
+        <h2>Chi tiết bài viết</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
-          <li class="active">Thông tin Blog</li>
+          <li style="color:#fff">Bài viết</li>
         </ol>
       </div>
      </div>

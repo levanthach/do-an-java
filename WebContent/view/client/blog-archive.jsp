@@ -15,14 +15,14 @@
 <!--  content -->
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${url}/img/fashion/blog.jpg" alt="farm products img" width="1480" height="500">
+   <img src="${pageContext.request.contextPath}/view/client/assets/images/archive-banner.png" alt="banner blog">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Bài đăng</h2>
+        <h2>Tin tức</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
-          <li class="active">Bài đăng</li>
+          <li style="color:#fff">Tin tức</li>
         </ol>
       </div>
      </div>
