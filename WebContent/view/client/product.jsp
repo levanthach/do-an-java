@@ -127,7 +127,7 @@
                         <!-- Modal view content -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="aa-product-view-content">
-                            <h3>T-Shirt</h3>
+                            <h3>${detail_product.name}</h3>
                             <div class="aa-price-block">
                               <span class="aa-product-view-price">${detail_product.price }</span>
                               <p class="aa-product-avilability">Tình trạng: <span></span></p>
