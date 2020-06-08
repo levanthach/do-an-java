@@ -56,4 +56,22 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.getAll();
 	}
 
+	@Override
+	public List<Product> getProductById(int id) {
+		return productDao.getProductById(id);
+	}
+	
+	@Override
+	public List<Product> searchByName(String productName) {
+		return productDao.searchByName(productName);
+	}
+
+	@Override
+	public List<Product> getProductByIdCate(int idCate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 }

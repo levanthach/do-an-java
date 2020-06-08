@@ -17,7 +17,7 @@ import java.util.List;
 
 import java.sql.ResultSet;
 import nongsan.webmvc.model.Catalog;
-
+import nongsan.webmvc.model.Product;
 import nongsan.webmvc.dao.CategoryDao;
 import nongsan.webmvc.jdbc.connectDB;
 
@@ -132,4 +132,29 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 			e.printStackTrace();
 		}
 	}
+	
+	@Override
+	public List<Catalog> getCateByProduct(int id) {
+		List<Catalog> products_cate = new ArrayList<Catalog>();
+		String sql = "select catalog.name from catalog,product where catalog.id = product.catalog_id and product.id = ?";
+		Connection conn = connectDB.getConnect();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Catalog catagory_product = new Catalog();
+				catagory_product.setName(rs.getString("name"));
+				products_cate.add(catagory_product);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return products_cate;
+	}
+	
+	
 }

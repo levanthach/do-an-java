@@ -6,6 +6,7 @@ import java.util.List;
 import nongsan.webmvc.dao.CategoryDao;
 import nongsan.webmvc.dao.impl.CategoryDaoImpl;
 import nongsan.webmvc.model.Catalog;
+import nongsan.webmvc.model.Product;
 import nongsan.webmvc.service.CategoryService;
 
 public class CategoryServicesImpl implements CategoryService {
@@ -44,6 +45,11 @@ public class CategoryServicesImpl implements CategoryService {
 	@Override
 	public List<Catalog> getAll() {
 		return categoryDao.getAll();
+	}
+	
+	
+	public List<Catalog> getCateByProduct(int id) {
+		return categoryDao.getCateByProduct(id);
 	}
 
 }

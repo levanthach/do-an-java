@@ -210,9 +210,9 @@
        <servlet-name>deleteUser</servlet-name>
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
+
    
-   
-      <servlet>
+    <servlet>
        <servlet-name>AdminHomePage</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.AdminHomePage</servlet-class>
    </servlet>
@@ -241,7 +241,7 @@
        <servlet-name>AdminLogin</servlet-name>
        <url-pattern>/admin/login</url-pattern>
    </servlet-mapping>
-   
+
  	<!--  Client Router -->
  	
    <servlet>
@@ -314,5 +314,5 @@
 		<servlet-name>listBoardnewClientDetail</servlet-name>
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>

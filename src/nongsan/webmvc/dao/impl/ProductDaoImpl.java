@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import java.sql.ResultSet;
 
-import nongsan.webmvc.model.Catalog;
 import nongsan.webmvc.model.Product;
 
 import nongsan.webmvc.dao.ProductDao;
@@ -97,14 +97,16 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			while (rs.next()) {
 				Product product = new Product();
 				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
 				product.setName(rs.getString("name"));
 				product.setPrice(rs.getString("price"));
-				product.setCreated(rs.getString("created"));
+				product.setStatus(rs.getString("status"));
 				product.setDescription(rs.getString("description"));
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setImage_list(rs.getString("image_list"));
+				product.setCreated(rs.getString("created"));
 				return product;
 
 			}
@@ -152,5 +154,78 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 		return products;
 	}
+
+	@Override
+	public List<Product> getProductById(int id) {
+		List<Product> products = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE catalog_id=?";
+		Connection conn = connectDB.getConnect();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setImage_list(rs.getString("image_list"));
+				product.setCreated(rs.getString("created"));
+				products.add(product);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return products;
+	}
+	
+
+	@Override
+	public List<Product> searchByName(String keyword) {
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE name LIKE ? ";
+		Connection conn = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "%" + keyword + "%");
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setImage_list(rs.getString("image_list"));
+				product.setCreated(rs.getString("created"));
+				productList.add(product);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return productList;
+	}
+
+	
+	
 
 }

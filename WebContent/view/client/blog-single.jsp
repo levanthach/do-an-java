@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Thông tin về Blog</h2>
         <ol class="breadcrumb">
-          <li><a href="index.jsp.html">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
           <li class="active">Thông tin Blog</li>
         </ol>
       </div>
@@ -40,29 +40,17 @@
                 <!-- Blog details -->
                 <div class="aa-blog-content aa-blog-details">
                   <article class="aa-blog-content-single">                        
-                    <h2><a href="#">Nông sản hàng hóa là gì? Tại sao nông sản lại có vai trò quan trọng như vậy?</a></h2>
+                    <h2><a href="#">${boardnew.title}</a></h2>
                      <div class="aa-article-bottom">
                       <div class="aa-post-author">
-                        Đăng bởi <a href="#">Thịnh Dương </a>
+                        Đăng bởi <a href="#">${boardnew.author}</a>
                       </div>
-                      <div class="aa-post-date">
-                        May 9th 2020
-                      </div>
+                      <div class="aa-post-date">${boardnew.created}</div>
                     </div>
                     <figure class="aa-blog-img">
-                      <a href="#"><img src="${url}/img/fashion/11.jpg" alt="fashion img"></a>
+                      <a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}" alt="fashion img"></a>
                     </figure>
-                    <h3> <b> 1. Nông sản hàng hóa là gì ?</b> </h3>
-                    <p>Nông sản là những sản phẩm hoặc bán thành phẩm của ngành sản xuất hàng hóa thông qua gây trồng và phát triển của cây trồng. Sản phẩm nông nghiệp bao gồm nhiều nhóm hàng thực phẩm, tơ sợi, nhiên liệu, nguyên vật liệu, dược phẩm , các sản phẩm độc đáo đặc thù. Ngày nay, nông sản còn hàm nghĩa những sản phẩm từ hoạt động làm vườn và thực tế nông sản thường được hiểu là những sản phẩm hàng hóa được làm ra từ tư liệu sản xuất là đất.</p>
-                    <blockquote>
-                    Một cách dễ hiểu hơn : Nông sản là sản phẩm của các ngành nông nghiệp, lâm nghiệp, thủy sản, diêm nghiệp.
-                    </blockquote>
-                    <h3> <b> 2. Tầm quan trọng của nông sản ? </b> </h3>
-                    <p><strong> 2.1. Tiếp cận thị trường thế giới, tiêu thụ sản phẩm </strong></p>
-                    <p>Thương mại hóa nông sản là bước đầu tiên để vươn ra thị trường thế giới rộng lớn. Xuất khẩu hàng nông sản đã chiếm đến hơn 10 tỉ USD năm 2012. Chiếm gần 1/10 GDP.Trong khoảng hơn 6 năm kể từ khi gia nhập WTO Việt nam đã kí kết nhiều hiệp định thương mại có lợi cho việc xuất khẩu các mặt hàng mà Việt Nam có thế mạnh trong đó có hàng nông sản.</p>
-                    <p><strong> 2.2. Phát triển công nghiệp chế biến, công nghệ sinh học và các ngành có giá trị gia tăng cao </strong></p>
-                    <p>Thương mại hóa sản phẩm nông sản chính là đáp ứng nhu cầu ngày càng cao về số lượng và chất lượng sản phẩm cho thị trường. Một trong những khâu cực kì quan trọng để có thể gia tăng được chất lượng sản phẩm là khâu chọn giống. Công nghệ sinh học vì yêu cầu bức thiết này nên phải phát triển theo để đáp ứng kịp thời. Phát triển công nghệ sinh học không chỉ giải quyết được vấn đề cây, con giống mà còn nâng cao được năng lực sản xuất, hiện đại hóa kĩ thuật canh tác lạc hậu hiện có.</p>
-                    <p>Bên cạnh đó, một trong những điểm yếu khi sản xuất nông sản ở Việt Nam là chưa làm chủ được lĩnh vực công nghiệp hỗ trợ sản xuất nông nghiệp như phân bón, máy móc cơ khí nông nghiệp... Sản xuất nông nghiệp còn ở quy mô nhỏ, sử dụng nhiều thuốc bảo vệ thực vật gây tác hại cho môi trường. Phát triển sản xuất hàng hóa nông nghiệp tạo động lực và nguồn lực tái đầu tư cho phát triển công nghiệp hỗ trợ. Góp phần vào công cuộc đẩy mạnh công nghiệp hóa hiện đại hóa đất nước.</p>
+                    <p>${boardnew.content}</p>
                     <div class="blog-single-bottom">
                       <div class="row">
                         <div class="col-md-8 col-sm-6 col-xs-12">
@@ -76,10 +64,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12">
                           <div class="blog-single-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
                             <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
                           </div>
                         </div>
                       </div>
@@ -193,7 +178,6 @@
                   </div>
                 </div>
               </div>
-
               <!-- blog sidebar -->
               <div class="col-md-3">
                 <aside class="aa-blog-sidebar">
