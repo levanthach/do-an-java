@@ -16,5 +16,5 @@ public interface AdminDao {
 	Admin get(String name); 
  
 	List<Admin> getAll(); 
- 
+	
 } 
