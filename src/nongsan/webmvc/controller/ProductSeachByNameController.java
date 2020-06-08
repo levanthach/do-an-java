@@ -16,25 +16,22 @@ import nongsan.webmvc.service.ProductService;
 import nongsan.webmvc.service.impl.CategoryServicesImpl;
 import nongsan.webmvc.service.impl.ProductServiceImpl;
 
-public class ProductDetailController extends HttpServlet {
-
+public class ProductSeachByNameController extends HttpServlet {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	CategoryService cateService = new CategoryServicesImpl();
-	ProductService productService = new ProductServiceImpl();
-	
+	ProductService productService=new ProductServiceImpl();
+	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-		Product detail_product = productService.get(Integer.parseInt(id));
-		req.setAttribute("detail_product", detail_product);
-		
-		List<Catalog> name_cate_of_product = cateService.getCateByProduct(Integer.parseInt(id));
-		req.setAttribute("name_cate_of_product", name_cate_of_product);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product-detail.jsp");
+		String name=req.getParameter("s");
+		List<Catalog> cateList = cateService.getAll();
+		req.setAttribute("catelist", cateList);
+		List<Product> productSeachByName = productService.searchByName(name);
+		req.setAttribute("productlist", productSeachByName);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product-search.jsp");
 		dispatcher.forward(req, resp);
-	}
 
+	}
 }
