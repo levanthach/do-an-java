@@ -21,7 +21,6 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tiêu đề</th>
-                        <th scope="col">Nội dung</th>
                         <th scope="col">Hình ảnh</th>
                         <th scope="col">Người đăng</th>
                         <th scope="col">Ngày đăng</th>
@@ -33,8 +32,7 @@
                       <tr>
                         <td scope="row">${boardnew.id}</td>
                         <td>${boardnew.title}</td>
-        				<td>${boardnew.content}</td>
-        				<td>${boardnew.image_link}</td>
+        				<td><img style="width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}"></td>
         				<td>${boardnew.author}</td>
         				<td>${boardnew.created}</td>
         				 <td>
