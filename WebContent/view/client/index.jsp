@@ -832,8 +832,8 @@
                   <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
                     được giao khá nhanh và sản phẩm thì tốt.</p>
                   <div class="aa-testimonial-info">
-                    <p>Hà Ngủ Tân</p>
-                    <span>Master Develop</span>
+                    <p>Ngọc Huy</p>
+                    <span>Nhân viên kinh doanh</span>
                   </div>
                 </div>
               </li>
@@ -845,8 +845,8 @@
                   <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
                     được giao khá nhanh và sản phẩm thì tốt.</p>
                   <div class="aa-testimonial-info">
-                    <p>Maria Ozawa</p>
-                    <span>Diễn Viên, Idol</span>
+                    <p>Mỹ Tân</p>
+                    <span>Diễn Viên</span>
                   </div>
                 </div>
               </li>

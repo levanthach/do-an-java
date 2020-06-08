@@ -253,6 +253,17 @@
        <servlet-name>ProductListOfCategoryClient</servlet-name>
        <url-pattern>/view/client/product-id</url-pattern>
    </servlet-mapping>
+   
+    
+    <servlet>
+       <servlet-name>ProductSearchByName</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductSeachByNameController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductSearchByName</servlet-name>
+       <url-pattern>/view/client/product/search</url-pattern>
+   </servlet-mapping>
 
 	
  	<servlet>

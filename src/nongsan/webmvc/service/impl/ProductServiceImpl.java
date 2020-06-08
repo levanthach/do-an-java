@@ -60,6 +60,11 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> getProductById(int id) {
 		return productDao.getProductById(id);
 	}
+	
+	@Override
+	public List<Product> searchByName(String productName) {
+		return productDao.searchByName(productName);
+	}
 
 
 }

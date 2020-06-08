@@ -253,6 +253,7 @@ img {
      right: 5px;
      top: 0px;
      width: 50px;
+     background:none;
      transition: all 0.5s;
 }
 #aa-header .aa-header-top .aa-header-top-area {
@@ -699,15 +700,17 @@ img {
 }
 #menu .menu-area .navbar-default .navbar-nav .aa-search .aa-search-box {
   position: relative;
-  bottom: 15px;
+  bottom: 0.2em;
 }
 #menu .menu-area .navbar-default .navbar-nav .aa-search-box input[type="text"] {
-  font-size: 14px;
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: white;
-  opacity: 0.5;
+  font-size: 15px;
+   border: 1px solid white;
+   border-radius: 10px;
+   padding: 5px 25px 5px 8px;
+   background-color: white;
+   opacity: 0.5;
+   color: black;
+   outline: none;
 }
 #menu .menu-area .navbar-default .navbar-nav .aa-search-box .aa-search-icon:hover {
   opacity: 0.8;
