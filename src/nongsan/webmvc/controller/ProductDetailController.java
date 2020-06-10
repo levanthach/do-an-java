@@ -33,7 +33,12 @@ public class ProductDetailController extends HttpServlet {
 		List<Catalog> name_cate_of_product = cateService.getCateByProduct(Integer.parseInt(id));
 		req.setAttribute("name_cate_of_product", name_cate_of_product);
 		
-		System.out.print("cc" + name_cate_of_product);
+		String idCate = detail_product.getCatalog_id();
+		
+		List<Product> productListCate = productService.getProductById(Integer.parseInt(idCate));
+		
+		req.setAttribute("productById", productListCate);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product-detail.jsp");
 		dispatcher.forward(req, resp);
 	}

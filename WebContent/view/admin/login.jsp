@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value ="/view/admin/assets" var="url"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +11,24 @@
   <meta name="author" content=""/>
   <title>Dashtreme Admin - Free Dashboard for Bootstrap 4 by Codervent</title>
   <!-- loader-->
-  <link href="assets/css/pace.min.css" rel="stylesheet"/>
-  <script src="assets/js/pace.min.js"></script>
+  <link href="${url}/css/pace.min.css" rel="stylesheet"/>
+  <script src="${url}/js/pace.min.js"></script>
   <!--favicon-->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="${url}/images/favicon.ico" type="image/x-icon">
   <!-- Bootstrap core CSS-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="${url}/css/bootstrap.min.css" rel="stylesheet"/>
   <!-- animate CSS-->
-  <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <link href="${url}/css/animate.css" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <link href="${url}/css/icons.css" rel="stylesheet" type="text/css"/>
   <!-- Custom Style-->
-  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <link href="${url}/css/app-style.css" rel="stylesheet"/>
+  <script src="${url}/js/jquery.min.js"></script>
+  <script src="${url}/js/popper.min.js"></script>
+  <script src="${url}/js/bootstrap.min.js"></script>
+  <script src="${url}/plugins/simplebar/js/simplebar.js"></script>
+  <script src="${url}/js/sidebar-menu.js"></script>
+  <script src="${url}/js/app-script.js"></script>
   
 </head>
 
@@ -38,10 +46,10 @@
 		<div class="card-body">
 		 <div class="card-content p-2">
 		 	<div class="text-center">
-		 		<img src="assets/images/logo-icon.png" alt="logo icon">
+		 		<img src="${url}/images/logo-icon.png" alt="logo icon">
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Đăng nhập</div>
-		    <form>
+		    <form action="${pageContext.request.contextPath}/admin/login"  method="post">
 			  <div class="form-group">
 			  <label for="exampleInputUsername" class="sr-only">Username</label>
 			   <div class="position-relative has-icon-right">
@@ -63,12 +71,12 @@
 			<div class="form-row">
 			 <div class="form-group col-6">
 			   <div class="icheck-material-white">
-                <input type="checkbox" id="user-checkbox" checked="" />
+                <input type="checkbox" id="user-checkbox" />
                 <label for="user-checkbox">Ghi nhớ</label>
 			  </div>
 			 </div>
 			</div>
-			 <button type="button" class="btn btn-light btn-block">Đăng nhập</button>
+			 <button type="submit" class="btn btn-light btn-block">Đăng nhập</button>
 			 </form>
 		   </div>
 		  </div>
@@ -78,13 +86,5 @@
      <!--Start Back To Top Button-->
   
   </div>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
-  <script src="assets/js/sidebar-menu.js"></script>
-  <script src="assets/js/app-script.js"></script>
-  
 </body>
 </html>

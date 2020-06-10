@@ -127,7 +127,7 @@
                         <!-- Modal view content -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="aa-product-view-content">
-                            <h3>T-Shirt</h3>
+                            <h3>${detail_product.name}</h3>
                             <div class="aa-price-block">
                               <span class="aa-product-view-price">${detail_product.price }</span>
                               <p class="aa-product-avilability">Tình trạng: <span></span></p>
@@ -211,59 +211,35 @@
 
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
-              <h3>Lượt xem gần đây</h3>
+              <h3>Sản phẩm gần đây</h3>
               <div class="aa-recently-views">
                 <ul>
+                 <c:forEach items="${productlist}" var="product" end="2">
                   <li>
-                    <a href="product-detail.jsp" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
-                      <h4><a href="product-detail.jsp">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
+                      <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
+                      <p>${product.price } VNĐ</p>
                     </div>                    
                   </li>
-                  <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-1.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Tinh dầu</a></h4>
-                      <p>1 x 300.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>
-                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>                                      
+                  </c:forEach>
                 </ul>
-              </div>                            
+              </div>                                 
             </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
-              <h3>Mặt hàng xếp hạng cao</h3>
+              <h3>Sản phẩm xếp hạng cao</h3>
               <div class="aa-recently-views">
                 <ul>
+                 <c:forEach items="${product_banchay}" var="product" end="2">
                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
+                      <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
+                      <p>${product.price } VNĐ</p>
                     </div>                    
                   </li>
-                  <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-1.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Tinh dầu</a></h4>
-                      <p>1 x 300.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>
-                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>                                      
+                  </c:forEach>
                 </ul>
               </div>                            
             </div>
