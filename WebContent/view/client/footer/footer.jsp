@@ -55,7 +55,7 @@
                     <h3>HỖ TRỢ KHÁCH HÀNG</h3>
                     <ul class="aa-footer-nav">
                       <li><a href="#">Hướng dẫn đặt hàng</a></li>
-                      <li><a href="#">Hướng dẫn thanh toán</a></li>
+                      <li><a href="./payment.jsp">Hướng dẫn thanh toán</a></li>
                       <li><a href="#">Chính sách bảo hành</a></li>
                       <li><a href="#">Kiểm tra đơn hàng</a></li>
                       <li><a href="#">Chính sách bảo mật thông tin</a></li>
