@@ -558,17 +558,11 @@
         <div class="col-md-12">
           <div class="aa-client-brand-area">
             <ul class="aa-client-brand-slider">
-              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-joomla.png" alt="joomla img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-tiki.png" alt="tiki bấm là có"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-lazada.png" alt="lazada "></a></li>
+              <li><a href="#"><img src="${url}/img/logo-sendo.jpg" alt="sendo mua là đỏ"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-shopee.jpg" alt="shopee đi làm chi"></a></li>
+               <li><a href="#"><img src="${url}/img/logo-concung.png" alt="concung mua là cưng"></a></li>
             </ul>
           </div>
         </div>
