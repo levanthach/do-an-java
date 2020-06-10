@@ -93,18 +93,7 @@
                 </div>
               </div>
               <!-- / cart box -->
-              
-              <!-- search box -->
-<!--              <div class="aa-search-box">
-                <form action="">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bạn cần tìm gì?..">
-                    </div>
-                  <input type="text" name="" id="" placeholder="Bạn cần tìm gì? ">
-                  <button type="submit"><span class="fa fa-search"></span></button>
-                </form>
-              </div>-->
-              <!-- / search box -->             
+                         
             </div>
           </div>
         </div>
