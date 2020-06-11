@@ -11,7 +11,7 @@ public class ReviewServicesImpl implements ReviewService {
 	ReviewDao reviewDao = new ReviewDaoImpl();
 	@Override
 	public void insert(Review review) {
-		// TODO Auto-generated method stub
+		reviewDao.insert(review);
 		
 	}
 

@@ -109,7 +109,7 @@
                 <div class="tab-pane fade " id="review">
                  <div class="aa-product-review-area">
                    <ul class="aa-review-nav">
-                   <c:forEach items="${reviewbyid}" var="review">
+                   <c:forEach items="${reviewbyid}" var="review" >
                      <li>
                         <div class="media">
                           <div class="media-body">
@@ -137,18 +137,18 @@
                      <a href="#"><span class="fa fa-star-o"></span></a>
                    </div>
                    <!-- review form -->
-                   <form action="${pageContext.request.contextPath}/view/client/review?id=${product.id}" method="get" class="aa-review-form">
-                      <div class="form-group">
-                        <label for="message">Đánh giá của bạn</label>
-                        <textarea class="form-control" rows="3" id="message"></textarea>
-                      </div>
+                   <form action="${pageContext.request.contextPath}/view/client/review?id=${detail_product.id}" method="post" class="aa-review-form">
                       <div class="form-group">
                         <label for="name">Tên</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name" name="name">
                       </div>  
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Đánh giá của bạn</label>
+                        <textarea class="form-control" rows="3" id="content" name="content"></textarea>
                       </div>
 
                       <button type="submit" class="btn btn-default aa-review-submit">Gửi</button>

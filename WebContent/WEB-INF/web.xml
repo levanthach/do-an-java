@@ -334,5 +334,13 @@
 		<servlet-name>listBoardnewClientDetail</servlet-name>
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet>
+		<servlet-name>submitReview</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>submitReview</servlet-name>
+		<url-pattern>/view/client/review</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -15,8 +15,21 @@ public class ReviewDaoImpl extends connectDB implements ReviewDao {
 
 	@Override
 	public void insert(Review review) {
-		// TODO Auto-generated method stub
-		
+		String sql = "INSERT INTO review(product_id,  name, email, content, created) VALUES (?, ?, ?, ?, ?)";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, review.getProduct_id());
+			ps.setString(2, review.getName());
+			ps.setString(3, review.getEmail());
+			ps.setString(4, review.getContent());
+			ps.setString(5, review.getCreated());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
