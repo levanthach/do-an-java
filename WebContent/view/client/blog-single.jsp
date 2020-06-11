@@ -145,52 +145,11 @@
                       </nav>
                     </div>
                   </div>
-                  <!-- blog comments form -->
-                  <div id="respond">
-                    <h3 class="reply-title">Để lại bình luận</h3>
-                    <form id="commentform">
-                      <p class="comment-notes">
-                        Email của bạn sẽ được ẩn khi đăng bình luận. Vui lòng điền vào những chỗ có dấu<span class="required">*</span>
-                      </p>
-                      <p class="comment-form-author">
-                        <label for="author">Tên <span class="required">*</span></label>
-                        <input type="text" name="author" value="" size="30" required="required">
-                      </p>
-                      <p class="comment-form-email">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" name="email" value="" aria-required="true" required="required">
-                      </p>
-                      <p class="comment-form-url">
-                        <label for="url">Website</label>
-                        <input type="url" name="url" value="">
-                      </p>
-                      <p class="comment-form-comment">
-                        <label for="comment">Bình luận</label>
-                        <textarea name="comment" cols="40" rows="8" aria-required="true" required="required"></textarea>
-                      </p>
-                      <p class="form-allowed-tags">
-                        Bạn có thể sử dụng các thẻ <abbr title="HyperText Markup Language">HTML</abbr> tags:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
-                      </p>
-                      <p class="form-submit">
-                        <input type="submit" name="submit" class="aa-browse-btn" value="Đăng">
-                      </p>        
-                    </form>
-                  </div>
                 </div>
               </div>
               <!-- blog sidebar -->
               <div class="col-md-3">
                 <aside class="aa-blog-sidebar">
-                  <div class="aa-sidebar-widget">
-                    <h3>Danh mục</h3>
-                    <ul class="aa-catg-nav">
-                      <li><a href="#">Men</a></li>
-                      <li><a href="">Women</a></li>
-                      <li><a href="">Kids</a></li>
-                      <li><a href="">Electornics</a></li>
-                      <li><a href="">Sports</a></li>
-                    </ul>
-                  </div>
                   <div class="aa-sidebar-widget">
                     <h3>Tags</h3>
                     <div class="tag-cloud">
@@ -205,13 +164,15 @@
                     <h3>Bài đăng gần đây</h3>
                     <div class="aa-recently-views">
                       <ul>
+                   <c:forEach items="${boardnewlist}" var="boardnew" end="2">
                         <li>
-                          <a class="aa-cartbox-img" href="#"><img src="${url}/img/fashion/12.jpg" alt="img"></a>
+                          <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}" alt="img bài viết"></a>
                           <div class="aa-cartbox-info">
-                            <h4><a href="#"><b>Một số loại nông sản</a></h4>
-                            <p>May 9th 2020</p>
+                            <h4><a href="${pageContext.request.contextPath}/view/client/news-list-detail?id=${boardnew.id}"><b>${boardnew.title }</b></a></h4>
+                            <p>${boardnew.created }</p>
                           </div>                    
                         </li>
+                        </c:forEach>
                       </ul>
                     </div>                            
                   </div>
