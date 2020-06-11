@@ -148,7 +148,6 @@ public class CategoryDaoImpl extends connectDB implements CategoryDao {
 				Catalog catagory_product = new Catalog();
 				catagory_product.setName(rs.getString("name"));
 				products_cate.add(catagory_product);
-				System.out.print(products_cate);
 			}
 
 		} catch (SQLException e) {

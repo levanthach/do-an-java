@@ -12,14 +12,8 @@ import nongsan.webmvc.model.Admin;
 import nongsan.webmvc.service.AdminService;
 import nongsan.webmvc.service.impl.AdminServicesImpl; 
  
-/** 
- * Servlet implementation class AdminAddController 
- */ 
-//@WebServlet(urlPatterns = { "" }) 
 public class AdminAddController extends HttpServlet { 
-	/** 
-	 *  
-	 */ 
+
 	private static final long serialVersionUID = 1L; 
 	AdminService adminService = new AdminServicesImpl(); 
  

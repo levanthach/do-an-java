@@ -3,7 +3,7 @@
 <c:url value = "/view/admin/assets" var="url"/>
     <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
       <div class="brand-logo">
-        <a href="index.jsp">
+        <a href="${pageContext.request.contextPath}/admin/homepage">
           <img src="${url}/images/logo-icon.png" class="logo-icon" alt="logo icon">
           <h5 class="logo-text">Admin Web Nông Sản</h5>
         </a>
@@ -11,7 +11,7 @@
       <ul class="sidebar-menu do-nicescrol">
         <li class="sidebar-header">MENU ADMIN</li>
         <li>
-          <a href="index.jsp">
+          <a href="${pageContext.request.contextPath}/admin/homepage">
             <i class="zmdi zmdi-view-dashboard"></i> <span>Tổng quan</span>
           </a>
         </li>
@@ -42,7 +42,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="${pageContext.request.contextPath}/admin/review/list">
             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
           </a>   
         </li>

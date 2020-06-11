@@ -210,7 +210,58 @@
        <servlet-name>deleteUser</servlet-name>
        <url-pattern>/admin/user/delete</url-pattern>
    </servlet-mapping>
+
    
+    <servlet>
+       <servlet-name>AdminHomePage</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminHomePage</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminHomePage</servlet-name>
+       <url-pattern>/admin/homepage</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>AdminLogout</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminLogout</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminLogout</servlet-name>
+       <url-pattern>/admin/logout</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>AdminLogin</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.AdminLoginController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>AdminLogin</servlet-name>
+       <url-pattern>/admin/login</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>listReview</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ReviewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listReview</servlet-name>
+       <url-pattern>/admin/review/list</url-pattern>
+   </servlet-mapping>
+	
+	<servlet>
+       <servlet-name>deleteReview</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ReviewDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteReview</servlet-name>
+       <url-pattern>/admin/review/delete</url-pattern>
+   </servlet-mapping>
+	
  	<!--  Client Router -->
  	
    <servlet>
@@ -245,13 +296,24 @@
    </servlet-mapping>
    
     <servlet>
-       <servlet-name>PrductListOfCategoryClient</servlet-name>
-       <servlet-class>nongsan.webmvc.controller.PrductListOfCategoryClientController</servlet-class>
+       <servlet-name>ProductListOfCategoryClient</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductListOfCategoryClientController</servlet-class>
    </servlet>
  
    <servlet-mapping>
-       <servlet-name>PrductListOfCategoryClient</servlet-name>
+       <servlet-name>ProductListOfCategoryClient</servlet-name>
        <url-pattern>/view/client/product-id</url-pattern>
+   </servlet-mapping>
+   
+    
+    <servlet>
+       <servlet-name>ProductSearchByName</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ProductSeachByNameController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>ProductSearchByName</servlet-name>
+       <url-pattern>/view/client/product/search</url-pattern>
    </servlet-mapping>
 
 	
@@ -273,4 +335,12 @@
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>submitReview</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>submitReview</servlet-name>
+		<url-pattern>/view/client/review</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -32,11 +32,9 @@ public class ProductListClientController extends HttpServlet {
 		List<Product> productList = productService.getAll();
 		req.setAttribute("productlist", productList);
 		
-//		Product detail_product = productService.get(Integer.parseInt(id));
-//		req.setAttribute("detail_product", detail_product);
-		
-//		List<Catalog> name_cate_of_product = cateService.getCateByProduct(Integer.parseInt(id));
-//		req.setAttribute("name_cate_of_product", name_cate_of_product);
+		// Product bán chạy
+		List<Product> product_banchay= productService.getProductById(6);
+		req.setAttribute("product_banchay", product_banchay);	
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product.jsp");
 		dispatcher.forward(req, resp);

@@ -49,7 +49,7 @@
             </a>
           </li>
         </ul>
-
+		
         <ul class="navbar-nav align-items-center right-nav-link">
           <li class="nav-item">
             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
@@ -64,14 +64,13 @@
                         alt="user avatar"></div>
                     <div class="media-body">
                       <h6 class="mt-2 user-title">Webnongsan</h6>
-                      <p class="user-subtitle">webnongsan@gmail.com</p>
                     </div>
                   </div>
                 </a>
               </li>
               <li class="dropdown-item"><i class="icon-wallet mr-2"></i>Tài khoản</li>
               <li class="dropdown-divider"></li>
-              <li class="dropdown-item"><i class="icon-power mr-2"></i> Đăng xuất</li>
+			 <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="${pageContext.request.contextPath}/admin/logout"> Đăng xuất</a></li>		
             </ul>
           </li>
         </ul>
