@@ -28,8 +28,16 @@ public class ProductSeachByNameController extends HttpServlet {
 		String name=req.getParameter("s");
 		List<Catalog> cateList = cateService.getAll();
 		req.setAttribute("catelist", cateList);
+		
 		List<Product> productSeachByName = productService.searchByName(name);
 		req.setAttribute("productlist", productSeachByName);
+	
+		List<Product> productAllList = productService.getAll();
+		req.setAttribute("product_all", productAllList);
+		// Product bán chạy
+		List<Product> product_banchay= productService.getProductById(6);
+		req.setAttribute("product_banchay", product_banchay);	
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product-search.jsp");
 		dispatcher.forward(req, resp);
 

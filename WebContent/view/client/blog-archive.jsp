@@ -15,14 +15,14 @@
 <!--  content -->
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${url}/img/fashion/blog.jpg" alt="farm products img" width="1480" height="500">
+   <img src="${pageContext.request.contextPath}/view/client/assets/images/archive-banner.png" alt="banner blog">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Bài đăng</h2>
+        <h2>Tin tức</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
-          <li class="active">Bài đăng</li>
+          <li style="color:#fff">Tin tức</li>
         </ol>
       </div>
      </div>
@@ -37,7 +37,7 @@
         <div class="col-md-12">
           <div class="aa-blog-archive-area">
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-12">
                 <div class="aa-blog-content">
                   <div class="row">
                   <c:forEach items="${boardnewlist}" var="boardnew">
@@ -82,31 +82,7 @@
                   </nav>
                 </div>
               </div>
-              <div class="col-md-3">
-                <aside class="aa-blog-sidebar">
-                  <div class="aa-sidebar-widget">
-                    <h3>Danh mục</h3>
-                    <ul class="aa-catg-nav">
-                      <li><a href="#">Men</a></li>
-                      <li><a href="">Women</a></li>
-                      <li><a href="">Kids</a></li>
-                      <li><a href="">Electornics</a></li>
-                      <li><a href="">Sports</a></li>
-                    </ul>
-                  </div>
-                  <div class="aa-sidebar-widget">
-                    <h3>Tags</h3>
-                    <div class="tag-cloud">
-                      <a href="#">Nông sản</a>
-                      <a href="#">Hàng hóa</a>
-                      <a href="#">Cửa hàng</a>
-                      <a href="#">Nông nghiệp</a>
-                      <a href="#">Bảo quản</a>
-                      <a href="#">Hữu cơ</a>
-                    </div>
-                  </div>
-                </aside>
-              </div>
+             
             </div>
           </div>
         </div>
