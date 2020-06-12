@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import nongsan.webmvc.jdbc.connectDB;
+import nongsan.webmvc.model.Admin;
 
 
 
@@ -21,6 +22,9 @@ public class  AdminLoginDao {
 			ResultSet rs;
 			rs = st.executeQuery();
 		    exist = rs.next();
+		    Admin admin = new Admin();
+		    String name = rs.getString("name");
+		    admin.setName(name);
 		    } catch (Exception e) {
 			e.printStackTrace();
 		}

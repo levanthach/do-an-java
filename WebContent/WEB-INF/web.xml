@@ -315,4 +315,13 @@
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
 
+<servlet>
+		<servlet-name>ClientLogin</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientLogin</servlet-name>
+		<url-pattern>/client/login</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

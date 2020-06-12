@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import nongsan.webmvc.dao.AdminLoginDao;
+import nongsan.webmvc.model.Admin;
 
 
 @WebServlet("/AdminLoginController")
@@ -27,18 +28,23 @@ public class AdminLoginController extends HttpServlet {
     }
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	   response.setContentType("text/html");   
 		 
 		String username = request.getParameter("admin-username");
 		String password = request.getParameter("admin-password");
+		Admin admin = new Admin();
+		admin.setName(request.getParameter("name"));
 		
 		if(AdminLoginDao.checkAdminLogin(username,password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("admin-username", username);
+			session.setAttribute("admin-password", password);
 			response.sendRedirect(request.getContextPath() + "/admin/homepage"); 
 		}
 		else {
-
-			response.sendRedirect("/view/admin/login.jsp"); 
+            request.setAttribute("errorMessage", "Tài khoản đăng nhập hoặc mật khẩu sai !!!");
+            RequestDispatcher rd = request.getRequestDispatcher("/view/admin/login.jsp");
+            rd.forward(request, response);     
 		}
 		
 			}
