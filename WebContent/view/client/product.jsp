@@ -75,12 +75,7 @@
 	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span>
 	                    
 	                    </figcaption>
-	                  </figure>                         
-	                  <div class="aa-product-hvr-content">
-	                    <a href="#" data-toggle="tooltip" data-placement="top" title="Yêu thích"><span class="fa fa-heart-o"></span></a>
-	          
-	                    <a href="#" data-toggle2="tooltip" data-placement="top" title="Xem nhanh" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>                            
-	                  </div>
+	                  </figure>
 	                  <!-- product badge -->
 	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
 	                </li>

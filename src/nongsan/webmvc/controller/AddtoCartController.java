@@ -29,7 +29,7 @@ public class AddtoCartController extends HttpServlet {
 		String id;
 		if(request.getParameter("product-id")!=null) {
 			id = request.getParameter("product-id");
-			Product product = (Product) productService.getProductById(Integer.parseInt(id));
+			Product product = productService.get(Integer.parseInt(id));;
 			if(product != null) {
 				if(request.getParameter("qty")!=null) {
 					qty = Integer.parseInt(request.getParameter("qty"));
@@ -51,7 +51,7 @@ public class AddtoCartController extends HttpServlet {
 					List<Item> listItems = order.getItems();
 					boolean check = false;
 					for(Item item : listItems) {
-						if(item.getProduct().getId()== product.getId()) {
+						if(Integer.parseInt(item.getProduct().getId()) == Integer.parseInt(product.getId())) {
 							item.setQty(item.getQty() + qty);
 							check = true;
 						}
@@ -66,12 +66,11 @@ public class AddtoCartController extends HttpServlet {
 					session.setAttribute("order", order);
 				}
 			}
-			response.sendRedirect(request.getContextPath() + "/view/client/addtoCart");
+			response.sendRedirect(request.getContextPath() + "/view/client/product");
 		} else {
 			response.sendRedirect(request.getContextPath() + "/home");
 		}
 		
 	}
-
 
 }

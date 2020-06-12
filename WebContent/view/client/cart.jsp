@@ -46,18 +46,18 @@
                         <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
-                        <th>Tổng cộng</th>
+                        <th>Giá Tiền</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <c:forEach items="${order.item}" var="item">
+                      <c:forEach items="${order.items}" var="item">
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/vitao.jpg" alt="img"></a></td>
+                        <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
                         <td>${item.product.price }</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1" min=1></td>
-                        <td>Tổng VNĐ</td>
+                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
+                        <td>${item.product.price}</td>
                       </tr>
           			 </c:forEach>
                       <tr>

@@ -343,6 +343,16 @@
 		<servlet-name>AddtoCartController</servlet-name>
 		<url-pattern>/view/client/add-cart</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.CartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>/view/client/cart</url-pattern>
+	</servlet-mapping>
+	
 
 <servlet>
 		<servlet-name>ClientLogin</servlet-name>
