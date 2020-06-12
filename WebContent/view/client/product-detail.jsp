@@ -108,17 +108,12 @@
                 </div>
                 <div class="tab-pane fade " id="review">
                  <div class="aa-product-review-area">
-                   <h4>2 Đánh giá cho Quả óc chó</h4> 
                    <ul class="aa-review-nav">
+                   <c:forEach items="${reviewbyid}" var="review" >
                      <li>
                         <div class="media">
-                          <div class="media-left">
-                            <a href="#">
-                              <img class="media-object" src="${url}/img/testimonial-img-3.jpg" alt="girl image">
-                            </a>
-                          </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><strong>Hangutan</strong> - <span>DEC 26, 2019</span></h4>
+                            <h4 class="media-heading"><strong>${review.name}</strong> - <span>${review.created}</span></h4>
                             <div class="aa-product-rating">
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star"></span>
@@ -126,30 +121,11 @@
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star-o"></span>
                             </div>
-                            <p>Hàng tốt, giao hàng nhanh đóng gói cẩn thận. Sử dụng Ok!</p>
+                            <p>${review.content}</p>
                           </div>
                         </div>
                       </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <a href="#">
-                              <img class="media-object" src="${url}/img/testimonial-img-3.jpg" alt="girl image">
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading"><strong>Thach</strong> - <span>Oct 5, 2019</span></h4>
-                            <div class="aa-product-rating">
-                              <span class="fa fa-star"></span>
-                              <span class="fa fa-star"></span>
-                              <span class="fa fa-star"></span>
-                              <span class="fa fa-star"></span>
-                              <span class="fa fa-star-o"></span>
-                            </div>
-                            <p>Cam kết hàng đúng với ảnh, sử dụng chất lượng!</p>
-                          </div>
-                        </div>
-                      </li>
+                      </c:forEach>
                    </ul>
                    <h4>Thêm đánh giá</h4>
                    <div class="aa-your-rating">
@@ -161,18 +137,18 @@
                      <a href="#"><span class="fa fa-star-o"></span></a>
                    </div>
                    <!-- review form -->
-                   <form action="" class="aa-review-form">
-                      <div class="form-group">
-                        <label for="message">Đánh giá của bạn</label>
-                        <textarea class="form-control" rows="3" id="message"></textarea>
-                      </div>
+                   <form action="${pageContext.request.contextPath}/view/client/review?id=${detail_product.id}" method="post" class="aa-review-form">
                       <div class="form-group">
                         <label for="name">Tên</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name" name="name">
                       </div>  
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Đánh giá của bạn</label>
+                        <textarea class="form-control" rows="3" id="content" name="content"></textarea>
                       </div>
 
                       <button type="submit" class="btn btn-default aa-review-submit">Gửi</button>

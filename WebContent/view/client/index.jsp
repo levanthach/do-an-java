@@ -266,7 +266,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
                                 <div class="aa-prod-quantity">
                                   <form action="">
-                                    <select name="" id="">
+                                    <select name="">
                                       <option value="0" selected="1">1</option>
                                       <option value="1">2</option>
                                       <option value="2">3</option>
@@ -558,17 +558,11 @@
         <div class="col-md-12">
           <div class="aa-client-brand-area">
             <ul class="aa-client-brand-slider">
-              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-joomla.png" alt="joomla img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-java.png" alt="java img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-jquery.png" alt="jquery img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-html5.png" alt="html5 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-css3.png" alt="css3 img"></a></li>
-              <li><a href="#"><img src="${url}/img/client-brand-wordpress.png" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-tiki.png" alt="tiki bấm là có"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-lazada.png" alt="lazada "></a></li>
+              <li><a href="#"><img src="${url}/img/logo-sendo.jpg" alt="sendo mua là đỏ"></a></li>
+              <li><a href="#"><img src="${url}/img/logo-shopee.jpg" alt="shopee đi làm chi"></a></li>
+               <li><a href="#"><img src="${url}/img/logo-concung.png" alt="concung mua là cưng"></a></li>
             </ul>
           </div>
         </div>
@@ -583,11 +577,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-subscribe-area">
-            <h3>Subscribe our newsletter </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+            <h3>Đăng ký nhận tin tức mới </h3>
+            <p>Chúng tôi sẽ gởi các cho bạn các thông tin mới về sản phẩm</p>
             <form action="" class="aa-subscribe-form">
-              <input type="email" name="" id="" placeholder="Enter your Email">
-              <input type="submit" value="Subscribe">
+              <input type="email" placeholder="Địa chỉ Email">
+              <input type="submit" value="Đăng ký">
             </form>
           </div>
         </div>
