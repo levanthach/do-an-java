@@ -189,7 +189,7 @@
                 <c:forEach items="${productById}" var="product">
 	                <li>
 	                  <figure>
-	                    <a class="aa-product-img" href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt=""></a>
+	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt=""></a>
 	                    <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 	                     <figcaption>
 	                      <h4 class="aa-product-title"><a href="#">${product.name}</a></h4>
