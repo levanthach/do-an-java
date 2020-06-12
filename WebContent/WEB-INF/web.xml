@@ -353,10 +353,22 @@
 		<url-pattern>/view/client/cart</url-pattern>
 	</servlet-mapping>
 	
+
+<servlet>
+		<servlet-name>ClientLogin</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.LoginController</servlet-class>
+	</servlet>
+  
+	<servlet-mapping>
+		<servlet-name>ClientLogin</servlet-name>
+		<url-pattern>/client/login</url-pattern>
+	</servlet-mapping>
+  
 	<servlet>
-	<servlet-name>submitReview</servlet-name>
+    <servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
+  
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
