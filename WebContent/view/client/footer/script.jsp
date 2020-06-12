@@ -6,9 +6,8 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="${url}/js/bootstrap.js"></script>  
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="${url}/assets/js/jquery.smartmenus.js"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="${url}/js/jquery.smartmenus.bootstrap.js"></script>  
+
   <!-- To Slider JS -->
   <script src="${url}/js/sequence.js"></script>
   <script src="${url}/js/sequence-theme.modern-slide-in.js"></script>  

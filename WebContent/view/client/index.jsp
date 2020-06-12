@@ -266,7 +266,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
                                 <div class="aa-prod-quantity">
                                   <form action="">
-                                    <select name="" id="">
+                                    <select name="">
                                       <option value="0" selected="1">1</option>
                                       <option value="1">2</option>
                                       <option value="2">3</option>
@@ -577,11 +577,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-subscribe-area">
-            <h3>Subscribe our newsletter </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+            <h3>Đăng ký nhận tin tức mới </h3>
+            <p>Chúng tôi sẽ gởi các cho bạn các thông tin mới về sản phẩm</p>
             <form action="" class="aa-subscribe-form">
-              <input type="email" name="" id="" placeholder="Enter your Email">
-              <input type="submit" value="Subscribe">
+              <input type="email" placeholder="Địa chỉ Email">
+              <input type="submit" value="Đăng ký">
             </form>
           </div>
         </div>

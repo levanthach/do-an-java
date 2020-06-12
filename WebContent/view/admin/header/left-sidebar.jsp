@@ -42,7 +42,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="${pageContext.request.contextPath}/admin/review/list">
             <i class="zmdi zmdi-calendar-check"></i> <span>Review</span>
           </a>   
         </li>

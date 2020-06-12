@@ -241,7 +241,27 @@
        <servlet-name>AdminLogin</servlet-name>
        <url-pattern>/admin/login</url-pattern>
    </servlet-mapping>
-
+   
+   <servlet>
+       <servlet-name>listReview</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ReviewListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listReview</servlet-name>
+       <url-pattern>/admin/review/list</url-pattern>
+   </servlet-mapping>
+	
+	<servlet>
+       <servlet-name>deleteReview</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.ReviewDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteReview</servlet-name>
+       <url-pattern>/admin/review/delete</url-pattern>
+   </servlet-mapping>
+	
  	<!--  Client Router -->
  	
    <servlet>
@@ -314,5 +334,21 @@
 		<servlet-name>listBoardnewClientDetail</servlet-name>
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddtoCartController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.AddtoCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddtoCartController</servlet-name>
+		<url-pattern>/view/client/add-cart</url-pattern>
+	</servlet-mapping>
 
+	<servlet-name>submitReview</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>submitReview</servlet-name>
+		<url-pattern>/view/client/review</url-pattern>
+	</servlet-mapping>
 </web-app>
