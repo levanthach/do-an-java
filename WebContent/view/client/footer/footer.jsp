@@ -42,10 +42,9 @@
                   <h3>GIỚI THIỆU</h3>
                   <ul class="aa-footer-nav">
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Khách hàng</a></li>
-                    <li><a href="#">Đối tác</a></li>
-                    <li><a href="#">Tuyển dụng</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/view/client/introduce">Giới thiệu</a></li>
+                    <li><a href="contact.jsp">Liên hệ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/view/client/assets/images/dadangky.png" alt="logo img" width="40%"></a></li>
                   </ul>
                 </div>
               </div>
@@ -54,11 +53,9 @@
                   <div class="aa-footer-widget">
                     <h3>HỖ TRỢ KHÁCH HÀNG</h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="#">Hướng dẫn đặt hàng</a></li>
-                      <li><a href="./payment.jsp">Hướng dẫn thanh toán</a></li>
-                      <li><a href="#">Chính sách bảo hành</a></li>
-                      <li><a href="#">Kiểm tra đơn hàng</a></li>
-                      <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/order">Hướng dẫn đặt hàng</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/payment">Hướng dẫn thanh toán</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/security">Chính sách bảo mật thông tin</a></li>
                     </ul>
                   </div>
                 </div>
