@@ -68,6 +68,7 @@
 				  </div>
 			   </div>
 			  </div>
+			  <div> ${errorMessage} </div>
 			<div class="form-row">
 			 <div class="form-group col-6">
 			   <div class="icheck-material-white">
