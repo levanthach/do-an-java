@@ -343,10 +343,12 @@
 		<servlet-name>AddtoCartController</servlet-name>
 		<url-pattern>/view/client/add-cart</url-pattern>
 	</servlet-mapping>
-
-	<servlet-name>submitReview</servlet-name>
+	
+	<servlet>
+		<servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
