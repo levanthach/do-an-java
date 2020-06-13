@@ -336,6 +336,42 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>introduce</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.IntroduceController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>introduce</servlet-name>
+		<url-pattern>/view/client/introduce</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>order</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.OrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>order</servlet-name>
+		<url-pattern>/view/client/order</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>security</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.SecurityController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>security</servlet-name>
+		<url-pattern>/view/client/security</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>payment</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.PaymentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payment</servlet-name>
+		<url-pattern>/view/client/payment</url-pattern>
+   </servlet-mapping> 
+    
+	<servlet>
 		<servlet-name>AddtoCartController</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.AddtoCartController</servlet-class>
 	</servlet>
