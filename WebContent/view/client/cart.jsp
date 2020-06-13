@@ -55,11 +55,15 @@
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
                         <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
-                        <td>${item.product.price }</td>
-                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
                         <td>${item.product.price}</td>
+                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
+                        <td>${item.price}00</td>
                       </tr>
           			 </c:forEach>
+          			 <tr>
+                        <td colspan="5" class="">TỔNG TIỀN</td>
+                        <td>${sumprice}</td>
+                      </tr>
                       <tr>
                         <td colspan="6" class="aa-cart-view-bottom">
                           <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">

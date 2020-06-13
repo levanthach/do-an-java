@@ -60,11 +60,11 @@
                 <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
-                  <span class="aa-cart-notify">2</span>
+                  <span class="aa-cart-notify">1</span>
                 </a>
                 <div class="aa-cartbox-summary">
                   <ul>
-                  <c:forEach items="${order.items}" var="item" end="1">
+                  <c:forEach items="${order.items}" var="item" >
                     <li>
                       <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/cart"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a>
                       <div class="aa-cartbox-info">
