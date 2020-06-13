@@ -34,8 +34,8 @@
                 </ul>
               </li>
               <li><a href="${pageContext.request.contextPath}/view/client/news-list">TIN TỨC</a></li>
-              <li><a href="checkout.jsp">ĐẶT HÀNG</a></li>
-              <li><a href="contact.jsp">LIÊN HỆ</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/security">CHÍNH SÁCH</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/contact">LIÊN HỆ</a></li>
               <li class="aa-search"><!-- search box -->
               <a class="aa-search-box">
                 <form action="${pageContext.request.contextPath}/view/client/product/search" method="GET">

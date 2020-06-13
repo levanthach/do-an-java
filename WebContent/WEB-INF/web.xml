@@ -370,6 +370,15 @@
 		<servlet-name>payment</servlet-name>
 		<url-pattern>/view/client/payment</url-pattern>
    </servlet-mapping> 
+   
+   <servlet>
+		<servlet-name>contact</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.ContactController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contact</servlet-name>
+		<url-pattern>/view/client/contact</url-pattern>
+   </servlet-mapping> 
     
 	<servlet>
 		<servlet-name>AddtoCartController</servlet-name>
@@ -390,7 +399,7 @@
 	</servlet-mapping>
 	
 
-<servlet>
+	<servlet>
 		<servlet-name>ClientLogin</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.LoginController</servlet-class>
 	</servlet>

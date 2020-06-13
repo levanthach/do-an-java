@@ -13,7 +13,8 @@
       <div class="aa-catg-head-banner-content">
         <h2>Hướng dẫn đặt hàng</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>   
+          <li style="color:#fff">Đăt hàng</li>      
         </ol>
       </div>
      </div>
