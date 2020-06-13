@@ -16,14 +16,14 @@
 <!--  content -->
    <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${url}/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+   <img src="${pageContext.request.contextPath}/view/client/assets/images/contact-banner.png" alt="banner liên hệ">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
         <h2>Liên hệ</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
-          <li class="active">Liên hệ</li>
+          <li style="color:#fff">Thông tin liên hệ</li>
         </ol>
       </div>
      </div>

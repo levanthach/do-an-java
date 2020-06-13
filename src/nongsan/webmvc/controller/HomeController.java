@@ -25,9 +25,34 @@ public class HomeController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Boardnew> boardnewList = boardnewService.getAll();
 		req.setAttribute("boardnewlist", boardnewList);
+		// Product Rau củ quả
+		List<Product> product_raucu= productService.getProductById(1);
+		req.setAttribute("product_raucu", product_raucu);	
 		
-		List<Product> productList = productService.getAll();
-		req.setAttribute("productlist", productList);
+		// Product hạt
+		List<Product> product_hat= productService.getProductById(2);
+		req.setAttribute("product_hat", product_hat);	
+		
+		// Product trái cây
+		List<Product> product_traicay= productService.getProductById(3);
+		req.setAttribute("product_traicay", product_traicay);	
+		
+		// Product mật ong
+		List<Product> product_matong= productService.getProductById(4);
+		req.setAttribute("product_matong", product_matong);	
+		
+		// Product mới
+		List<Product> product_new= productService.getProductById(5);
+		req.setAttribute("product_new", product_new);	
+				
+		// Product bán chạy
+		List<Product> product_banchay= productService.getProductById(6);
+		req.setAttribute("product_banchay", product_banchay);	
+		
+		// Product giảm giá
+		List<Product> product_sale= productService.getProductById(7);
+		req.setAttribute("product_sale", product_sale);	
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/index.jsp");
 		dispatcher.forward(req, resp);
 	}

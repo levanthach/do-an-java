@@ -20,7 +20,7 @@
                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                 </a>-->
                 <!-- img based logo -->
-                <a href="${pageContext.request.contextPath}/home"><img src="${url}/images/logo.jpg" alt="logo img" width="100%"></a> 
+                <a href="${pageContext.request.contextPath}/home"><img src="${url}/images/logo.png" alt="logo img" width="100%"></a> 
               </div>
               <!-- / logo  -->
               <!-- Shipping service -->
@@ -57,29 +57,23 @@
               
                <!-- cart box -->
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
+                <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
                   <span class="aa-cart-notify">2</span>
                 </a>
                 <div class="aa-cartbox-summary">
                   <ul>
+                  <c:forEach items="${order.items}" var="item" end="1">
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-2.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/cart"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a>
                       <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
+                        <h4><a href="${pageContext.request.contextPath}/view/client/cart">${item.product.name}</a></h4>
+                        <p>${item.qty} x ${item.product.price}</p>
                       </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
+                      <a class="aa-remove-product" href="${pageContext.request.contextPath}/view/client/cart"><span class="fa fa-times"></span></a>
                     </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
+                   	</c:forEach>               
                     <li>
                       <span class="aa-cartbox-total-title">
                         Total
@@ -89,22 +83,12 @@
                       </span>
                     </li>
                   </ul>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/cart">Detail</a>
                   <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.jsp">Checkout</a>
                 </div>
               </div>
               <!-- / cart box -->
-              
-              <!-- search box -->
-<!--              <div class="aa-search-box">
-                <form action="">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bạn cần tìm gì?..">
-                    </div>
-                  <input type="text" name="" id="" placeholder="Bạn cần tìm gì? ">
-                  <button type="submit"><span class="fa fa-search"></span></button>
-                </form>
-              </div>-->
-              <!-- / search box -->             
+                         
             </div>
           </div>
         </div>

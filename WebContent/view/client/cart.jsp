@@ -14,14 +14,14 @@
 <!--  content -->
 <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${url}/img/fashion/cart.jpg" alt="fashion img" width="1500" height="500">
+   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-cart.png" alt="banner giỏ hàng">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
         <h2>Giỏ hàng</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ </a></li>
-          <li class="active">Giỏ hàng</li>
+          <li style="color:#fff">Thông tin giỏ hàng</li>
         </ol>
       </div>
      </div>
@@ -46,43 +46,26 @@
                         <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
-                        <th>Tổng cộng</th>
+                        <th>Giá Tiền</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <c:forEach items="${order.items}" var="item">
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/vitao.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Vi tảo cao cấp</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$250</td>
+                        <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a></td>
+                        <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
+                        <td>${item.product.price }</td>
+                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
+                        <td>${item.product.price}</td>
                       </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/mangtay.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Măng tây</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$250</td>
-                      </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/hatdieu.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Hạt điều</a></td>
-                        <td>$50</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$50</td>
-                      </tr>
+          			 </c:forEach>
                       <tr>
                         <td colspan="6" class="aa-cart-view-bottom">
-                          <div class="aa-cart-coupon">
-                            <input class="aa-coupon-code" type="text" placeholder="Mã giảm giá">
-                            <input class="aa-cart-view-btn" type="submit" value="Áp dụng mã giảm giá">
-                          </div>
                           <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">
                         </td>
                       </tr>
+                     
                       </tbody>
                   </table>
                 </div>

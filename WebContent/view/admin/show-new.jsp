@@ -1,5 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+  response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");
+  response.setHeader("Pragma" , "no-cache");
+  response.setHeader("Expires" , "0");
+  
+  
+  if (session.getAttribute("admin-username") == null){
+	  response.sendRedirect(request.getContextPath() + "/admin/login");
+  }
+  %>
   <!-- Start header section -->
   <jsp:include page = "./header/header.jsp" flush = "true" />
     <div class="content-wrapper">
@@ -21,7 +31,6 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tiêu đề</th>
-                        <th scope="col">Nội dung</th>
                         <th scope="col">Hình ảnh</th>
                         <th scope="col">Người đăng</th>
                         <th scope="col">Ngày đăng</th>
@@ -33,8 +42,7 @@
                       <tr>
                         <td scope="row">${boardnew.id}</td>
                         <td>${boardnew.title}</td>
-        				<td>${boardnew.content}</td>
-        				<td>${boardnew.image_link}</td>
+        				<td><img style="width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/news/${boardnew.image_link}"></td>
         				<td>${boardnew.author}</td>
         				<td>${boardnew.created}</td>
         				 <td>
