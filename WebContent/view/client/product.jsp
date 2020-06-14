@@ -69,7 +69,7 @@
 	                <li>
 	                  <figure>
 	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></a>
-	                    <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 	                    <figcaption>
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
 	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span>
@@ -211,59 +211,35 @@
 
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
-              <h3>Lượt xem gần đây</h3>
+              <h3>Sản phẩm gần đây</h3>
               <div class="aa-recently-views">
                 <ul>
+                 <c:forEach items="${productlist}" var="product" end="2">
                   <li>
-                    <a href="product-detail.jsp" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
-                      <h4><a href="product-detail.jsp">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
+                      <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
+                      <p>${product.price } VNĐ</p>
                     </div>                    
                   </li>
-                  <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-1.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Tinh dầu</a></h4>
-                      <p>1 x 300.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>
-                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>                                      
+                  </c:forEach>
                 </ul>
-              </div>                            
+              </div>                                 
             </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
-              <h3>Mặt hàng xếp hạng cao</h3>
+              <h3>Sản phẩm xếp hạng cao</h3>
               <div class="aa-recently-views">
                 <ul>
+                 <c:forEach items="${product_banchay}" var="product" end="2">
                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
+                      <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
+                      <p>${product.price } VNĐ</p>
                     </div>                    
                   </li>
-                  <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-1.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Tinh dầu</a></h4>
-                      <p>1 x 300.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>
-                   <li>
-                    <a href="#" class="aa-cartbox-img"><img alt="img" src="${url}/img/woman-small-2.jpg"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="#">Quả óc chó</a></h4>
-                      <p>1 x 550.000<sup><u>đ</u></sup></p>
-                    </div>                    
-                  </li>                                      
+                  </c:forEach>
                 </ul>
               </div>                            
             </div>

@@ -33,6 +33,11 @@ public class ProductListOfCategoryClientController extends HttpServlet {
 		String id = req.getParameter("id");
 		List<Product> productList = productService.getProductById(Integer.parseInt(id));
 		req.setAttribute("productlist", productList);		
+		
+		// Product bán chạy
+		List<Product> product_banchay= productService.getProductById(6);
+		req.setAttribute("product_banchay", product_banchay);	
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/product.jsp");
 		dispatcher.forward(req, resp);
 	}

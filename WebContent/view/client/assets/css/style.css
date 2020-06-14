@@ -825,7 +825,9 @@ img {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
+.serach-box:focus {
+	outline: none;
+}
 #wpf-loader-two .wpf-loader-two-inner:after {
   content: "";
   height: 57%;
@@ -2755,9 +2757,11 @@ a.aa-product-img img {
 #aa-blog-archive .aa-blog-archive-area .aa-blog-content .aa-blog-content-single h4 {
   font-size: 20px;
   margin-bottom: 20px;
+  color: black;
+  height: auto;
 }
 #aa-blog-archive .aa-blog-archive-area .aa-blog-content .aa-blog-content-single h4 a {
-  color: #5555;
+  color: #666;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -2777,6 +2781,7 @@ a.aa-product-img img {
   opacity: 1;
 }
 #aa-blog-archive .aa-blog-archive-area .aa-blog-content .aa-blog-content-single .aa-blog-img img {
+  /* margin-top: 50px; */
   max-width: 100%;
   opacity: 0.8;
   -webkit-transition: all 0.5s;
