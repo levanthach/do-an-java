@@ -20,7 +20,6 @@ import nongsan.webmvc.model.User;
 @WebServlet("/RegistrationController")
 public class RegistrationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     public RegistrationController() {
         super();
     }
@@ -40,12 +39,12 @@ public class RegistrationController extends HttpServlet {
 		if(register.RegisterUser(user))   //On success, you can display a message to user on Home page
         {		
 			request.setAttribute("Message", "Bạn đã tạo tài khoàn thành công. Mời đăng nhập.");
-			RequestDispatcher rd = request.getRequestDispatcher("/view/client/index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/view/client/account.jsp");
 	         rd.forward(request, response);
         }
         else   
         {
-           request.setAttribute("errMessage", "There's something went wrong. Please try again !!!");
+           request.setAttribute("errMessage", "Tạo tài khoản thất bại. Hãy thử lại !!!");
            RequestDispatcher rd = request.getRequestDispatcher("/view/client/account.jsp");
 	         rd.forward(request, response);
        }

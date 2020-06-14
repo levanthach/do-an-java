@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import nongsan.webmvc.jdbc.connectDB;
 import nongsan.webmvc.model.User;
 
 public class RegisterDao {
@@ -18,7 +17,6 @@ public class RegisterDao {
 		boolean set = false;      
         try
         {    
-        	con = connectDB.getConnect();
             String sql = "INSERT INTO users (username,password,email,phone,name) values (?,?,?,?,?)"; 
             PreparedStatement preparedStatement = this.con.prepareStatement(sql);
             preparedStatement.setString(1, user.getUsername());
