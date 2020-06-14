@@ -315,7 +315,7 @@
 		<url-pattern>/view/client/news-list-detail</url-pattern>
 	</servlet-mapping>
 
-<servlet>
+	<servlet>
 		<servlet-name>ClientLogin</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.LoginController</servlet-class>
 	</servlet>
@@ -324,4 +324,12 @@
 		<url-pattern>/client/login</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>ClientRegister</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.RegistrationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientRegister</servlet-name>
+		<url-pattern>/view/client/register</url-pattern>
+	</servlet-mapping>
 </web-app>

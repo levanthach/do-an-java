@@ -42,11 +42,12 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.jsp">Tài khoản</a></li>
+ <!--                  <li><a href="account.jsp">Tài khoản</a></li>      -->
                   <li class="hidden-xs"><a href="wishlist.jsp">Wishlist</a></li>
                   <li class="hidden-xs"><a href="cart.jsp">Giỏ hàng</a></li>
                   <li class="hidden-xs"><a href="checkout.jsp">Thanh toán</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
+                  <li><a href="${pageContext.request.contextPath}/client/login">Đăng nhập</a></li>
+                   <!--  data-toggle="modal" data-target="#login-modal" -->
                 </ul>
               </div>
             </div>
