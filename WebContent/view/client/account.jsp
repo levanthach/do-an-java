@@ -18,10 +18,10 @@
     <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Trang tài khoản</h2>
+        <h2>Tài khoản</h2>
         <ol class="breadcrumb">
           <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>                   
-          <li class="active">Tài khoản</li>
+          <li class="active">Đăng ký tài khoản</li>
         </ol>
       </div>
      </div>
@@ -36,28 +36,47 @@
        <div class="col-md-12">
         <div class="aa-myaccount-area">         
             <div class="row">
-              <div class="col-md-6">
-                <div class="aa-myaccount-login">
-                <h4>Đăng nhập</h4>
-                 <form class="aa-login-form" action="${pageContext.request.contextPath}/login" method="post">
-                  <label for="">Tên tài khoản<span>*</span></label>
-                   <input type="text" placeholder="Username" name="username">
-                   <label for="">Mật khẩu<span>*</span></label>
-                    <input type="password" placeholder="Password" name="password">
-                    <button type="submit" class="aa-browse-btn">Đăng nhập</button>
-                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                    <p class="aa-lost-password"><a href="#">Quên mật khẩu?</a></p>
-                  </form>
-                </div>
-              </div>
-              <div class="col-md-6">
+             
+              <div class="col-md-8 col-md-push-2">
                 <div class="aa-myaccount-register">                 
                  <h4>Đăng ký</h4>
-                 <form action="" class="aa-login-form">
-                    <label for="">Tên tài khoản hoặc Email<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
+                                               
+                 <form action="${pageContext.request.contextPath}/view/client/register" method="post" class="aa-login-form">
+                  	<label for="">Họ tên<span>*</span></label>
+                    <input type="text" placeholder="Nhập Họ Tên" name="user-name">
+                    	<label for="">Email<span>*</span></label>
+                    <input type="text" placeholder="Nhập Email" name="user-email">
+                    	<label for="">Số điện thoại<span>*</span></label>
+                    <input type="text" placeholder="Nhập SĐT" name="user-phone">
+                    <label for="">Username<span>*</span></label>
+                    <input type="text" placeholder="Nhập Username" name="user-userName">
                     <label for="">Mật khẩu<span>*</span></label>
-                    <input type="password" placeholder="Password">
+                    <input type="password" id="myinput" placeholder="Nhập Password" name="user-password">
+                    <input type="checkbox" onclick="myFunction1()">Hiển thị mật khẩu
+                    <input type="date"  name="user-created" id="the-date" style="display:none"/>
+					<script>
+					var date = new Date();
+
+					var day = date.getDate();
+					var month = date.getMonth() + 1;
+					var year = date.getFullYear();
+
+					if (month < 10) month = "0" + month;
+					if (day < 10) day = "0" + day;
+
+					var today = year + "-" + month + "-" + day;
+
+
+					document.getElementById('the-date').value = today;
+					function myFunction1() {
+                    	  var x = document.getElementById("myinput");
+                    	  if (x.type === "password") {
+                    	    x.type = "text";
+                    	  } else {
+                    	    x.type = "password";
+                    	  }
+                    	}
+					</script>            
                     <button type="submit" class="aa-browse-btn">Đăng ký</button>                    
                   </form>
                 </div>

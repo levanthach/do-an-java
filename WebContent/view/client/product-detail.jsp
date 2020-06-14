@@ -88,7 +88,7 @@
                       </p>
                     </div>
                     <div class="aa-prod-view-bottom">
-                      <a class="aa-add-to-cart-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}">Thêm vào giỏ hàng</a>
+                      <a class="aa-add-to-cart-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${detail_product.id}">Thêm vào giỏ hàng</a>
                     </div>
                   </div>
                 </div>

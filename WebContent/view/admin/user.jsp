@@ -16,9 +16,9 @@
       <div class="container-fluid">
 
         <div class="row mt-3">
-          <div class="col-lg-12">
+          <!--<div class="col-lg-12">
             <button class="add-catalog"><a href="${pageContext.request.contextPath}/admin/user/add">Thêm User</a></button>
-          </div>
+          </div>  -->
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">

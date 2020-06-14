@@ -22,9 +22,8 @@ import nongsan.webmvc.service.impl.ProductServiceImpl;
  */
 public class ProductListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	ProductService productService = new ProductServiceImpl();
 
+	ProductService productService = new ProductServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Product> productList = productService.getAll();

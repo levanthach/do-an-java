@@ -28,7 +28,6 @@
 	                  <label for="input-4">Người đăng</label>
                   <div>
                     <select class="form-control valid" id="input-4" name="new-author" required aria-invalid="false">
-                        <option>NULL</option>
                         <option>Thịnh Dương</option>
                         <option>Lê Thạch</option>
                         <option>Lan Ngọc</option>
@@ -38,7 +37,7 @@
                   </div>
                   <div class="form-group">
 	                  <label for="input-5">Ngày đăng</label>
-	                  <input type="date" class="form-control" id="input-5" name="new-created">
+	                  <input type="date" class="form-control" id="the-date" name="new-created">
 	              </div>
                  <div class="form-footer">
                  	
@@ -53,5 +52,19 @@
         <div class="overlay toggle-menu"></div>
       </div>
     </div>
-  
+  <script>
+		var date = new Date();
+		
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		
+		var today = year + "-" + month + "-" + day;
+		
+		
+		document.getElementById('the-date').value = today;
+</script>
     <jsp:include page = "./footer/footer.jsp" flush = "true" />

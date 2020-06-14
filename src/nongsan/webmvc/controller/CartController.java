@@ -12,16 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CartController
  */
-//@WebServlet("/CartController")
+
 public class CartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//	private ProductService productService;
-//	@Override
-//	public void init() throws ServletException
-//	{
-//		productService = new ProductServiceImpl();
-//		super.init();
-//	}
     
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
