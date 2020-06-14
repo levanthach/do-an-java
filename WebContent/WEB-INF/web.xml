@@ -435,4 +435,13 @@
 		<servlet-name>ClientRegister</servlet-name>
 		<url-pattern>/view/client/register</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>LogoutClient</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutClient</servlet-name>
+		<url-pattern>/view/client/logout</url-pattern>
+	</servlet-mapping>
 </web-app>
