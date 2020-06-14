@@ -46,7 +46,7 @@
                   </div>
                   <div class="form-group">
                     <label for="input-5">Date</label>
-                    <input type="date" class="form-control" id="input-6" placeholder="Ngày tạo" name="user-created">
+                    <input type="date" class="form-control" id="the-date" placeholder="Ngày tạo" name="user-created">
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Đăng ký</button>
@@ -59,5 +59,20 @@
         <div class="overlay toggle-menu"></div>
       </div>
     </div>
+    <script>
+		var date = new Date();
+		
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		
+		var today = year + "-" + month + "-" + day;
+		
+		
+		document.getElementById('the-date').value = today;
+</script>
 
     <jsp:include page = "./footer/footer.jsp" flush = "true" />

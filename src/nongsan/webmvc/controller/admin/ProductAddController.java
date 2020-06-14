@@ -44,7 +44,6 @@ public class ProductAddController extends HttpServlet {
 			String product_content = req.getParameter("product-content");
 			String product_discount = req.getParameter("product-discount");
 			String product_image = req.getParameter("product-image");
-			String product_list_image = req.getParameter("product-image-list");
 			String product_day = req.getParameter("product-day");
 
 			Product product = new Product();
@@ -56,7 +55,6 @@ public class ProductAddController extends HttpServlet {
 			product.setContent(product_content);
 			product.setDiscount(product_discount);
 			product.setImage_link(product_image);
-			product.setImage_list(product_list_image);
 			product.setCreated(product_day);
 			productService.insert(product);
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");

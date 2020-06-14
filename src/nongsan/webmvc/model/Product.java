@@ -9,12 +9,11 @@ public class Product {
 	private String description;
 	private String content;
 	private String image_link;
-	private String image_list;
 	private String created;
 	private String discount;
 	public Product() {}
 	public Product(String id, String catalog_id, String name, String price, String status, String description, String content,
-			String discount, String image_link, String image_list, String created) {
+			String discount, String image_link, String created) {
 		super();
 		this.id = id;
 		this.catalog_id = catalog_id;
@@ -25,7 +24,6 @@ public class Product {
 		this.content = content;
 		this.discount = discount;
 		this.image_link = image_link;
-		this.image_list = image_list;
 		this.created = created;
 	}
 	public String getId() {
@@ -82,12 +80,6 @@ public class Product {
 	public void setImage_link(String image_link) {
 		this.image_link = image_link;
 	}
-	public String getImage_list() {
-		return image_list;
-	}
-	public void setImage_list(String image_list) {
-		this.image_list = image_list;
-	}
 	public String getCreated() {
 		return created;
 	}
@@ -98,7 +90,7 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", catalog_id=" + catalog_id + ", name=" + name + ", price=" + price + ", status="
 				+ status + ", description=" + description + ", content=" + content + ", discount=" + discount
-				+ ", image_link=" + image_link + ", image_list=" + image_list + ", created="
+				+ ", image_link=" + image_link + ", created="
 				+ created + "]";
 	}
 

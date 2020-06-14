@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value = "/view/client/assets" var="url"/>
 <!-- Login Modal -->  
   <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -39,13 +41,12 @@
             <div class="row">
               <div class="col-md-4 col-sm-6">
                 <div class="aa-footer-widget">
-                  <h3>GIỚI THIỆU</h3>
+                  <a href="${pageContext.request.contextPath}/view/client/home"><img src="${url}/images/logo_footer.jpg" alt="logo img" width="185px"></a> 
                   <ul class="aa-footer-nav">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Khách hàng</a></li>
-                    <li><a href="#">Đối tác</a></li>
-                    <li><a href="#">Tuyển dụng</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/view/client/introduce">Giới thiệu</a></li>
+                    <li><a href="${pageContext.request.contextPath}/view/client/contact">Liên hệ</a></li>
+                    <li><img src="${pageContext.request.contextPath}/view/client/assets/images/dadangky.png" alt="logo img" width="40%"></li>
                   </ul>
                 </div>
               </div>
@@ -54,11 +55,9 @@
                   <div class="aa-footer-widget">
                     <h3>HỖ TRỢ KHÁCH HÀNG</h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="#">Hướng dẫn đặt hàng</a></li>
-                      <li><a href="./payment.jsp">Hướng dẫn thanh toán</a></li>
-                      <li><a href="#">Chính sách bảo hành</a></li>
-                      <li><a href="#">Kiểm tra đơn hàng</a></li>
-                      <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/order">Hướng dẫn đặt hàng</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/payment">Hướng dẫn thanh toán</a></li>
+                      <li><a href="${pageContext.request.contextPath}/view/client/security">Chính sách bảo mật thông tin</a></li>
                     </ul>
                   </div>
                 </div>

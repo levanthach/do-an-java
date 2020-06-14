@@ -28,7 +28,7 @@
                   <a class="aa-shipping-boxsmall">
                       <span class="aa-shipping-boxsmall-icon fas fa-shipping-fast"></span>
                       <span class="aa-shipping-box-text">
-                          <div class="aa-shipping-title">Thanh toán tại nhà</div>
+                          <div class="aa-shipping-title">Miễn phí vận chuyển</div>
                       <div class="">Khu vực TP HCM</div>
                       </span>
                       
@@ -45,7 +45,7 @@
                       <span class="aa-shipping-boxsmall-icon fas fa-shipping-fast"></span>
                       <span class="aa-shipping-box-text">
                           <div class="aa-shipping-title">Giao hàng toàn quốc</div>
-                      <div class="">Ship COD tận nhà</div>
+                      <div class="">Đảm bảo uy tín, chất lượng</div>
                       </span>
                       
                   </a>
@@ -57,39 +57,34 @@
               
                <!-- cart box -->
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
+                <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
-                  <span class="aa-cart-notify">2</span>
+                  <span class="aa-cart-notify">1</span>
                 </a>
                 <div class="aa-cartbox-summary">
                   <ul>
+                  <c:forEach items="${order.items}" var="item" >
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-2.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/cart"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a>
                       <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
+                        <h4><a href="${pageContext.request.contextPath}/view/client/cart">${item.product.name}</a></h4>
+                        <p>${item.qty} x ${item.product.price} VNĐ</p>
                       </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
+                      <a class="aa-remove-product" href="${pageContext.request.contextPath}/view/client/cart"><span class="fa fa-times"></span></a>
                     </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="${url}/img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
+                   	</c:forEach>               
                     <li>
                       <span class="aa-cartbox-total-title">
-                        Total
+                        Tổng
                       </span>
                       <span class="aa-cartbox-total-price">
-                        $500
+                        ${sumprice} VNĐ
                       </span>
                     </li>
                   </ul>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.jsp">Checkout</a>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/cart">Chi tiết</a>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/checkout">Thanh toán</a>
                 </div>
               </div>
               <!-- / cart box -->

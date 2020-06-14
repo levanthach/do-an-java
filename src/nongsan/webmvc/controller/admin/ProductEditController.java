@@ -56,7 +56,6 @@ public class ProductEditController extends HttpServlet {
 		product.setContent(req.getParameter("product-content"));
 		product.setDiscount(req.getParameter("product-discount"));
 		product.setImage_link(req.getParameter("product-image"));
-		product.setImage_list(req.getParameter("product-image-list"));
 		product.setCreated(req.getParameter("product-day"));
 		productService.edit(product);
 		

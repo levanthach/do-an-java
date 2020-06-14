@@ -76,14 +76,9 @@
                 
                  <div class="form-group">
                     <label for="input-1">Ảnh đại diện</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image" value="${product.image_link}">
+                    <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}">
                   </div>
-                  
-                  <div class="form-group">
-                    <label for="input-1">Hình mô tả</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image-list" value="${product.image_list}">
-                  </div>
-                
+              
               
           
                <div class="form-footer">

@@ -24,9 +24,8 @@
             <!-- Left nav -->
             <ul class="nav navbar-nav">
               <li><a href="${pageContext.request.contextPath}/home">TRANG CHỦ</a></li>
-              <li><a href="./introduce.jsp">GIỚI THIỆU</a></li>
-              <li><a href="${pageContext.request.contextPath}/about">GIỚI THIỆU</a></li>
-              <li><a href="${pageContext.request.contextPath}/view/client/product">SẢN PHẨM</span></a>
+              <li><a href="${pageContext.request.contextPath}/view/client/introduce">GIỚI THIỆU</a></li>
+            <li><a href="${pageContext.request.contextPath}/view/client/product">SẢN PHẨM</span></a>
                 <ul class="dropdown-menu">                
                   <li><a href="product.jsp">RAU CỦ QUẢ</a></li>
                   <li><a href="product.jsp">CÁC LOẠI HẠT</a></li>
@@ -35,8 +34,8 @@
                 </ul>
               </li>
               <li><a href="${pageContext.request.contextPath}/view/client/news-list">TIN TỨC</a></li>
-              <li><a href="checkout.jsp">ĐẶT HÀNG</a></li>
-              <li><a href="contact.jsp">LIÊN HỆ</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/security">CHÍNH SÁCH</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/contact">LIÊN HỆ</a></li>
               <li class="aa-search"><!-- search box -->
               <a class="aa-search-box">
                 <form action="${pageContext.request.contextPath}/view/client/product/search" method="GET">
