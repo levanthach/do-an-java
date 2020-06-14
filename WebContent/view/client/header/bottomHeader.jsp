@@ -84,7 +84,7 @@
                     </li>
                   </ul>
                   <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/cart">Chi tiết</a>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.jsp">Thanh toán</a>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/checkout">Thanh toán</a>
                 </div>
               </div>
               <!-- / cart box -->

@@ -389,6 +389,15 @@
 		<url-pattern>/view/client/add-cart</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+		<servlet-name>CheckoutController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.CheckoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckoutController</servlet-name>
+		<url-pattern>/view/client/checkout</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>CartController</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.CartController</servlet-class>
