@@ -46,43 +46,30 @@
                         <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
-                        <th>Tổng cộng</th>
+                        <th>Giá Tiền</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <c:forEach items="${order.items}" var="item">
                       <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/vitao.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Vi tảo cao cấp</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$250</td>
+                        <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
+                        <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
+                        <td>${item.product.price} VNĐ</td>
+                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
+                        <td>${item.price}00 VNĐ</td>
                       </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/mangtay.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Măng tây</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$250</td>
-                      </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${url}/img/fashion/hatdieu.jpg" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Hạt điều</a></td>
-                        <td>$50</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$50</td>
+          			 </c:forEach>
+          			 <tr>
+                        <td colspan="5" class=""><strong>TỔNG TIỀN</strong></td>
+                        <td><strong>${sumprice} VNĐ</strong></td>
                       </tr>
                       <tr>
                         <td colspan="6" class="aa-cart-view-bottom">
-                          <div class="aa-cart-coupon">
-                            <input class="aa-coupon-code" type="text" placeholder="Mã giảm giá">
-                            <input class="aa-cart-view-btn" type="submit" value="Áp dụng mã giảm giá">
-                          </div>
                           <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">
                         </td>
                       </tr>
+                     
                       </tbody>
                   </table>
                 </div>
@@ -94,15 +81,19 @@
                  <tbody>
                    <tr>
                      <th>Tạm tính</th>
-                     <td>$550</td>
+                     <td>${sumprice} VNĐ</td>
+                   </tr>
+                   <tr>
+                     <th>VAT</th>
+                     <td>0 VNĐ</td>
                    </tr>
                    <tr>
                      <th>Tổng cộng</th>
-                     <td>$550</td>
+                     <td><strong>${sumprice} VNĐ</strong></td>
                    </tr>
                  </tbody>
                </table>
-               <a href="#" class="aa-cart-view-btn">Thanh toán</a>
+               <a href="${pageContext.request.contextPath}/view/client/checkout" class="aa-cart-view-btn">Thanh toán</a>
              </div>
            </div>
          </div>

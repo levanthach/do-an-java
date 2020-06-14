@@ -336,11 +336,112 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>submitReview</servlet-name>
+		<servlet-name>introduce</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.IntroduceController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>introduce</servlet-name>
+		<url-pattern>/view/client/introduce</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>order</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.OrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>order</servlet-name>
+		<url-pattern>/view/client/order</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>security</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.SecurityController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>security</servlet-name>
+		<url-pattern>/view/client/security</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>payment</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.PaymentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payment</servlet-name>
+		<url-pattern>/view/client/payment</url-pattern>
+   </servlet-mapping> 
+   
+   <servlet>
+		<servlet-name>contact</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.ContactController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contact</servlet-name>
+		<url-pattern>/view/client/contact</url-pattern>
+   </servlet-mapping> 
+    
+	<servlet>
+		<servlet-name>AddtoCartController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.AddtoCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddtoCartController</servlet-name>
+		<url-pattern>/view/client/add-cart</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>CheckoutController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.CheckoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckoutController</servlet-name>
+		<url-pattern>/view/client/checkout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartController</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.CartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>/view/client/cart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ClientLogin</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.LoginController</servlet-class>
+	</servlet>
+  
+	<servlet-mapping>
+		<servlet-name>ClientLogin</servlet-name>
+		<url-pattern>/view/client/login</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+    <servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
+  
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
+	</servlet-mapping>
+   
+   	<servlet>
+		<servlet-name>ClientRegister</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.RegistrationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientRegister</servlet-name>
+		<url-pattern>/view/client/register</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>LogoutClient</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutClient</servlet-name>
+		<url-pattern>/view/client/logout</url-pattern>
 	</servlet-mapping>
 </web-app>

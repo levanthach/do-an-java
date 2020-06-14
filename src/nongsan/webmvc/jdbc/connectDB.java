@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class connectDB {
 	public connectDB(){
-		
+		super();
 	}
 	public static Connection getConnect(){
 		Connection connection = null;

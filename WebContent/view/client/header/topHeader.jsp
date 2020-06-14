@@ -22,13 +22,9 @@
                 <div class="aa-language">
                   <div class="dropdown">
                     <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <img src="${url}/img/flag/english.jpg" alt="english flag">ENGLISH
-                      <span class="caret"></span>
+                      <img src="${url}/img/flag/vietnam.png" alt="english flag">Việt Nam
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#"><img src="${url}/img/flag/french.jpg" alt="">FRENCH</a></li>
-                      <li><a href="#"><img src="${url}/img/flag/english.jpg" alt="">ENGLISH</a></li>
-                    </ul>
+                   
                   </div>
                 </div>
                 <!-- / language -->
@@ -42,11 +38,20 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.jsp">Tài khoản</a></li>
-                  <li class="hidden-xs"><a href="wishlist.jsp">Wishlist</a></li>
-                  <li class="hidden-xs"><a href="cart.jsp">Giỏ hàng</a></li>
-                  <li class="hidden-xs"><a href="checkout.jsp">Thanh toán</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
+               
+	                <c:if test="${sessionScope.username != null}">
+	                 <li>
+						<a><strong>Chào</strong> ${username }</a>
+					</li>
+					<li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/logout">Đăng xuất</a></li>
+					</c:if>
+				
+				 <c:if test="${sessionScope.username == null}">
+	                  <li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/register">Đăng ký</a></li>
+	                  <li><a href="${pageContext.request.contextPath}/view/client/login">Đăng nhập</a></li>
+	              </c:if>
+                  
+                   <!--  data-toggle="modal" data-target="#login-modal" -->
                 </ul>
               </div>
             </div>

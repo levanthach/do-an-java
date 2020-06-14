@@ -12,7 +12,8 @@
       <div class="aa-catg-head-banner-content">
         <h2>Giới thiệu</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>      
+          <li style="color:#fff">Giới thiệu</li>   
         </ol>
       </div>
      </div>
@@ -29,14 +30,14 @@
       		<strong>“Mang thiên nhiên về với căn nhà của bạn”</strong>. Với quy trình lựa chọn và kiểm soát nghiêm ngặt Nông Sản 24h đã tạo nên quỹ đầu tư chuyên thu mua 
       		và cung cấp phân phối những sản phẩm rau sạch tươi ngon nhất từ các nông trại phân phối đến tay người tiêu dùng giúp họ có những bữa ăn tươi ngon
       		nhất trong từng sản phẩm khác biệt từ thiên nhiên.</p>
-      		<img src="./assets/images/introduce_thuc_pham_sach.png" alt="Thực phẩm sạch"/> <br/> <br>
+      		<img src="${url}/images/introduce_thuc_pham_sach.png" alt="Thực phẩm sạch"/> <br/> <br>
       		<p>Với triết lý trong kinh doanh là tuân thủ và đảm bảo được chất lượng tươi ngon nhất, nguồn gốc xuất xứ về sản phẩm rõ ràng.Chúng tôi cam kết không sử dụng
       		chất bảo quản nào bị Bộ Y Tế cấm không được sử dụng và cam kết với quý khách hàng về toàn bộ những sản phẩm được phân phối qua hệ thống phân phối  <strong>Nông Sản 24h </strong>
       		đảm bảo an toàn nhất.</p>
       		<p>Với cam kết chỉ phân phối những hàng hóa được cung cấp từ những nhà sản xuất có uy tín và đã được cơ quan y tế có thẩm quyền cấp chứng nhận và
       		đảm bảo vệ sinh an toàn thực phẩm có đủ quyền cung cấp thực phẩm sạch, các loại nông sản là các đặc sản từ mọi miền trên toàn quốc, các thực phẩm sử dụng hàng ngày
       		như các thực phẩm được đóng gói, thực phẩm được chế biến sẵn, rau củ quả, các loại gạo vùng miền và các loại phụ gia về thực phẩm như các loại gia vị dùng trong việc chế biến món ăn hàng ngày,...</p>
-      		<img src="./assets/images/introduce_thuc_pham_sach2.jpg" alt="Thực phẩm sạch" width= "1160" height= "600"/> <br/> <br>
+      		<img src="${url}/images/introduce_thuc_pham_sach2.jpg" alt="Thực phẩm sạch" width= "1160" height= "600"/> <br/> <br>
       		<strong>Dưới đây, chúng tôi xin điểm qua những mặt hàng của Nông Sản 24h hiện đang được rất nhiều khách hàng tin dùng và ưa chuộng:</strong><br/>
       		<p> <strong>Rau củ sạch Đà Lạt, an toàn có nguồn gốc rõ ràng: </strong>
 			Với những loại rau củ là những loại đặc sản tại các vùng miền <strong>Nông Sản 24h</strong> là địa chỉ uy tín cung cấp cho bạn các loại sản phẩm chất lượng từ các loại  
@@ -54,8 +55,6 @@
       		<p> <strong>Mật ong rừng hoàn toàn nguyên chất</strong> được khai thác trực tiếp từ rừng già Quảng Ngãi, đem đến cho khách hàng một sản phẩm chất lượng, với giá trị dinh dưỡng cao.</p>
       		<br />
       	</div>
-
-      	
       </div>
      </div>
     </section>
