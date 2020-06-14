@@ -38,10 +38,19 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                   <li><a href="account.jsp">Tài khoản</a></li>
-                  <li class="hidden-xs"><a href="checkout.jsp">Thanh toán</a></li>
-                   <li class="hidden-xs"><a href="${pageContext.request.contextPath}/register">Đăng ký</a></li>
-                  <li><a href="${pageContext.request.contextPath}/client/login">Đăng nhập</a></li>
+               
+	                <c:if test="${sessionScope.username != null}">
+	                 <li>
+						<a><strong>Chào</strong> ${username }</a>
+					</li>
+					<li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/logout">Đăng xuất</a></li>
+					</c:if>
+				
+				 <c:if test="${sessionScope.username == null}">
+	                  <li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/register">Đăng ký</a></li>
+	                  <li><a href="${pageContext.request.contextPath}/view/client/login">Đăng nhập</a></li>
+	              </c:if>
+                  
                    <!--  data-toggle="modal" data-target="#login-modal" -->
                 </ul>
               </div>
