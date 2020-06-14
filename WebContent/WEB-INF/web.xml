@@ -429,6 +429,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>ClientRegister</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.RegistrationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientRegister</servlet-name>
+		<url-pattern>/view/client/register</url-pattern>
+	</servlet-mapping>
+  
+  	<servlet>
        <servlet-name>addUserClient</servlet-name>
        <servlet-class>nongsan.webmvc.controller.UserAddClientController</servlet-class>
    </servlet>

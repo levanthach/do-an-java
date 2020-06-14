@@ -1,5 +1,4 @@
 package nongsan.webmvc.model;
-import java.util.Date;
 
 public class User{
 	private int id;
@@ -16,10 +15,28 @@ public class User{
 		this.password = password;
 	}
 	
-	public User() {
-		// TODO Auto-generated constructor stub
+	public User(int id, String username, String password, String phone, String email, String name) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.phone = phone;
+		this.email = email;
+		this.name = name;
 	}
-
+	public User(String username, String password, String email, String phone, String name)
+	{
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.phone = phone;
+		this.name = name;
+	}
+	public User()
+	{
+		super();
+	}
 	public int getId() {
 		return id;
 	}
