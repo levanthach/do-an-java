@@ -49,6 +49,7 @@
                     <input type="text" placeholder="Số điện thoại" name="phone" required>   
                      <label for="">Username<span>*</span></label>
                     <input type="text" placeholder="Username" name="username" required>
+                    <p style="color:red; display: block;">${verifyMsg}</p>
                     <label for="">Mật khẩu<span>*</span></label>  
                     <input type="password" placeholder="Password" name="password" required>     
                     <input type="date" style="display: none" placeholder="Password" name="created" id="the-date">             
