@@ -368,9 +368,17 @@
     <servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
-  
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    <servlet-name>deleteProductInCart</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.DeleteProductInCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteProductInCart</servlet-name>
+		<url-pattern>/view/client/cart-delete</url-pattern>
 	</servlet-mapping>
 </web-app>
