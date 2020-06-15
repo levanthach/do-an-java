@@ -53,7 +53,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">                        
-                          <input type="text" placeholder="Your Name" class="form-control">
+                          <input type="text" placeholder="Họ tên" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -63,22 +63,18 @@
                       </div>
                     </div>
                      <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <div class="form-group">                        
-                          <input type="text" placeholder="Subject" class="form-control">
+                          <input type="text" placeholder="Tiêu đề" class="form-control">
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group">                        
-                          <input type="text" placeholder="Company" class="form-control">
-                        </div>
-                      </div>
+                    
                     </div>                  
                      
                     <div class="form-group">                        
-                      <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Lời nhắn" style="width:100%"></textarea>
                     </div>
-                    <button class="aa-secondary-btn">Send</button>
+                    <button class="aa-secondary-btn">Gửi</button>
                   </form>
                  </div>
                </div>

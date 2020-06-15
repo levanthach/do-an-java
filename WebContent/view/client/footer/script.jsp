@@ -18,5 +18,6 @@
   <script type="text/javascript" src="${url}/js/slick.js"></script>
   <!-- Price picker slider -->
   <script type="text/javascript" src="${url}/js/nouislider.js"></script>
+  <script type="text/javascript" src="${url}/js/validate.js"></script>
   <!-- Custom js -->
-  <script src="${url}/js/custom.js"></script> 
+  <script type="text/javascript" src="${url}/js/custom.js"></script> 

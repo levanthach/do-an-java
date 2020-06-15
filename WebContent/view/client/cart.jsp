@@ -52,17 +52,22 @@
                     <tbody>
                       <c:forEach items="${order.items}" var="item">
                       <tr>
+<<<<<<< HEAD
                         <td><a class="remove" href="${pageContext.request.contextPath}/view/client/cart-delete?id=${item.product.id}"><fa class="fa fa-close"></fa></a></td>
                         <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a></td>
+=======
+                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
+                        <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
+>>>>>>> 44c1d5ee1f3eb8010505b0590b18d75382456e22
                         <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
-                        <td>${item.product.price}</td>
+                        <td>${item.product.price} VNĐ</td>
                         <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
-                        <td>${item.price}00</td>
+                        <td>${item.price}00 VNĐ</td>
                       </tr>
           			 </c:forEach>
           			 <tr>
-                        <td colspan="5" class="">TỔNG TIỀN</td>
-                        <td>${sumprice}</td>
+                        <td colspan="5" class=""><strong>TỔNG TIỀN</strong></td>
+                        <td><strong>${sumprice} VNĐ</strong></td>
                       </tr>
                       <tr>
                         <td colspan="6" class="aa-cart-view-bottom">
@@ -81,15 +86,19 @@
                  <tbody>
                    <tr>
                      <th>Tạm tính</th>
-                     <td>$550</td>
+                     <td>${sumprice} VNĐ</td>
+                   </tr>
+                   <tr>
+                     <th>VAT</th>
+                     <td>0 VNĐ</td>
                    </tr>
                    <tr>
                      <th>Tổng cộng</th>
-                     <td>$550</td>
+                     <td><strong>${sumprice} VNĐ</strong></td>
                    </tr>
                  </tbody>
                </table>
-               <a href="#" class="aa-cart-view-btn">Thanh toán</a>
+               <a href="${pageContext.request.contextPath}/view/client/checkout" class="aa-cart-view-btn">Thanh toán</a>
              </div>
            </div>
          </div>
