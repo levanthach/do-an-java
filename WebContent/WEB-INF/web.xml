@@ -436,12 +436,23 @@
 		<url-pattern>/view/client/register</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>LogoutClient</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.LogoutController</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>LogoutClient</servlet-name>
 		<url-pattern>/view/client/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TransactionClient</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.TransactionController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TransactionClient</servlet-name>
+		<url-pattern>/view/client/transaction</url-pattern>
 	</servlet-mapping>
 </web-app>
