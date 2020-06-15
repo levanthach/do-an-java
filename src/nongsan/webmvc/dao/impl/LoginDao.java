@@ -1,4 +1,4 @@
-package nongsan.webmvc.dao;
+package nongsan.webmvc.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

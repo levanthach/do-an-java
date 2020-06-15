@@ -32,7 +32,7 @@
 	                </div>
 	                 <div class="form-group">
                     <label for="input-1">Ngày</label> 
-                    <input type="date" class="form-control" id="input-1" placeholder="Ngày đăng" name="product-day">
+                    <input type="date" class="form-control" id="the-date" placeholder="Ngày đăng" name="product-day">
                   </div>
 	                <div class="form-group">
                     <label for="input-1">Giá</label>
@@ -72,16 +72,8 @@
                 
                  <div class="form-group">
                     <label for="input-1">Ảnh đại diện</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image">
+                    <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image">
                   </div>
-                  
-                  <div class="form-group">
-                    <label for="input-1">Hình mô tả</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Link hình" name="product-image-list">
-                  </div>
-                
-              
-          
                <div class="form-footer">
                     <button class="btn btn-danger"><i class="fa fa-times"></i><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>
                     <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> Thêm</button>
@@ -94,5 +86,19 @@
         <div class="overlay toggle-menu"></div>
       </div>
     </div>
-  
+<script>
+		var date = new Date();
+		
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		
+		var today = year + "-" + month + "-" + day;
+		
+		
+		document.getElementById('the-date').value = today;
+</script>
     <jsp:include page = "./footer/footer.jsp" flush = "true" />

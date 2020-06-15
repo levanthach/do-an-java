@@ -1,6 +1,7 @@
 package nongsan.webmvc.controller;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +24,16 @@ import nongsan.webmvc.service.impl.ProductServiceImpl;
 public class AddtoCartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
-
+	public double sumPrice = 0;
+	DecimalFormat df = new DecimalFormat("#.000");
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int n= 0;
 		int qty = 1;
 		String id;
 		if(request.getParameter("product-id")!=null) {
 			id = request.getParameter("product-id");
-			Product product = (Product) productService.getProductById(Integer.parseInt(id));
+			Product product = productService.get(Integer.parseInt(id));;
 			if(product != null) {
 				if(request.getParameter("qty")!=null) {
 					qty = Integer.parseInt(request.getParameter("qty"));
@@ -43,16 +47,22 @@ public class AddtoCartController extends HttpServlet {
 					item.setQty(qty);
 					item.setProduct(product);
 					item.setPrice(Double.parseDouble(product.getPrice()));
+					sumPrice = sumPrice + item.getPrice();
 					listItems.add(item);
 					order.setItems(listItems);
+					n = listItems.size();
+					session.setAttribute("length_order",n);
 					session.setAttribute("order", order);
+					session.setAttribute("sumprice", df.format(sumPrice));
 				} else {
 					Order order = (Order) session.getAttribute("order");
 					List<Item> listItems = order.getItems();
 					boolean check = false;
 					for(Item item : listItems) {
-						if(item.getProduct().getId()== product.getId()) {
+						if(Integer.parseInt(item.getProduct().getId()) == Integer.parseInt(product.getId())) {
 							item.setQty(item.getQty() + qty);
+							sumPrice = sumPrice + item.getPrice();
+							item.setPrice(item.getPrice() + item.getPrice());
 							check = true;
 						}
 					}
@@ -61,17 +71,20 @@ public class AddtoCartController extends HttpServlet {
 						item.setQty(qty);
 						item.setProduct(product);
 						item.setPrice(Double.parseDouble(product.getPrice()));
+						sumPrice = sumPrice + item.getPrice();
 						listItems.add(item);
 					}
+					n = listItems.size();
+					session.setAttribute("length_order",n);
 					session.setAttribute("order", order);
+					session.setAttribute("sumprice", df.format(sumPrice));
 				}
 			}
-			response.sendRedirect(request.getContextPath() + "/view/client/addtoCart");
+			response.sendRedirect(request.getContextPath() + "/view/client/product");
 		} else {
 			response.sendRedirect(request.getContextPath() + "/home");
 		}
 		
 	}
-
 
 }

@@ -19,13 +19,12 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void insert(Product product) {
-		String sql = "INSERT INTO product(catalog_id, name, price, status, description, content, discount, image_link, image_list, created) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO product(catalog_id, name, price, status, description, content, discount, image_link, created) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-//			ps.setString(1, product.getId());
 			ps.setString(1, product.getCatalog_id());
 			ps.setString(2, product.getName());
 			ps.setString(3, product.getPrice());
@@ -34,8 +33,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			ps.setString(6, product.getContent());
 			ps.setString(7, product.getDiscount());
 			ps.setString(8, product.getImage_link());
-			ps.setString(9, product.getImage_list());
-			ps.setString(10, product.getCreated());
+			ps.setString(9, product.getCreated());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -44,7 +42,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void edit(Product product) {
-		String sql = "UPDATE product SET name = ?, catalog_id = ?, price = ?, status = ?, description = ?, content = ?, discount = ?, image_link = ?, image_list = ?, created = ? WHERE id = ?";
+		String sql = "UPDATE product SET name = ?, catalog_id = ?, price = ?, status = ?, description = ?, content = ?, discount = ?, image_link = ?, created = ? WHERE id = ?";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
@@ -58,9 +56,8 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			ps.setString(6, product.getContent());
 			ps.setString(7, product.getDiscount());
 			ps.setString(8, product.getImage_link());
-			ps.setString(9, product.getImage_list());
-			ps.setString(10, product.getCreated());
-			ps.setString(11, product.getId());
+			ps.setString(9, product.getCreated());
+			ps.setString(10, product.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -105,7 +102,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
-				product.setImage_list(rs.getString("image_list"));
 				product.setCreated(rs.getString("created"));
 				return product;
 
@@ -143,7 +139,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
-				product.setImage_list(rs.getString("image_list"));
 				product.setCreated(rs.getString("created"));
 				products.add(product);
 			}
@@ -178,7 +173,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
-				product.setImage_list(rs.getString("image_list"));
 				product.setCreated(rs.getString("created"));
 				products.add(product);
 			}
@@ -212,7 +206,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
-				product.setImage_list(rs.getString("image_list"));
 				product.setCreated(rs.getString("created"));
 				productList.add(product);
 			}

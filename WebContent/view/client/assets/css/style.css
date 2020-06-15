@@ -99,7 +99,7 @@ img {
 /* End custom by Thach */
 .aa-primary-btn {
   font-size: 16px;
-  padding: 10px 30px;
+  padding: 10px 28px;
   border: 1px solid #e9e9e9;
   margin-top: 10px;
   display: inline-block;
@@ -531,6 +531,7 @@ img {
   margin-left: -6px;
 }
 #aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary {
+  max-height:350px;
   background-color: #fff;
   border: 1px solid #E9E9E9;
   display: none;
@@ -540,6 +541,15 @@ img {
   top: 100%;
   width: 300px;
   z-index: 9999;
+  overflow:hidden;
+}
+#aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary .scroll-product{
+	max-height:240px;
+	overflow-y: scroll;
+	
+}
+#aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary .total-detailproduct{
+	padding-top:2px;
 }
 #aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary:after, #aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary:before {
   bottom: 100%;
@@ -1718,6 +1728,7 @@ a.aa-product-img img {
 ====================*/
 
 #aa-client-brand {
+	margin-bottom:10px;
   background-color: #333;
   display: inline;
   float: left;
@@ -2566,7 +2577,7 @@ a.aa-product-img img {
 #checkout .checkout-area .checkout-left .panel-group .aa-checkout-billaddress .aa-checkout-single-bill textarea {
   border: 1px solid #ccc;
   color: #999;
-  height: 150px;
+  height: 158px;
   padding: 10px;
   width: 100%;
 }
@@ -2619,7 +2630,7 @@ a.aa-product-img img {
   font-weight: normal;
 }
 #checkout .checkout-area .checkout-right .aa-payment-method img {
-  margin-top: -10px;
+  margin-top: 0px;
   width: 80%;
 }
 #checkout .checkout-area .checkout-right .aa-payment-method input[type="submit"] {
