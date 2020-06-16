@@ -36,7 +36,7 @@
      <div class="row">
        <div class="col-md-12">
         <div class="checkout-area">
-          <form action="">
+          <form action="${pageContext.request.contextPath}/view/client/transaction" method="post">
             <div class="row">
               <div class="col-md-8">
                 <div class="checkout-left">
@@ -57,7 +57,7 @@
                          <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
-                                <input type="text" placeholder="Họ Tên*" required="required">
+                                <input type="text" placeholder="Họ Tên*" required="required" name="transaction_name">
                               </div>                             
                             </div>
                           
@@ -66,26 +66,44 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="email" placeholder="Email*" required="required">
+                                <input type="email" placeholder="Email*" required="required" name="transaction_email">
                               </div>                             
                             </div>
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="tel" placeholder="Số điện thoại*" required="required">
+                                <input type="tel" placeholder="Số điện thoại*" required="required" name="transaction_phone">
                               </div>
                             </div>
                           </div> 
                           <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
-                                <textarea cols="8" rows="3" required="required" placeholder="Địa chỉ*"></textarea>
+                                <textarea cols="8" rows="3" required="required" placeholder="Địa chỉ*" name="transaction_address"></textarea>
                               </div>                             
                             </div>                            
                           </div>
                            <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
-                                <textarea cols="8" rows="3" placeholder="Ghi chú"></textarea>
+                                <textarea cols="8" rows="3" placeholder="Ghi chú" name="transaction_mess"></textarea>
+                              </div>                             
+                            </div>                            
+                          </div>     
+                          
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="aa-checkout-single-bill">
+                                  <input type="date" placeholder="Password" name="transaction_created" id="the-date" style="display: none">             
+                              </div>                             
+                            </div>                            
+                          </div>             
+                          
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="aa-checkout-single-bill">
+                                  <input type="text" placeholder="userid_session" name="transaction_usersession" value="${username }"> 
+                                  
+                                 <input type="text" placeholder="totalmoney_session" name="transaction_amount" value="${sumprice}">         
                               </div>                             
                             </div>                            
                           </div>              
@@ -133,9 +151,9 @@
                   </div>
                   <h4>Hình thức thanh toán</h4>
                   <div class="aa-payment-method">                    
-                    <label for="cashdelivery"><input type="radio" id="cashdelivery" name="optionsRadios" checked> Thanh toán khi nhận hàng (COD) </label>
-                    <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" > Thanh toán bằng thể ngân hàng (ATM) </label>
-                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">    
+                    <label for="cashdelivery"><input type="radio" id="cashdelivery" name="transaction_payment" checked value="0"> Thanh toán khi nhận hàng (COD) </label>
+                    <label for="paypal"><input type="radio" id="paypal" name="transaction_payment" value="1" > Thanh toán bằng thể ngân hàng (ATM) </label>
+                    <img src="${pageContext.request.contextPath}/view/client/assets/img/paypal.jpg" border="0" alt="PayPal Acceptance Mark">    
                     <input type="submit" value="Đặt hàng" class="aa-browse-btn">
                   </div>
                 </div>
@@ -149,7 +167,21 @@
  </section>
  <!-- / Cart view section -->
 <!--  end content-->
-  
+   <script>
+		var date = new Date();
+		
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		
+		var today = year + "-" + month + "-" + day;
+		
+		
+		document.getElementById('the-date').value = today;
+</script>
 <!--  footer-->
  <jsp:include page = "./footer/footer.jsp" flush = "true" />
 <!-- end footer-->
