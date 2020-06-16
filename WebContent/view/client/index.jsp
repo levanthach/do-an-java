@@ -475,28 +475,7 @@
       </div>
     </div>
   </section>
-  <!-- / Client Brand -->
-
-  <!-- Subscribe section -->
-  <section id="aa-subscribe">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-subscribe-area">
-            <h3>Đăng ký nhận tin tức mới </h3>
-            <p>Chúng tôi sẽ gởi các cho bạn các thông tin mới về sản phẩm</p>
-            <form action="" class="aa-subscribe-form">
-              <input type="email" placeholder="Địa chỉ Email">
-              <input type="submit" value="Đăng ký">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / Subscribe section -->
-    
-  
+  <!-- / Client Brand -->  
 <!--  footer-->
  <jsp:include page = "./footer/footer.jsp" flush = "true" />
 <!-- end footer-->

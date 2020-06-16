@@ -35,30 +35,6 @@
       <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3">
           <div class="aa-product-catg-content">
-            <div class="aa-product-catg-head">
-              <div class="aa-product-catg-head-left">
-                <form action="" class="aa-sort-form">
-                  <label for="">Sắp xếp theo</label>
-                  <select name="">
-                    <option value="1" selected="Default">Mặc định</option>
-                    <option value="2">Tên</option>
-                    <option value="3">Giá cả</option>
-                    <option value="4">Ngày tháng</option>
-                  </select>
-                </form>
-                <form action="" class="aa-show-form">
-                  <label for="">Hiển thị</label>
-                  <select name="">
-                    <option value="1" selected="12">12</option>
-                    <option value="2">24</option>
-                    <option value="3">36</option>
-                  </select>
-                </form>
-              </div>
-              <div class="aa-product-catg-head-right">
-                <a id="grid-catg" href="#"><span class="fa fa-th"></span></a>
-              </div>
-            </div>
             <div class="aa-product-catg-body">
             
             	<c:choose>

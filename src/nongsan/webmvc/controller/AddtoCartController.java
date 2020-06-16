@@ -27,6 +27,7 @@ public class AddtoCartController extends HttpServlet {
 	DecimalFormat df = new DecimalFormat("#.000");
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int n= 0;
 		int qty = 1;
 		String id;
 		if(request.getParameter("product-id")!=null) {
@@ -49,6 +50,8 @@ public class AddtoCartController extends HttpServlet {
 					order.setSumPrice(Double.parseDouble(product.getPrice()));
 					listItems.add(item);
 					order.setItems(listItems);
+					n = listItems.size();
+					session.setAttribute("length_order",n);
 					session.setAttribute("order", order);
 					session.setAttribute("sumprice", df.format(order.getSumPrice()));
 				} else {
@@ -71,6 +74,8 @@ public class AddtoCartController extends HttpServlet {
 						order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()));
 						listItems.add(item);
 					}
+					n = listItems.size();
+					session.setAttribute("length_order",n);
 					session.setAttribute("order", order);
 					session.setAttribute("sumprice", df.format(order.getSumPrice()));
 				}
