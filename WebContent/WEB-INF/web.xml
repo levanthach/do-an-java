@@ -425,7 +425,6 @@
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
 	
 	<servlet>
     <servlet-name>deleteProductInCart</servlet-name>
@@ -434,7 +433,7 @@
 	<servlet-mapping>
 		<servlet-name>deleteProductInCart</servlet-name>
 		<url-pattern>/view/client/cart-delete</url-pattern>
-=======
+	</servlet-mapping>
    
    	<servlet>
 		<servlet-name>ClientRegister</servlet-name>
@@ -445,13 +444,21 @@
 		<url-pattern>/view/client/register</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>LogoutClient</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.LogoutController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LogoutClient</servlet-name>
 		<url-pattern>/view/client/logout</url-pattern>
->>>>>>> 44c1d5ee1f3eb8010505b0590b18d75382456e22
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateCart</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.UpdateCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCart</servlet-name>
+		<url-pattern>/view/client/cart-update</url-pattern>
 	</servlet-mapping>
 </web-app>

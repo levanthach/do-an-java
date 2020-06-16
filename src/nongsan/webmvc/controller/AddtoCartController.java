@@ -44,9 +44,9 @@ public class AddtoCartController extends HttpServlet {
 					Item item = new Item();
 					item.setQty(qty);
 					item.setProduct(product);
-					item.setPrice(Double.parseDouble(product.getPrice()));
+					item.setPrice(Double.parseDouble(product.getPrice()) - Double.parseDouble(product.getPrice())*(Double.parseDouble(product.getDiscount())/100));
 					order.setSumPrice(0);
-					order.setSumPrice(Double.parseDouble(product.getPrice()));
+					order.setSumPrice(order.getSumPrice() + item.getPrice());
 					listItems.add(item);
 					order.setItems(listItems);
 					session.setAttribute("order", order);
@@ -58,8 +58,8 @@ public class AddtoCartController extends HttpServlet {
 					for(Item item : listItems) {
 						if(Integer.parseInt(item.getProduct().getId()) == Integer.parseInt(product.getId())) {
 							item.setQty(item.getQty() + qty);
-							order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()));
-							item.setPrice(item.getPrice() + Double.parseDouble(item.getProduct().getPrice()));
+							order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100));
+							item.setPrice(item.getPrice() + (Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100)));
 							check = true;
 						}
 					}
@@ -67,8 +67,8 @@ public class AddtoCartController extends HttpServlet {
 						Item item = new Item();
 						item.setQty(qty);
 						item.setProduct(product);
-						item.setPrice(Double.parseDouble(product.getPrice()));
-						order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()));
+						item.setPrice(Double.parseDouble(product.getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100));
+						order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100));
 						listItems.add(item);
 					}
 					session.setAttribute("order", order);
