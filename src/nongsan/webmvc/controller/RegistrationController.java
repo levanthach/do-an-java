@@ -4,11 +4,11 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import nongsan.webmvc.dao.VerifyUser;
 import nongsan.webmvc.dao.impl.RegisterDao;
 import nongsan.webmvc.jdbc.connectDB;
 import nongsan.webmvc.model.User;
@@ -44,18 +44,15 @@ public class RegistrationController extends HttpServlet {
 		User user = new User(username, password, email, phone, name, created);
 
 		RegisterDao register = new RegisterDao(connectDB.getConnect());
-		VerifyUser verify = new VerifyUser(username);		
-		if (register.RegisterUser(user) && verify.equals(username)) // On success, you can display a message to user on Home page
-		{	
-			
+		if (register.RegisterUser(user)) // On success, you can display a message to user on Home page
+		{
 			request.setAttribute("Message", "Bạn đã tạo tài khoàn thành công. Mời bạn đăng nhập <a href='/do-an-java/view/client/login'>tại đây!</a>");
 			RequestDispatcher rd = request.getRequestDispatcher("/view/client/register.jsp");
 			rd.forward(request, response);
 		} else {
-			request.setAttribute("verifyMsg", "Tài khoản đã tồn tại. Vui lòng thử lại");
 			request.setAttribute("errMessage", "Tạo tài khoản thất bại. Hãy thử lại !!!");
 			RequestDispatcher rd = request.getRequestDispatcher("/view/client/register.jsp");
 			rd.forward(request, response);
-		}			
+		}
 	}
 }

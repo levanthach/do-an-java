@@ -1,7 +1,7 @@
 package nongsan.webmvc.model;
 
 public class Transactions {
-	private String id;
+	private int id;
 	private String status;
 	private String user_session;
 	private String user_name;
@@ -17,11 +17,11 @@ public class Transactions {
 		
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -111,6 +111,7 @@ public class Transactions {
 				+ user_name + ", user_mail=" + user_mail + ", user_phone=" + user_phone + ", address=" + address
 				+ ", amount=" + amount + ", payment=" + payment + ", message=" + message + ", created=" + created + "]";
 	}
+
 	
 	
 

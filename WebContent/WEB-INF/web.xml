@@ -455,4 +455,34 @@
 		<servlet-name>TransactionClient</servlet-name>
 		<url-pattern>/view/client/transaction</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>listOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listOrder</servlet-name>
+       <url-pattern>/admin/order/list</url-pattern>
+   </servlet-mapping>
+   
+   	<servlet>
+       <servlet-name>deleteOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteOrder</servlet-name>
+       <url-pattern>/admin/order/delete</url-pattern>
+   </servlet-mapping>
+   
+      <servlet>
+       <servlet-name>editOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editOrder</servlet-name>
+       <url-pattern>/admin/order/edit</url-pattern>
+   </servlet-mapping>
 </web-app>

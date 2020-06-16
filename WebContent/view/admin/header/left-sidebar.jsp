@@ -37,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="${pageContext.request.contextPath}/admin/order/list">
             <i class="zmdi zmdi-shopping-cart"></i> <span>Đơn Hàng</span>
           </a>
         </li>
