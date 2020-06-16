@@ -6,6 +6,7 @@ public class Order {
 	private User customer;
 	private List<Item> items;
 	private int status;
+	private double sumPrice;
 	public String getId() {
 		return id;
 	}
@@ -31,11 +32,17 @@ public class Order {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
+	public double getSumPrice() {
+		return sumPrice;
+	}
+	public void setSumPrice(double sumPrice) {
+		this.sumPrice = sumPrice;
+	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", customer=" + customer + ", items=" + items + ", status=" + status + "]";
+		return "Order [id=" + id + ", customer=" + customer + ", items=" + items + ", status=" + status + ", sumPrice="
+				+ sumPrice + "]";
 	}
-
+	
 	
 }
