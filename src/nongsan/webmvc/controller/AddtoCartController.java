@@ -24,7 +24,6 @@ import nongsan.webmvc.service.impl.ProductServiceImpl;
 public class AddtoCartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
-	public double sumPrice = 0;
 	DecimalFormat df = new DecimalFormat("#.000");
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,11 +45,12 @@ public class AddtoCartController extends HttpServlet {
 					item.setQty(qty);
 					item.setProduct(product);
 					item.setPrice(Double.parseDouble(product.getPrice()));
-					sumPrice = sumPrice + item.getPrice();
+					order.setSumPrice(0);
+					order.setSumPrice(Double.parseDouble(product.getPrice()));
 					listItems.add(item);
 					order.setItems(listItems);
 					session.setAttribute("order", order);
-					session.setAttribute("sumprice", df.format(sumPrice));
+					session.setAttribute("sumprice", df.format(order.getSumPrice()));
 				} else {
 					Order order = (Order) session.getAttribute("order");
 					List<Item> listItems = order.getItems();
@@ -58,8 +58,8 @@ public class AddtoCartController extends HttpServlet {
 					for(Item item : listItems) {
 						if(Integer.parseInt(item.getProduct().getId()) == Integer.parseInt(product.getId())) {
 							item.setQty(item.getQty() + qty);
-							sumPrice = sumPrice + item.getPrice();
-							item.setPrice(item.getPrice() + item.getPrice());
+							order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()));
+							item.setPrice(item.getPrice() + Double.parseDouble(item.getProduct().getPrice()));
 							check = true;
 						}
 					}
@@ -68,11 +68,11 @@ public class AddtoCartController extends HttpServlet {
 						item.setQty(qty);
 						item.setProduct(product);
 						item.setPrice(Double.parseDouble(product.getPrice()));
-						sumPrice = sumPrice + item.getPrice();
+						order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()));
 						listItems.add(item);
 					}
 					session.setAttribute("order", order);
-					session.setAttribute("sumprice", df.format(sumPrice));
+					session.setAttribute("sumprice", df.format(order.getSumPrice()));
 				}
 			}
 			response.sendRedirect(request.getContextPath() + "/view/client/product");

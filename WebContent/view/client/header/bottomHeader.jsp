@@ -60,7 +60,6 @@
                 <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
-                  <span class="aa-cart-notify">1</span>
                 </a>
                 <div class="aa-cartbox-summary">
                   <ul>
@@ -71,7 +70,6 @@
                         <h4><a href="${pageContext.request.contextPath}/view/client/cart">${item.product.name}</a></h4>
                         <p>${item.qty} x ${item.product.price} VNĐ</p>
                       </div>
-                      <a class="aa-remove-product" href="${pageContext.request.contextPath}/view/client/cart"><span class="fa fa-times"></span></a>
                     </li>
                    	</c:forEach>               
                     <li>
