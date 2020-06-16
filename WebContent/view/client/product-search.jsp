@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Tìm kiếm sản phẩm</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>         
           <li style="color:#fff">Kết quả tìm kiếm</li>
         </ol>
       </div>
