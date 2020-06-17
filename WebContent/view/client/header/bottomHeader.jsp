@@ -60,9 +60,11 @@
                 <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
+                  <span class="aa-cart-notify">${length_order}</span>
+
                 </a>
                 <div class="aa-cartbox-summary">
-                  <ul>
+                  <ul class="scroll-product">
                   <c:forEach items="${order.items}" var="item" >
                     <li>
                       <a class="aa-cartbox-img" href="${pageContext.request.contextPath}/view/client/cart"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img"></a>
@@ -72,15 +74,15 @@
                       </div>
                     </li>
                    	</c:forEach>               
-                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Tổng
+                  </ul>
+                  <div class="total-detailproduct">
+                  		<span class="aa-cartbox-total-title">
+                        <b>Tổng:</b>
                       </span>
                       <span class="aa-cartbox-total-price">
                         ${sumprice} VNĐ
                       </span>
-                    </li>
-                  </ul>
+                  </div>
                   <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/cart">Chi tiết</a>
                   <a class="aa-cartbox-checkout aa-primary-btn" href="${pageContext.request.contextPath}/view/client/checkout">Thanh toán</a>
                 </div>

@@ -388,7 +388,6 @@
 		<servlet-name>AddtoCartController</servlet-name>
 		<url-pattern>/view/client/add-cart</url-pattern>
 	</servlet-mapping>
-	
 		<servlet>
 		<servlet-name>CheckoutController</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.CheckoutController</servlet-class>
@@ -421,6 +420,7 @@
     <servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
@@ -435,7 +435,7 @@
 		<url-pattern>/view/client/cart-delete</url-pattern>
 	</servlet-mapping>
    
-   	<servlet>
+ <servlet>
 		<servlet-name>ClientRegister</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.RegistrationController</servlet-class>
 	</servlet>
@@ -448,6 +448,7 @@
 		<servlet-name>LogoutClient</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.LogoutController</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>LogoutClient</servlet-name>
 		<url-pattern>/view/client/logout</url-pattern>
@@ -461,4 +462,44 @@
 		<servlet-name>UpdateCart</servlet-name>
 		<url-pattern>/view/client/cart-update</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TransactionClient</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.TransactionController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TransactionClient</servlet-name>
+		<url-pattern>/view/client/transaction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>listOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listOrder</servlet-name>
+       <url-pattern>/admin/order/list</url-pattern>
+   </servlet-mapping>
+   
+   	<servlet>
+       <servlet-name>deleteOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderDeleteController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>deleteOrder</servlet-name>
+       <url-pattern>/admin/order/delete</url-pattern>
+   </servlet-mapping>
+   
+      <servlet>
+       <servlet-name>editOrder</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderEditController</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+       <servlet-name>editOrder</servlet-name>
+       <url-pattern>/admin/order/edit</url-pattern>
+   </servlet-mapping>
 </web-app>
