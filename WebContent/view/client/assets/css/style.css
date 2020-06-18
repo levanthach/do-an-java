@@ -595,6 +595,7 @@ img {
 #aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary ul li .aa-cartbox-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 #aa-header .aa-header-bottom .aa-cartbox .aa-cartbox-summary ul li .aa-cartbox-info {
   display: block;
@@ -1256,7 +1257,8 @@ a.aa-product-img img {
   font-size: 16px;
 }
 .aa-product-catg li .aa-product-price del {
-  margin-left: 5px;
+  margin-left: 15px;
+  color: #666;
 }
 .aa-product-catg li .aa-product-hvr-content {
   left: 0;
@@ -2419,6 +2421,7 @@ a.aa-product-img img {
 #cart-view .cart-view-area .cart-view-table .table tbody tr td img {
   width: 80px;
   height: 100px;
+ object-fit: cover;
 }
 #cart-view .cart-view-area .cart-view-table .table tbody tr td .aa-cart-quantity {
   padding: 5px;

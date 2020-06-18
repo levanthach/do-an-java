@@ -20,7 +20,7 @@
                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                 </a>-->
                 <!-- img based logo -->
-                <a href="${pageContext.request.contextPath}/home"><img src="${url}/images/logo.png" alt="logo img" width="100%"></a> 
+                <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo.png" alt="logo img" width="100%"></a> 
               </div>
               <!-- / logo  -->
               <!-- Shipping service -->
@@ -36,7 +36,7 @@
                   <a class="aa-shipping-boxsmall">
                       <span class="aa-shipping-boxsmall-icon fas fa-phone"></span>
                       <span class="aa-shipping-box-text">
-                          <div class="aa-shipping-title">Hotline:19001234</div>
+                          <div class="aa-shipping-title">Hỗ trợ: 037.7026.186</div>
                           <div class="">Tư vấn 24/7 miễn phí</div>
                       </span>
                       
@@ -54,13 +54,16 @@
               
               
               
-              
                <!-- cart box -->
               <div class="aa-cartbox">
                 <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
                   <span class="aa-cart-title">GIỎ HÀNG</span>
-                  <span class="aa-cart-notify">${length_order}</span>
+                 
+                  <c:if test="${length_order != NULL}">
+                  	<span class="aa-cart-notify">${length_order}</span>
+                  </c:if>
+                  
 
                 </a>
                 <div class="aa-cartbox-summary">

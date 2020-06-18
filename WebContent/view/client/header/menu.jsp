@@ -23,7 +23,7 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="${pageContext.request.contextPath}/home">TRANG CHỦ</a></li>
+              <li><a href="${pageContext.request.contextPath}/">TRANG CHỦ</a></li>
               <li><a href="${pageContext.request.contextPath}/view/client/introduce">GIỚI THIỆU</a></li>
             <li><a href="${pageContext.request.contextPath}/view/client/product">SẢN PHẨM</span></a>
                 <ul class="dropdown-menu">                

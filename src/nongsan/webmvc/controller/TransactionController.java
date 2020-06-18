@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import nongsan.webmvc.model.Item;
 import nongsan.webmvc.model.Order;
 import nongsan.webmvc.model.Ordered;
+
 import nongsan.webmvc.model.Transactions;
 import nongsan.webmvc.service.OrderedService;
 import nongsan.webmvc.service.TransactionService;
@@ -60,6 +61,7 @@ public class TransactionController extends HttpServlet {
 		transaction.setCreated(tr_created);
 	
 		transactionService.insert(transaction);
+
 		int maxid =0;
 		List<Transactions> transactions = transactionService.getAll();
 		if(transactions.size() == 0)
@@ -84,7 +86,14 @@ public class TransactionController extends HttpServlet {
 			ordered.setTransacsion_id(String.valueOf(maxid));
 			orderedService.insert(ordered);
 		}
-		resp.sendRedirect(req.getContextPath() + "/admin/new/list");
+		 HttpSession session = req.getSession(false);
+		 if (session != null) {
+			 session.removeAttribute("order"); //remove session
+			 session.removeAttribute("sumprice"); //remove session
+			 session.removeAttribute("length_order"); //remove session
+		 }
+    resp.sendRedirect(req.getContextPath() + "/view/client/checkout");
+		
 	}
 
 

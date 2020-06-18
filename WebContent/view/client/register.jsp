@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Đăng ký</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>                   
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>                   
           <li style="color:#fff">Đăng ký tài khoản</li>
         </ol>
       </div>

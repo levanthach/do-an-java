@@ -1,28 +1,27 @@
+
+
 package nongsan.webmvc.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
+import nongsan.webmvc.service.BoardnewService;
+import nongsan.webmvc.service.impl.BoardnewServicesImpl;
 
 /**
- * Servlet implementation class LogoutController
+ * Servlet implementation class ErrorPageController
  */
-public class LogoutController extends HttpServlet {
+public class ErrorPageController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-	@Override
+	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		 HttpSession session = req.getSession(false);
-		 if (session != null) {
-			 session.removeAttribute("username"); //remove session
-		 }
-		  resp.sendRedirect(req.getContextPath() + "/"); 
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/404.jsp");
+		dispatcher.forward(req, resp);
 	}
-
 }

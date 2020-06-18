@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Sản phẩm</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>         
           <li style="color:#fff">Danh sách sản phẩm</li>
         </ol>
       </div>
@@ -49,7 +49,7 @@
 	                    <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 	                    <figcaption>
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
-						<c:if test=""></c:if>
+
 						<c:choose>
 						<c:when test="${product.discount == 0}">
 	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
@@ -73,27 +73,7 @@
 
               <!-- / quick view modal -->   
             </div>
-            <div class="aa-product-catg-pagination">
-              <nav>
-                <ul class="pagination">
-                  <li>
-                    <a href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li>
-                    <a href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
@@ -108,17 +88,6 @@
               </ul>
             </div>
             <!-- single sidebar -->
-            <div class="aa-sidebar-widget">
-              <h3>Thẻ</h3>
-              <div class="tag-cloud">
-                <a href="product-detail.jsp">Quả óc chó</a>
-                <a href="#">Tinh dầu</a>
-                <a href="#">Mật ong</a>
-                <a href="#">Rau cải</a>
-                <a href="#">Mật ong rừng</a>
-                <a href="#">Tinh dầu bưởi</a>
-              </div>
-            </div>
 
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
@@ -130,7 +99,7 @@
                     <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
                       <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                      <p>${product.price } VNĐ</p>
+                      <p>${product.price} VNĐ</p>
                     </div>                    
                   </li>
                   </c:forEach>
@@ -138,22 +107,7 @@
               </div>                                 
             </div>
             <!-- single sidebar -->
-            <div class="aa-sidebar-widget">
-              <h3>Sản phẩm xếp hạng cao</h3>
-              <div class="aa-recently-views">
-                <ul>
-                 <c:forEach items="${product_banchay}" var="product" end="2">
-                  <li>
-                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
-                    <div class="aa-cartbox-info">
-                      <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                      <p>${product.price } VNĐ</p>
-                    </div>                    
-                  </li>
-                  </c:forEach>
-                </ul>
-              </div>                            
-            </div>
+           
           </aside>
         </div>
        
