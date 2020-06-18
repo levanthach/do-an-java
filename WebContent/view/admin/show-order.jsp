@@ -54,7 +54,7 @@
                          <td>${order.message}</td>
                          <td>${order.amount} VNĐ</td>
                           <td>  <c:choose>
-	                        <c:when test="${order.payment == '0'}"> 
+	                        <c:when test="${order.payment == 0}"> 
 	                        	<c:out value="COD"/>
 	                       	</c:when>
 	                       	<c:otherwise>

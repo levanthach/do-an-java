@@ -20,9 +20,14 @@ public class TransactionServicesImpl implements TransactionService{
 	public void edit(Transactions transaction) {
 		Transactions oldTransaction = transactionDao.get(transaction.getId());		
 		oldTransaction.setUser_name(transaction.getUser_name());
-
-		transactionDao.edit(oldTransaction); 
-
+		oldTransaction.setUser_mail(transaction.getUser_mail());
+		oldTransaction.setUser_phone(transaction.getUser_phone());
+		oldTransaction.setAddress(transaction.getAddress());
+		oldTransaction.setMessage(transaction.getMessage());
+		oldTransaction.setAmount(transaction.getAmount());
+//		oldTransaction.setPayment(transaction.getPayment());
+		oldTransaction.setStatus(transaction.getStatus());
+		transactionDao.edit(oldTransaction);
 	} 
 	
 	

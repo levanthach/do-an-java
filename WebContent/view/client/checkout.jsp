@@ -98,7 +98,7 @@
                             </div>                            
                           </div>             
                           
-                          <div class="row">
+                          <div class="row" style="display: none">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
                                   <input type="text" placeholder="userid_session" name="transaction_usersession" value="${username }"> 

@@ -141,7 +141,4 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
  
 		return transactions; 
 	}
- 	
-
-
 }

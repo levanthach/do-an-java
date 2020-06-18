@@ -69,7 +69,7 @@
                   </div>
                 </a>
               </li>
-              <li class="dropdown-item"><i class="icon-wallet mr-2"></i><a href="${pageContext.request.contextPath}/admin/admin/list">Tài khoản</a></li>
+            
               <li class="dropdown-divider"></li>
 			 <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="${pageContext.request.contextPath}/admin/logout"> Đăng xuất</a></li>		
             </ul>

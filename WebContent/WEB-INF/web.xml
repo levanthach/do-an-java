@@ -388,6 +388,7 @@
 		<servlet-name>AddtoCartController</servlet-name>
 		<url-pattern>/view/client/add-cart</url-pattern>
 	</servlet-mapping>
+	
 		<servlet>
 		<servlet-name>CheckoutController</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.CheckoutController</servlet-class>
@@ -420,22 +421,13 @@
     <servlet-name>submitReview</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.ReviewClientController</servlet-class>
 	</servlet>
-
+  
 	<servlet-mapping>
 		<servlet-name>submitReview</servlet-name>
 		<url-pattern>/view/client/review</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-    <servlet-name>deleteProductInCart</servlet-name>
-		<servlet-class>nongsan.webmvc.controller.DeleteProductInCartController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>deleteProductInCart</servlet-name>
-		<url-pattern>/view/client/cart-delete</url-pattern>
-	</servlet-mapping>
    
- <servlet>
+   	<servlet>
 		<servlet-name>ClientRegister</servlet-name>
 		<servlet-class>nongsan.webmvc.controller.RegistrationController</servlet-class>
 	</servlet>
@@ -452,15 +444,6 @@
 	<servlet-mapping>
 		<servlet-name>LogoutClient</servlet-name>
 		<url-pattern>/view/client/logout</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>UpdateCart</servlet-name>
-		<servlet-class>nongsan.webmvc.controller.UpdateCartController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UpdateCart</servlet-name>
-		<url-pattern>/view/client/cart-update</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -502,4 +485,22 @@
        <servlet-name>editOrder</servlet-name>
        <url-pattern>/admin/order/edit</url-pattern>
    </servlet-mapping>
+   
+   	<servlet>
+    <servlet-name>deleteProductInCart</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.DeleteProductInCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteProductInCart</servlet-name>
+		<url-pattern>/view/client/cart-delete</url-pattern>
+	</servlet-mapping>
+	
+   <servlet>
+		<servlet-name>UpdateCart</servlet-name>
+		<servlet-class>nongsan.webmvc.controller.UpdateCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCart</servlet-name>
+		<url-pattern>/view/client/cart-update</url-pattern>
+	</servlet-mapping>
 </web-app>
