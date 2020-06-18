@@ -20,7 +20,11 @@
       <div class="aa-catg-head-banner-content">
         <h2>Giỏ hàng</h2>
         <ol class="breadcrumb">
+<<<<<<< HEAD
           <li><a href="${pageContext.request.contextPath}">Trang chủ </a></li>
+=======
+          <li><a href="${pageContext.request.contextPath}/home">Trang chủ </a></li>
+>>>>>>> tan_client
           <li style="color:#fff">Thông tin giỏ hàng</li>
         </ol>
       </div>
@@ -36,7 +40,7 @@
        <div class="col-md-12">
          <div class="cart-view-area">
            <div class="cart-view-table">
-             <form action="">
+             <form action="" method="post">
                <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -52,7 +56,7 @@
                     <tbody>
                       <c:forEach items="${order.items}" var="item">
                       <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
+                        <td><a class="remove" href="${pageContext.request.contextPath}/view/client/cart-delete?id=${item.product.id}"><fa class="fa fa-close"></fa></a></td>
                         <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
                         <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
                         <td>${item.product.price} VNĐ</td>
@@ -72,8 +76,9 @@
                      
                       </tbody>
                   </table>
-                </div>
+                  </div>
              </form>
+                </div>
              <!-- Cart Total view -->
              <div class="cart-view-total">
                <h4>Thông tin giỏ hàng</h4>
