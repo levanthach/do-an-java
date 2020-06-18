@@ -61,7 +61,19 @@
 	                    <figcaption>
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
 	                      
-	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
+	                    <c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
 	                    
 	                    </figcaption>
 	                  </figure>                         
@@ -87,17 +99,30 @@
               </ul>
             </div>
           
-         <!-- single sidebar -->
+		
+            <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Sản phẩm gần đây</h3>
               <div class="aa-recently-views">
                 <ul>
-                 <c:forEach items="${product_all}" var="product" end="2">
+                 <c:forEach items="${productlist}" var="product" end="2">
                   <li>
                     <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"></a>
                     <div class="aa-cartbox-info">
                       <h4><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                      <p>${product.price } VNĐ</p>
+                      <c:choose>
+						<c:when test="${product.discount == 0}">
+	                        <p>${product.price} VNĐ</p>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                       <p>${product1.price} VNĐ</p>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
+                    
                     </div>                    
                   </li>
                   </c:forEach>

@@ -41,9 +41,9 @@
             <div class="row">
               <div class="col-md-4 col-sm-6">
                 <div class="aa-footer-widget">
-                  <a href="${pageContext.request.contextPath}/view/client/home"><img src="${url}/images/logo_footer.jpg" alt="logo img" width="185px"></a> 
+                  <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo_footer.jpg" alt="logo img" width="185px"></a> 
                   <ul class="aa-footer-nav">
-                    <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
                     <li><a href="${pageContext.request.contextPath}/view/client/introduce">Giới thiệu</a></li>
                     <li><a href="${pageContext.request.contextPath}/view/client/contact">Liên hệ</a></li>
                     <li><img src="${pageContext.request.contextPath}/view/client/assets/images/dadangky.png" alt="logo img" width="40%"></li>

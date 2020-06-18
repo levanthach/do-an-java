@@ -86,7 +86,6 @@ public class TransactionController extends HttpServlet {
 			ordered.setTransacsion_id(String.valueOf(maxid));
 			orderedService.insert(ordered);
 		}
-		 HttpSession session = req.getSession(false);
 		 if (session != null) {
 			 session.removeAttribute("order"); //remove session
 			 session.removeAttribute("sumprice"); //remove session
