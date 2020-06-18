@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import nongsan.webmvc.model.Transactions;
 import nongsan.webmvc.service.TransactionService;
 import nongsan.webmvc.service.impl.TransactionServicesImpl;
@@ -51,8 +53,13 @@ public class TransactionController extends HttpServlet {
 		transaction.setCreated(tr_created);
 	
 		transactionService.insert(transaction);
-		System.out.print("Giao dịch" + transactionService);
-		resp.sendRedirect(req.getContextPath() + "/admin/new/list");
+		 HttpSession session = req.getSession(false);
+		 if (session != null) {
+			 session.removeAttribute("order"); //remove session
+			 session.removeAttribute("sumprice"); //remove session
+			 session.removeAttribute("length_order"); //remove session
+		 }
+		resp.sendRedirect(req.getContextPath() + "/view/client/checkout");
 	}
 
 

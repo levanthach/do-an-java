@@ -40,52 +40,23 @@
              <h2>Chúng tôi đang chờ để hỗ trợ bạn..</h2>
              <p>Nếu bạn nó bất cứ thắc mắc hay ý kiến gì cứ tìm đến chúng tôi.</p>
            </div>
-           <!-- contact map -->
-           <div class="aa-contact-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2324288146733!2d106.80161941474984!3d10.869918392258143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1589002140777!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-           </div>
+         
            <!-- Contact address -->
            <div class="aa-contact-address">
              <div class="row">
-               <div class="col-md-8">
-                 <div class="aa-contact-address-left">
-                   <form class="comments-form contact-form" action="">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">                        
-                          <input type="text" placeholder="Họ tên" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">                        
-                          <input type="email" placeholder="Email" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                     <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">                        
-                          <input type="text" placeholder="Tiêu đề" class="form-control">
-                        </div>
-                      </div>
-                    
-                    </div>                  
-                     
-                    <div class="form-group">                        
-                      <textarea class="form-control" rows="3" placeholder="Lời nhắn" style="width:100%"></textarea>
-                    </div>
-                    <button class="aa-secondary-btn">Gửi</button>
-                  </form>
-                 </div>
+               <div class="col-md-7">
+         			 <div class="aa-contact-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2324288146733!2d106.80161941474984!3d10.869918392258143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1589002140777!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+           </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-5">
                  <div class="aa-contact-address-right">
                    <address>
                      <h4>Nông Sản 24</h4>
                      <p>Liên hệ cho chúng tôi bất cứ khi nào bạn cần.</p>
-                     <p><span class="fa fa-home"></span>NongSan, Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</p>
-                     <p><span class="fa fa-phone"></span>+ 00-62-658-658</p>
-                     <p><span class="fa fa-envelope"></span>Email: support@nongsan24.com</p>
+                     <p><span class="fa fa-home"></span>Nông Sản, Khu phố 6, Linh Trung, Thủ Đức, TP.HCM</p>
+                     <p><span class="fa fa-phone"></span>037.7026.186</p>
+                     <p><span class="fa fa-envelope"></span>Email: contact@nongsan24.com</p>
                    </address>
                  </div>
                </div>

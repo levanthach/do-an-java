@@ -67,8 +67,8 @@
                   <div class="aa-footer-widget">
                     <h3>LIÊN HỆ</h3>
                     <address>
-                      <p>Khu phố 6-Phường Linh Trung-Quận Thủ Đức-TP HCM</p>
-                      <p><span class="fa fa-phone"></span>19001234</p>
+                      <p>Khu phố 6 - P.Linh Trung - Q.Thủ Đức - TP HCM</p>
+                      <p><span class="fa fa-phone"></span>037.7026.186</p>
                       <p><span class="fa fa-envelope"></span>webnongsan@gmail.com</p>
                     </address>
                     <div class="aa-footer-social">

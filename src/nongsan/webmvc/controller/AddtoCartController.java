@@ -82,7 +82,7 @@ public class AddtoCartController extends HttpServlet {
 			}
 			response.sendRedirect(request.getContextPath() + "/view/client/product");
 		} else {
-			response.sendRedirect(request.getContextPath() + "/home");
+			response.sendRedirect(request.getContextPath() + "/");
 		}
 		
 	}
