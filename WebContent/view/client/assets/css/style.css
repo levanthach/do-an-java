@@ -1256,7 +1256,8 @@ a.aa-product-img img {
   font-size: 16px;
 }
 .aa-product-catg li .aa-product-price del {
-  margin-left: 5px;
+  margin-left: 15px;
+  color: #666;
 }
 .aa-product-catg li .aa-product-hvr-content {
   left: 0;
