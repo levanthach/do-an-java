@@ -9,6 +9,20 @@
        <welcome-file>view/client/index.jsp</welcome-file> 
 	</welcome-file-list>
 	
+	 <servlet>
+       <servlet-name>404Handler</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.ErrorPageController</servlet-class>
+   </servlet>
+	<servlet-mapping>
+        <servlet-name>404Handler</servlet-name>
+        <url-pattern>/404</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/404</location>
+	</error-page>
+	
    <servlet>
        <servlet-name>addCategory</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.CategoryAddController</servlet-class>

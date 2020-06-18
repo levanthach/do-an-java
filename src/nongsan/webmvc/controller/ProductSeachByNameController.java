@@ -24,7 +24,6 @@ public class ProductSeachByNameController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	CategoryService cateService = new CategoryServicesImpl();
 	ProductService productService=new ProductServiceImpl();
-	NumberFormat formatter = new DecimalFormat("#0.00");
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name=req.getParameter("s");
