@@ -17,9 +17,9 @@
         <div class="col-md-12">
           <div class="aa-error-area">
             <h2>404</h2>
-            <span>Sorry! Page Not Found</span>
-            <p>Xin lỗi, nội dung này đã bị xóa hoặc không tồn tại. Vui lòng tìm kiếm lại!</p>
-            <a href="./"> Trở về trang chủ</a>
+            <span>Xin lỗi! Không tìm thấy trang</span>
+        
+            <a href="${pageContext.request.contextPath}/"> Trở về trang chủ</a>
           </div>
         </div>
       </div>

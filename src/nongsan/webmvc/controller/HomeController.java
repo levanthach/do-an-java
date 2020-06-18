@@ -1,5 +1,7 @@
 package nongsan.webmvc.controller;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -21,6 +23,7 @@ public class HomeController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
 	BoardnewService boardnewService = new BoardnewServicesImpl();
+	DecimalFormat df = new DecimalFormat("#.000");
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Boardnew> boardnewList = boardnewService.getAll();
@@ -48,6 +51,20 @@ public class HomeController extends HttpServlet{
 		// Product bán chạy
 		List<Product> product_banchay= productService.getProductById(6);
 		req.setAttribute("product_banchay", product_banchay);	
+		
+		List<Product> productList = productService.getAll();
+		req.setAttribute("productlist", productList);	
+		//Giá giảm
+		List<Product> productsList1 = new ArrayList<Product>();
+		for(Product product: productList)
+		{
+			Product product1 = productService.get(Integer.parseInt(product.getId()));
+			product1.setPrice(String.valueOf(df.format(Double.parseDouble(product.getPrice()) * (1 - (Double.parseDouble(product.getDiscount())/100)))));
+			productsList1.add(product1);
+			
+		}
+
+		req.setAttribute("productlist1", productsList1);
 		
 		// Product giảm giá
 		List<Product> product_sale= productService.getProductById(7);

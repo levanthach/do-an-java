@@ -54,7 +54,7 @@
                          <td>${order.message}</td>
                          <td>${order.amount} VNĐ</td>
                           <td>  <c:choose>
-	                        <c:when test="${order.payment == '0'}"> 
+	                        <c:when test="${order.payment == 0}"> 
 	                        	<c:out value="COD"/>
 	                       	</c:when>
 	                       	<c:otherwise>
@@ -65,11 +65,11 @@
                           </td>
                           <td>
                           	  <c:choose>
-	                        <c:when test="${order.status == 1}"> 
-	                        	<c:out value="Đã thanh toán"/>
+	                        <c:when test="${order.status == NULL}"> 
+	                        	<c:out value="Chưa thanh toán"/>
 	                       	</c:when>
 	                       	<c:otherwise>
-						        <c:out value="Chưa thanh toán"/>
+						        <c:out value="Đã thanh toán"/>
 						    </c:otherwise>
                        	</c:choose>
                           </td>

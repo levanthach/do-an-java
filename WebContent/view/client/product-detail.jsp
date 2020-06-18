@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Chi tiết sản phẩm</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}">Trang chủ</a></li>         
           <li><a href="${pageContext.request.contextPath}/view/client/product">Sản phẩm</a></li>
           <li style="color:#fff">${detail_product.name }</li>
         </ol>
@@ -69,18 +69,9 @@
 		                       	</c:choose>
                       </span></p>
                     </div>
-                    <p>${detail_product.description }</p>
-                    <div class="aa-prod-quantity">
-                      <form action="">
-                        <select id="" name="">
-                          <option selected="1" value="0">1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
-                          <option value="4">5</option>
-                          <option value="5">6</option>
-                        </select>
-                      </form>
+                    <p>${detail_product.description}</p>
+                    <div class="aa-prod-quantity">                  
+                       <input class="aa-cart-quantity" type="number" value="1" min=1 style="width:13%">
                       <p class="aa-prod-category">
                        <c:forEach items="${name_cate_of_product}" var="name_cate">
                         Danh mục: <a href="product.jsp">${name_cate.name }</a>

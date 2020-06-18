@@ -29,7 +29,7 @@
                     <img src="${url}/images/section1_tc.jpg" alt="dâu tây Đà Lạt">                    
                     <div class="aa-prom-content">
                       <span>Giảm giá 35%</span>
-                      <h4><a href="#">Dâu tây Đà Lạt</a></h4>                      
+                      <h4>Dâu tây Đà Lạt</h4>                      
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                       <img src="${url}/images/section2_tc.jpg" alt="hạt tiêu daklak">                      
                       <div class="aa-prom-content">
                         <span>Sản Phẩm độc quyền</span>
-                        <h4><a href="#">Hạt tiêu DakLak</a></h4>                        
+                        <h4>Hạt tiêu DakLak</h4>                        
                       </div>
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                       <img src="${url}/images/section3_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Sản phẩm nhập khẩu</span>
-                        <h4><a href="#">Cherry Mỹ</a></h4>                        
+                        <h4>Cherry Mỹ</h4>                        
                       </div>
                     </div>
                   </div>
@@ -60,7 +60,7 @@
                       <img src="${url}/images/section4_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Giảm giá 25%</span>
-                        <h4><a href="#">Tinh Dầu Sả</a></h4>                        
+                        <h4>Tinh Dầu Sả</h4>                        
                       </div>
                     </div>
                   </div>
@@ -69,7 +69,7 @@
                       <img src="${url}/images/section5_tc.jpg" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Sản phẩm độc quyền</span>
-                        <h4><a href="#">Mật ong rừng Tây Bắc</a></h4>                        
+                        <h4>Mật ong rừng Tây Bắc</h4>                        
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,20 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                             
+						<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -135,7 +148,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                             	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -160,7 +185,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                            	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -185,7 +222,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                            	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -253,7 +302,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                            	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -280,7 +341,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                            	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                          
@@ -308,7 +381,19 @@
                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
-                              <span class="aa-product-price">${product.price } VNĐ</span>
+                             	<c:choose>
+						<c:when test="${product.discount == 0}">
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == product.id}">
+		                      <span class="aa-product-price">${product1.price} VNĐ</span>
+		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
                             </figcaption>
                           </figure>                        
                         
@@ -458,45 +543,8 @@
   <!-- / Latest Blog -->
 
   <!-- Client Brand -->
-  <section id="aa-client-brand">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-client-brand-area">
-            <ul class="aa-client-brand-slider">
-              <li><a href="#"><img src="${url}/img/logo-tiki.png" alt="tiki bấm là có"></a></li>
-              <li><a href="#"><img src="${url}/img/logo-lazada.png" alt="lazada "></a></li>
-              <li><a href="#"><img src="${url}/img/logo-sendo.jpg" alt="sendo mua là đỏ"></a></li>
-              <li><a href="#"><img src="${url}/img/logo-shopee.jpg" alt="shopee đi làm chi"></a></li>
-               <li><a href="#"><img src="${url}/img/logo-concung.png" alt="concung mua là cưng"></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / Client Brand -->
 
-  <!-- Subscribe section -->
-  <section id="aa-subscribe">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-subscribe-area">
-            <h3>Đăng ký nhận tin tức mới </h3>
-            <p>Chúng tôi sẽ gởi các cho bạn các thông tin mới về sản phẩm</p>
-            <form action="" class="aa-subscribe-form">
-              <input type="email" placeholder="Địa chỉ Email">
-              <input type="submit" value="Đăng ký">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / Subscribe section -->
-    
-  
+  <!-- / Client Brand -->  
 <!--  footer-->
  <jsp:include page = "./footer/footer.jsp" flush = "true" />
 <!-- end footer-->

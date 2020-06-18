@@ -96,8 +96,8 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 			ps.setString(4, transaction.getAddress());
 			ps.setString(5, transaction.getMessage());
 			ps.setString(6, transaction.getAmount());
-			ps.setString(7, transaction.getPayment());
-			ps.setString(8, transaction.getStatus());
+			ps.setInt(7, Integer.parseInt(transaction.getPayment()));
+			ps.setString(8,transaction.getStatus());
 			ps.setInt(9,transaction.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
@@ -131,6 +131,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 				transaction.setMessage(rs.getString("message"));
 				transaction.setAmount(rs.getString("amount"));
 				transaction.setPayment(rs.getString("payment"));
+				transaction.setStatus(rs.getString("status"));
 				transaction.setCreated(rs.getString("created"));
 				transactions.add(transaction); 
 			} 
@@ -141,7 +142,4 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
  
 		return transactions; 
 	}
- 	
-
-
 }

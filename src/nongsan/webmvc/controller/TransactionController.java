@@ -1,14 +1,23 @@
 package nongsan.webmvc.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import nongsan.webmvc.model.Item;
+import nongsan.webmvc.model.Order;
+import nongsan.webmvc.model.Ordered;
+
 import nongsan.webmvc.model.Transactions;
+import nongsan.webmvc.service.OrderedService;
 import nongsan.webmvc.service.TransactionService;
+import nongsan.webmvc.service.impl.OrderedServiceImpl;
 import nongsan.webmvc.service.impl.TransactionServicesImpl;
 
 /**
@@ -18,6 +27,7 @@ public class TransactionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	TransactionService transactionService = new TransactionServicesImpl();
+	OrderedService orderedService = new OrderedServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -51,8 +61,38 @@ public class TransactionController extends HttpServlet {
 		transaction.setCreated(tr_created);
 	
 		transactionService.insert(transaction);
-		System.out.print("Giao dịch" + transactionService);
-		resp.sendRedirect(req.getContextPath() + "/admin/new/list");
+
+		int maxid =0;
+		List<Transactions> transactions = transactionService.getAll();
+		if(transactions.size() == 0)
+		{
+			maxid = 0;
+		}
+		else {
+			for(Transactions transactions2: transactions)
+			{
+				if(transactions2.getId()>=maxid)
+					maxid = transactions2.getId();
+			}
+		}
+		HttpSession session = req.getSession(true);
+		Order order = (Order) session.getAttribute("order");
+		List<Item> listItems = order.getItems();
+		for(Item item: listItems)
+		{
+			Ordered ordered = new Ordered();
+			ordered.setProduct_id(item.getProduct().getId());
+			ordered.setQty(item.getQty());
+			ordered.setTransacsion_id(String.valueOf(maxid));
+			orderedService.insert(ordered);
+		}
+		 if (session != null) {
+			 session.removeAttribute("order"); //remove session
+			 session.removeAttribute("sumprice"); //remove session
+			 session.removeAttribute("length_order"); //remove session
+		 }
+    resp.sendRedirect(req.getContextPath() + "/view/client/checkout");
+		
 	}
 
 

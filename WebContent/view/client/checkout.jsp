@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Thanh toán</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
           <li style="color:#fff">Thông tin thanh toán</li>
         </ol>
       </div>
@@ -98,7 +98,7 @@
                             </div>                            
                           </div>             
                           
-                          <div class="row">
+                          <div class="row" style="display: none">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
                                   <input type="text" placeholder="userid_session" name="transaction_usersession" value="${username }"> 

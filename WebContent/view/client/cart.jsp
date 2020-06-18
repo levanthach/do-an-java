@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Giỏ hàng</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ </a></li>
+          <li><a href="${pageContext.request.contextPath}">Trang chủ </a></li>
           <li style="color:#fff">Thông tin giỏ hàng</li>
         </ol>
       </div>
@@ -36,7 +36,7 @@
        <div class="col-md-12">
          <div class="cart-view-area">
            <div class="cart-view-table">
-             <form action="">
+             <form action="${pageContext.request.contextPath}/view/client/cart-update" method="post">
                <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -46,33 +46,35 @@
                         <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
-                        <th>Giá Tiền</th>
+                        <th>Giảm giá</th>
+                        <th>Thành Tiền</th>
                       </tr>
                     </thead>
                     <tbody>
                       <c:forEach items="${order.items}" var="item">
                       <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
-                        <td><a class="aa-cart-title" href="#">${item.product.name }</a></td>
+                        <td><a class="remove" href="${pageContext.request.contextPath}/view/client/cart-delete?id=${item.product.id}"><fa class="fa fa-close"></fa></a></td>
+                        <td><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
+                        <td><a class="aa-cart-title" href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}">${item.product.name }</a></td>
                         <td>${item.product.price} VNĐ</td>
-                        <td><input class="aa-cart-quantity" type="number" value="${item.qty}" min=1></td>
+                        <td><input class="aa-cart-quantity" type="number" name="${item.product.id}" value="${item.qty}" min=1></td>
+                        <td>${item.product.discount} %</td>
                         <td>${item.price}00 VNĐ</td>
                       </tr>
           			 </c:forEach>
           			 <tr>
-                        <td colspan="5" class=""><strong>TỔNG TIỀN</strong></td>
+                        <td colspan="6" class=""><strong>TỔNG TIỀN</strong></td>
                         <td><strong>${sumprice} VNĐ</strong></td>
                       </tr>
                       <tr>
-                        <td colspan="6" class="aa-cart-view-bottom">
+                        <td colspan="7" class="aa-cart-view-bottom">
                           <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">
                         </td>
                       </tr>
                      
                       </tbody>
                   </table>
-                </div>
+                  </div>
              </form>
              <!-- Cart Total view -->
              <div class="cart-view-total">
@@ -99,7 +101,7 @@
          </div>
        </div>
      </div>
-   </div>
+    </div>
  </section>
  <!-- / Cart view section -->
 
