@@ -25,7 +25,7 @@ public class TransactionServicesImpl implements TransactionService{
 		oldTransaction.setAddress(transaction.getAddress());
 		oldTransaction.setMessage(transaction.getMessage());
 		oldTransaction.setAmount(transaction.getAmount());
-//		oldTransaction.setPayment(transaction.getPayment());
+		oldTransaction.setPayment(transaction.getPayment());
 		oldTransaction.setStatus(transaction.getStatus());
 		transactionDao.edit(oldTransaction);
 	} 

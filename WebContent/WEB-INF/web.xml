@@ -484,6 +484,16 @@
        <url-pattern>/admin/order/list</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+       <servlet-name>listOrderdetail</servlet-name>
+       <servlet-class>nongsan.webmvc.controller.admin.OrderdetailListController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>listOrderdetail</servlet-name>
+       <url-pattern>/admin/order/list-detail</url-pattern>
+   </servlet-mapping>
+   
    	<servlet>
        <servlet-name>deleteOrder</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.OrderDeleteController</servlet-class>
