@@ -54,7 +54,7 @@
                     <div class="form-group">
 	                  <label for="input-2">Phương thức thanh toán</label>
 	                  <div>
-	                    <select class="form-control valid" id="input-6" name="product-status" required aria-invalid="false">
+	                    <select class="form-control valid" id="input-6" name="order-payment" required aria-invalid="false">
 	                        <option value="1">Thẻ nội địa ATM</option>
 	                        <option value="0" selected="selected">COD</option>
 	                    </select>
@@ -64,9 +64,9 @@
                     <div class="form-group">
 	                  <label for="input-2">Trạng thái</label>
 	                  <div>
-	                    <select class="form-control valid" id="input-6" name="product-status" required aria-invalid="false">
-	                        <option value="1">Đã thanh toán</option>
-	                        <option value="0" selected="selected">Chưa thanh toán</option>
+	                    <select class="form-control valid" id="input-6" name="order-status" required aria-invalid="false">
+	                        <option value="Đã thanh toán">Đã thanh toán</option>
+	                        <option value="Chưa thanh toán" selected="selected">Chưa thanh toán</option>
 	                    </select>
 	                  </div>
 	                </div>
