@@ -20,7 +20,11 @@
       <div class="aa-catg-head-banner-content">
         <h2>Sản phẩm</h2>
         <ol class="breadcrumb">
+<<<<<<< HEAD
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>         
+=======
           <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>         
+>>>>>>> tan_client
           <li style="color:#fff">Danh sách sản phẩm</li>
         </ol>
       </div>

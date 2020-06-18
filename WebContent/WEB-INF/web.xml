@@ -4,7 +4,11 @@
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
    id="WebApp_ID" version="3.0">
    <display-name>Website Nông Sản</display-name>
-
+   
+	<welcome-file-list>   
+       <welcome-file>view/client/index.jsp</welcome-file> 
+	</welcome-file-list>
+	
    <servlet>
        <servlet-name>addCategory</servlet-name>
        <servlet-class>nongsan.webmvc.controller.admin.CategoryAddController</servlet-class>
@@ -271,9 +275,9 @@
  
    <servlet-mapping>
        <servlet-name>homePage</servlet-name>
-       <url-pattern>/home</url-pattern>
+       <url-pattern></url-pattern>
    </servlet-mapping>
-
+   
 	<servlet>
        <servlet-name>productDetail</servlet-name>
        <servlet-class>nongsan.webmvc.controller.ProductDetailController</servlet-class>
