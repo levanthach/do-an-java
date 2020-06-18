@@ -21,7 +21,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Tin tức</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
           <li style="color:#fff">Tin tức</li>
         </ol>
       </div>

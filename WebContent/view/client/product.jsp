@@ -20,7 +20,7 @@
       <div class="aa-catg-head-banner-content">
         <h2>Sản phẩm</h2>
         <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/view/client/home">Trang chủ</a></li>         
+          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>         
           <li style="color:#fff">Danh sách sản phẩm</li>
         </ol>
       </div>
