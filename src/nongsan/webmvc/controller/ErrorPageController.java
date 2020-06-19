@@ -3,7 +3,6 @@
 package nongsan.webmvc.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import nongsan.webmvc.service.BoardnewService;
-import nongsan.webmvc.service.impl.BoardnewServicesImpl;
 
 /**
  * Servlet implementation class ErrorPageController

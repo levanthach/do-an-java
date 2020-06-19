@@ -42,8 +42,7 @@ public class ProductListClientController extends HttpServlet {
 			productsList1.add(product1);
 			
 		}
-		System.out.println("lisst moiws " + productsList1);
-		System.out.println("list cũ: " + productList);
+
 		req.setAttribute("productlist1", productsList1);
 		// Product bán chạy
 		List<Product> product_banchay= productService.getProductById(6);

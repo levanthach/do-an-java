@@ -7,29 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <c:url value = "/view/client/assets" var="url"/>
-<!-- Login Modal -->  
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">                      
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Đăng nhập hoặc Đăng ký</h4>
-          <form class="aa-login-form" action="${pageContext.request.contextPath}/login" method="post">
-            <label for="">Username hoặc email<span>*</span></label>
-            <input type="text" placeholder="Usernamel" name="username">
-            <label for="">Mật khẩu<span>*</span></label>
-            <input type="password" placeholder="Mật khẩu" name="password">
-            <button class="aa-browse-btn" type="submit">Đăng nhập</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Ghi nhớ tài khoản </label>
-            <p class="aa-lost-password"><a href="#">Quên mật khẩu?</a></p>
-            <div class="aa-register-now">
-              Bạn chưa có tài khoản?<a href="account.jsp">Đăng ký ngay!</a>
-            </div>
-          </form>
-        </div>                        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>    
+
         <!-- footer -->  
   <footer id="aa-footer">
     <!-- footer bottom -->
@@ -43,9 +21,8 @@
                 <div class="aa-footer-widget">
                   <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo_footer.jpg" alt="logo img" width="185px"></a> 
                   <ul class="aa-footer-nav">
-                    <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
-                    <li><a href="${pageContext.request.contextPath}/view/client/introduce">Giới thiệu</a></li>
-                    <li><a href="${pageContext.request.contextPath}/view/client/contact">Liên hệ</a></li>
+
+                    <li><p style="color:#888; text-align: justify; width: 95%">Là nơi chuyên buôn bán tất cả các mặt hàng về nông sản chất lượng. Chúng tôi luôn đặt tiêu chí về chất lượng và uy tín lên hàng đầu.</p></li>
                     <li><img src="${pageContext.request.contextPath}/view/client/assets/images/dadangky.png" alt="logo img" width="40%"></li>
                   </ul>
                 </div>
