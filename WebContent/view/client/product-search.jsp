@@ -63,7 +63,7 @@
 	                      
 	                    <c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -78,8 +78,10 @@
 	                    </figcaption>
 	                  </figure>                         
 	                 
-	                  <!-- product badge -->
+	                 <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
 	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
 	                </li>
                 </c:forEach>                                       
               </ul>

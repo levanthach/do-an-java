@@ -113,7 +113,7 @@
                              
 						<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -127,8 +127,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                           <c:if test="${product.discount != 0}">
+	                  		<!-- product badge -->
+	                  		<span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                 	 </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -150,7 +152,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                              	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -164,8 +166,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                        <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -187,7 +191,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -201,8 +205,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                       <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -224,7 +230,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -238,8 +244,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                            <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -304,7 +312,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -318,8 +326,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                             <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -343,7 +353,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -357,8 +367,10 @@
                             </figcaption>
                           </figure>                        
                          
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                           <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -383,7 +395,7 @@
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                              	<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
@@ -397,8 +409,10 @@
                             </figcaption>
                           </figure>                        
                         
-                          <!-- product badge -->
-                          <span class="aa-badge aa-sale">- ${product.discount}%</span>
+                             <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
+	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
                         </li>
                         </c:forEach>
                         <!-- start single product item -->
@@ -479,8 +493,7 @@
                 <div class="aa-testimonial-single">
                 <img class="aa-testimonial-img" src="${url}/images/avater-2.jpg" alt="avatar 2">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                  <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
-                    được giao khá nhanh và sản phẩm thì tốt.</p>
+                  <p> Về chất lượng của sản phẩm thì khỏi phải bàn, rau củ luôn tươi xanh nhìn rất thích. Tôi sẽ mua hàng ở đây thường xuyên<p>
                   <div class="aa-testimonial-info">
                     <p>Mỹ Tân</p>
                     <span>Diễn Viên</span>
@@ -492,8 +505,7 @@
                 <div class="aa-testimonial-single">
                 <img class="aa-testimonial-img" src="${url}/images/avatar-1.jpg" alt="avatar 3">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                  <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
-                    được giao khá nhanh và sản phẩm thì tốt.</p>
+                  <p>Nhiều lần đi làm bận rộn, không có thời gian ra siêu thị nên tôi thường mua hàng online ở đây. Chất lượng sản phẩm và dịch vụ ở đây rất là tốt!</p>
                   <div class="aa-testimonial-info">
                     <p>Oanh Oanh</p>
                     <span>Sinh viên</span>
