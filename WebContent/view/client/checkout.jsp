@@ -156,6 +156,10 @@
                     <img src="${pageContext.request.contextPath}/view/client/assets/img/paypal.jpg" border="0" alt="PayPal Acceptance Mark">    
                     <input type="submit" value="Đặt hàng" class="aa-browse-btn">
                   </div>
+                   <c:if test="${sessionScope.username != null && sessionScope.order == null}">
+                   <br>
+                   		<p style="color: red">Bạn đã đặt hàng thành công!</p>
+                   </c:if>
                 </div>
               </div>
             </div>
