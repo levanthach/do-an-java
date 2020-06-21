@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Web Nông Sản</title>
+    <title>Nông sản 24h - Sự lựa chọn tin cậy</title>
     
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -17,6 +17,7 @@
     
     <!-- Bootstrap -->
     <link href="${url}/css/bootstrap.css" rel="stylesheet">   
+     <link rel="icon" href="${url}/images/favicon.png" type="image/x-icon">
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
     <link href="${url}/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
     <!-- Product view slider -->
