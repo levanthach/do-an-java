@@ -57,7 +57,20 @@
                   <div class="aa-product-view-content">
                     <h3>${detail_product.name }</h3>
                     <div class="aa-price-block">
-                        <span class="aa-product-view-price"><b>${detail_product.price }</b> VNĐ</span>
+                    <c:choose>
+						<c:when test="${detail_product.discount == 0}">
+	                      <span class="aa-product-price">${detail_product.price} VNĐ</span><span class="aa-product-price"></span>
+	                    </c:when>
+	                    <c:otherwise>
+	                      <c:forEach items="${productlist1}" var="product1">
+	                      	<c:if test="${product1.id == detail_product.id}">
+		                      <span class="aa-product-price"><strong>${product1.price} VNĐ</strong></span>
+		                      <span class="aa-product-price"><del>${detail_product.price} VNĐ</del></span>
+	                      </c:if>
+	                      </c:forEach>
+	                    </c:otherwise>
+	                     </c:choose>
+                   
                       <p class="aa-product-avilability">Tình trạng: <span>
                       	<c:choose>
 			                        <c:when test="${detail_product.status == 1}"> 
@@ -156,13 +169,13 @@
 	                     
 						<c:choose>
 						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> --%>
+	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> 
 	                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
 	                      	<c:if test="${product1.id == product.id}">
 		                      <span class="aa-product-price">${product1.price} VNĐ</span>
-		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+		                      <span class="aa-product-price">${product.price} VNĐ</span>
 	                      </c:if>
 	                      </c:forEach>
 	                    </c:otherwise>
@@ -170,8 +183,10 @@
 	                    </figcaption>
 	                  </figure>                     
 	                
-	                  <!-- product badge -->
+	                   <c:if test="${product.discount != 0}">
+	                  	<!-- product badge -->
 	                  <span class="aa-badge aa-sale">- ${product.discount}%</span>
+	                  </c:if>
 	                </li>
                 </c:forEach>
                  <!-- start single product item -->                                                                                   
